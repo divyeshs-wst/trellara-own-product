@@ -14,6 +14,8 @@
         "type": "header",
         "settings": {
           "header_width": "container",
+          "header_padding_leftright": 15,
+          "header_padding_topbottom": 15,
           "header_bg_color": "#000000",
           "header_c_bg_color": "",
           "header_min_height": 100,
@@ -35,10 +37,11 @@
           "menu_icon_color": "#ffffff",
           "menu_icon_color_hover": "#cfc7c7",
           "mobile_drawer_width": 300,
-          "mobile_drawer_bg": "#cdcdcd",
-          "mobile_drawer_text_color": "#FF1717",
+          "mobile_drawer_bg": "#FCFCFC",
+          "mobile_line_color": "#ffffff",
+          "mobile_drawer_text_color": "#000000",
           "mobile_drawer_border_color": "#eaeaea",
-          "mobile_overlay_color": "#332F2F",
+          "mobile_overlay_color": "#332f2f",
           "mobile_overlay_opacity": 50
         }
       }
