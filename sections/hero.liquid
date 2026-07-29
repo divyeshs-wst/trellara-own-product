@@ -5,8 +5,32 @@
 
 {% endstyle %}
 
-<section class="trop-hero trop-hero--{{ s.background_type }}">
-  
+<section class="trop-hero">
+  <div class="trop-hero__media">
+    {% if s.background_type == 'video' and s.video != blank %}
+      {{ s.video | video_tag: autoplay: true, loop: true, muted: true, controls: false, playsinline: true }}
+
+    {% elsif s.desktop_image != blank %}
+      <picture>
+        {% if s.mobile_image != blank %}
+          <source
+            media="(max-width: 767px)"
+            srcset="{{ s.mobile_image | image_url: width: 900 }}"
+          >
+        {% endif %}
+
+        <img
+          src="{{ s.desktop_image | image_url: width: 2000 }}"
+          alt="{{ s.desktop_image.alt | escape }}"
+          loading="lazy"
+        >
+      </picture>
+    {% endif %}
+  </div>
+
+  {% if s.enable_overlay %}
+    <div class="trop-hero__overlay"></div>
+  {% endif %}
 </section>
 
 {% schema %}
