@@ -24,16 +24,16 @@
         "description": "<p>This is Your Hero Heading.</p>",
         "content_width": 600,
         "text_alignment": "left",
-        "horizontal_position": "center",
+        "horizontal_position": "flex-start",
         "vertical_position": "flex-end",
         "sub_heading_tag": "h3",
         "sub_heading_size": 18,
-        "sub_heading_color": "#ffffff",
+        "sub_heading_color": "#FCFCFC",
         "heading_tag": "h2",
         "heading_size": 52,
-        "heading_color": "#ffffff",
+        "heading_color": "#FCFCFC",
         "description_size": 16,
-        "description_color": "#ffffff"
+        "description_color": "#FCFCFC"
       }
     }
   },
