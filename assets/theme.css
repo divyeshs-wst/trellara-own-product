@@ -268,7 +268,7 @@ svg {
   display: block;
   width: 100%;
   height: 2px;
-  background: var(--trop-line-bg, #000);
+  background: var(--trop-line-bg, #fff);
 }
 
 /* Overlay backdrop */

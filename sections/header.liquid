@@ -52,6 +52,9 @@
     --trop-drawer-text-color: {{ s.mobile_drawer_text_color | default: "#111111" }};
     --trop-drawer-border-color: {{ s.mobile_drawer_border_color | default: "#eaeaea" }};
   }
+  .trop-header__hamburger span {
+    --trop-line-bg: {{ s.mobile_line_color | default: "#fff" }};
+  }
   .trop-header__overlay {
     --trop-overlay-color: {{ s.mobile_overlay_color | default: "#000000" }};
     --trop-overlay-opacity: {{ s.mobile_overlay_opacity | default: 50 | divided_by: 100.0 }};
