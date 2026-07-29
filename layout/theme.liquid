@@ -28,9 +28,9 @@
   </head>
 
   <body class="template-{{ request.page_type | handle }} color-scheme-1">
-    <a class="trop-skip-to-content" href="#MainContent">
+    {% comment %} <a class="trop-skip-to-content" href="#MainContent">
       {{ 'accessibility.skip_to_content' | t }}
-    </a>
+    </a> {% endcomment %}
 
     {% section 'header' %}
 
