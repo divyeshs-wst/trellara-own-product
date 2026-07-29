@@ -63,16 +63,7 @@
           "vertical_position": "center",
           "heading_size": 52,
           "heading_color": "#ffffff",
-          "description_color": "#ffffff",
-          "button_text": "Shop Now",
-          "button_link": "",
-          "button_bg": "#ffffff",
-          "button_color": "#000000",
-          "button_hover_bg": "#000000",
-          "button_hover_color": "#ffffff",
-          "button_radius": 5,
-          "button_text_2": "",
-          "button_link_2": ""
+          "description_color": "#ffffff"
         }
       }
     },
