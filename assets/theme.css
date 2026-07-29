@@ -121,8 +121,7 @@ svg {
   position: relative;
 }
 
-.trop-header__menu-item > a,
-.trop-header__icons > a {
+.trop-header__menu-item > a {
   display: flex;
   align-items: center;
   gap: var(--trop-menu-gap-drodpown, 12);
@@ -134,9 +133,25 @@ svg {
   white-space: nowrap;
 }
 
-.trop-header__menu-item > a:hover,
-.trop-header__icons > a:hover {
+.trop-header__menu-item > a:hover {
   color: var(--trop-menu-text-color-hover, #0070f3);
+  text-decoration: none;
+}
+
+.trop-header__icons > a {
+  display: flex;
+  align-items: center;
+  gap: var(--trop-menu-icon-gap, 12px);
+  padding: 10px 0;
+  font-family: var(--trop-menu-font-family, inherit);
+  font-size: var(--trop-menu-icon-text-size, 100%);
+  font-weight: 500;
+  color: var(--trop-menu-icon-text-color, inherit);
+  white-space: nowrap;
+}
+
+.trop-header__icons > a:hover {
+  color: var(--trop-menu-icon-text-color-hover, #0070f3);
   text-decoration: none;
 }
 
