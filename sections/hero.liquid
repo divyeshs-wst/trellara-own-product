@@ -15,15 +15,25 @@
         {% if s.mobile_image != blank %}
           <source
             media="(max-width: 767px)"
-            srcset="{{ s.mobile_image | image_url: width: 900 }}"
+            srcset="
+              {{ s.mobile_image | image_url: width: 375 }} 375w,
+              {{ s.mobile_image | image_url: width: 550 }} 550w,
+              {{ s.mobile_image | image_url: width: 750 }} 750w,
+              {{ s.mobile_image | image_url: width: 900 }} 900w
+            "
+            sizes="100vw"
           >
         {% endif %}
 
-        <img
-          src="{{ s.desktop_image | image_url: width: 2000 }}"
-          alt="{{ s.desktop_image.alt | escape }}"
-          loading="lazy"
-        >
+        {{
+          s.desktop_image
+          | image_url: width: 2000
+          | image_tag:
+            loading: 'lazy',
+            widths: '750,1100,1500,2000',
+            sizes: '100vw',
+            alt: s.desktop_image.alt
+        }}
       </picture>
     {% endif %}
   </div>
