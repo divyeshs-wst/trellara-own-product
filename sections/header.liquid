@@ -23,7 +23,7 @@
 
     {%- comment -%} Main menu {%- endcomment -%}
     <nav class="trop-header__nav">
-      <ul class="trop-header__menu">
+      <ul class="trop-header__menu trop-flex">
         {%- for link in section.settings.menu.links -%}
           <li class="trop-header__menu-item{% if link.links != blank %} has-dropdown{% endif %}">
             <a href="{{ link.url }}"{% if link.current %} aria-current="page"{% endif %}>{{ link.title }}</a>
