@@ -1,4 +1,5 @@
 {{ 'theme.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
 
 {%- liquid
   assign s = section.settings
@@ -67,18 +68,27 @@
       </a>
     </div>
 
+    {%- comment -%} Hamburger (mobile only) {%- endcomment -%}
+    <button type="button" class="trop-header__hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="trop-header-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
     {%- comment -%} Main menu {%- endcomment -%}
-    <nav class="trop-header__nav">
+    <nav class="trop-header__nav" id="trop-header-nav">
       <ul class="trop-header__menu trop-flex">
         {%- for link in section.settings.menu.links -%}
           <li class="trop-header__menu-item{% if link.links != blank %} has-dropdown{% endif %}">
             <a href="{{ link.url }}"{% if link.current %} aria-current="page"{% endif %}>{{ link.title }}</a>
             {%- if link.links != blank -%}
+              <button type="button" class="trop-header__toggle" aria-expanded="false" aria-label="Toggle submenu for {{ link.title }}"></button>
               <ul class="trop-header__submenu">
                 {%- for childlink in link.links -%}
                   <li class="{% if childlink.links != blank %}has-dropdown{% endif %}">
                     <a href="{{ childlink.url }}"{% if childlink.current %} aria-current="page"{% endif %}>{{ childlink.title }}</a>
                     {%- if childlink.links != blank -%}
+                      <button type="button" class="trop-header__toggle" aria-expanded="false" aria-label="Toggle submenu for {{ childlink.title }}"></button>
                       <ul class="trop-header__submenu">
                         {%- for grandchildlink in childlink.links -%}
                           <li>
@@ -163,7 +173,7 @@
       "max": 120,
       "step": 1,
       "default": 80,
-      "unit": "px",
+      "unit": "px"
     },
     {
       "type": "header",
