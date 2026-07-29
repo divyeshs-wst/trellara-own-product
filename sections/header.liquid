@@ -14,12 +14,19 @@
   endif
 -%}
 
+{{ s.menu_item_ffamily | font_face: font_display: 'swap' }}
+
 {% style %}
   .trop-header {
     background-color: {{ bg_color }};
   }
   .trop-header__inner {
     background-color: {{ container_bg_color }};
+  }
+  .trop-header__menu {
+    --trop-menu-gap: {{ s.menu_item_gap | default: 12 }}px;
+    --trop-menu-font-family: {{ s.menu_item_ffamily.family }}, {{ s.menu_item_ffamily.fallback_families }};
+    --trop-menu-font-size: {{ s.menu_item_fsize | default: 15 }}px;
   }
 {% endstyle %}
 
