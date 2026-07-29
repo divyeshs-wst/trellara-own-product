@@ -33,7 +33,13 @@
           "menu_icon_gap": 12,
           "menu_icon_fsize": 16,
           "menu_icon_color": "#ffffff",
-          "menu_icon_color_hover": "#cfc7c7"
+          "menu_icon_color_hover": "#cfc7c7",
+          "mobile_drawer_width": 300,
+          "mobile_drawer_bg": "#CDCDCD",
+          "mobile_drawer_text_color": "#111111",
+          "mobile_drawer_border_color": "#eaeaea",
+          "mobile_overlay_color": "#000000",
+          "mobile_overlay_opacity": 50
         }
       }
     },
