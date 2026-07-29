@@ -45,6 +45,17 @@
     --trop-menu-icon-text-color: {{ s.menu_icon_color | default: "#000000" }};
     --trop-menu-icon-text-color-hover: {{ s.menu_icon_color_hover | default: "#ffffff" }};
   }
+
+  .trop-header__nav {
+    --trop-drawer-width: {{ s.mobile_drawer_width | default: 300 }}px;
+    --trop-drawer-bg: {{ s.mobile_drawer_bg | default: "#ffffff" }};
+    --trop-drawer-text-color: {{ s.mobile_drawer_text_color | default: "#111111" }};
+    --trop-drawer-border-color: {{ s.mobile_drawer_border_color | default: "#eaeaea" }};
+  }
+  .trop-header__overlay {
+    --trop-overlay-color: {{ s.mobile_overlay_color | default: "#000000" }};
+    --trop-overlay-opacity: {{ s.mobile_overlay_opacity | default: 50 | divided_by: 100.0 }};
+  }
 {% endstyle %}
 
 <header class="trop-header">
@@ -75,8 +86,18 @@
       <span></span>
     </button>
 
+    {%- comment -%} Overlay backdrop for mobile drawer {%- endcomment -%}
+    <div class="trop-header__overlay"></div>
+
     {%- comment -%} Main menu {%- endcomment -%}
     <nav class="trop-header__nav" id="trop-header-nav">
+      <div class="trop-header__nav-head">
+        <span class="trop-header__nav-title">Menu</span>
+        <button type="button" class="trop-header__close" aria-label="Close menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
       <ul class="trop-header__menu trop-flex">
         {%- for link in section.settings.menu.links -%}
           <li class="trop-header__menu-item{% if link.links != blank %} has-dropdown{% endif %}">
@@ -300,6 +321,54 @@
       "id": "menu_icon_color_hover",
       "label": "Menu Icon Hover Color",
       "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Mobile Menu (Drawer)"
+    },
+    {
+      "type": "range",
+      "id": "mobile_drawer_width",
+      "label": "Drawer Width",
+      "min": 240,
+      "max": 420,
+      "step": 10,
+      "default": 300,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "mobile_drawer_bg",
+      "label": "Drawer Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "mobile_drawer_text_color",
+      "label": "Drawer Text Color",
+      "default": "#111111"
+    },
+    {
+      "type": "color",
+      "id": "mobile_drawer_border_color",
+      "label": "Drawer Divider Color",
+      "default": "#eaeaea"
+    },
+    {
+      "type": "color",
+      "id": "mobile_overlay_color",
+      "label": "Overlay Color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "mobile_overlay_opacity",
+      "label": "Overlay Opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 50,
+      "unit": "%"
     }
   ],
   "presets": [
