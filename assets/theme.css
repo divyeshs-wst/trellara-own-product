@@ -136,8 +136,8 @@ svg {
 
 .trop-header__menu-item > a:hover,
 .trop-header__icons > a:hover {
+  color: var(--trop-menu-text-color-hover, #0070f3);
   text-decoration: none;
-  color: #0070f3;
 }
 
 /* Dropdown arrow indicator (top-level items) */
