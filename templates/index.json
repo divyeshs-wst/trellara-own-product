@@ -9,7 +9,29 @@
  */
 {
   "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "background_type": "image",
+        "desktop_image": "shopify://shop_images/SSSBronzingDrops-Lifestyle3.jpg",
+        "hero_height": "small",
+        "enable_overlay": true,
+        "overlay_color": "#000000",
+        "overlay_opacity": 40,
+        "subheading": "Small heading",
+        "heading": "Your Hero Heading",
+        "description": "<p>This is Your Hero Heading.</p>",
+        "content_width": 600,
+        "text_alignment": "center",
+        "horizontal_position": "center",
+        "vertical_position": "center",
+        "heading_size": 52,
+        "heading_color": "#ffffff",
+        "description_color": "#ffffff"
+      }
+    }
   },
   "order": [
+    "hero"
   ]
 }
