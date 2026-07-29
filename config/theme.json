@@ -3,5 +3,10 @@
   "version": "1.0.0",
   "settings": [],
   "blocks": {},
-  "presets": []
+  "presets": [
+    {
+      "name": "Default",
+      "category": "Theme"
+    }
+  ]
 }
