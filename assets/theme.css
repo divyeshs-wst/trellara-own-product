@@ -99,6 +99,137 @@ svg {
 }
 
 
+/* Navigation menu */
+.trop-header__nav {
+  position: relative;
+}
+
+.trop-header__menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 28px;
+  align-items: center;
+}
+
+.trop-header__menu-item {
+  position: relative;
+}
+
+.trop-header__menu-item > a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: inherit;
+  white-space: nowrap;
+}
+
+.trop-header__menu-item > a:hover {
+  text-decoration: none;
+  color: #0070f3;
+}
+
+/* Dropdown arrow indicator */
+.trop-header__menu-item.has-dropdown > a::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
+  margin-top: -3px;
+  transition: transform 0.2s ease;
+}
+
+.trop-header__menu-item.has-dropdown:hover > a::after {
+  transform: rotate(-135deg);
+  margin-top: 3px;
+}
+
+/* Submenu (dropdown panel) */
+.trop-header__submenu {
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  z-index: 20;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+
+.trop-header__menu-item.has-dropdown:hover > .trop-header__submenu,
+.trop-header__menu-item.has-dropdown:focus-within > .trop-header__submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.trop-header__submenu li {
+  position: relative;
+}
+
+.trop-header__submenu li > a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #333;
+  white-space: nowrap;
+}
+
+.trop-header__submenu li > a:hover {
+  background: #f5f5f5;
+  text-decoration: none;
+  color: #0070f3;
+}
+
+/* Nested (3rd level) flyout submenu — opens to the right */
+.trop-header__submenu .trop-header__submenu {
+  top: 0;
+  left: 100%;
+  transform: translateX(8px);
+}
+
+.trop-header__submenu li:hover > .trop-header__submenu,
+.trop-header__submenu li:focus-within > .trop-header__submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* Mobile: stack menu, hide dropdowns by default (basic fallback) */
+@media (max-width: 768px) {
+  .trop-header__menu {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .trop-header__submenu {
+    position: static;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    display: none;
+    padding-left: 16px;
+  }
+
+  .trop-header__menu-item.has-dropdown:hover .trop-header__submenu {
+    display: block;
+  }
+}
+
 
 /* header CSS start */
 .trop-header__inner {
