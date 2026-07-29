@@ -180,17 +180,31 @@ svg {
 }
 
 .trop-header__submenu li > a {
-  display: block;
+  /* display: block;
   padding: 10px 20px;
   font-size: 14px;
   color: #333;
-  white-space: nowrap;
+  white-space: nowrap; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
 }
 
 .trop-header__submenu li > a:hover {
   background: #f5f5f5;
   text-decoration: none;
   color: #0070f3;
+}
+
+.trop-header__submenu li.has-dropdown > a::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(-45deg);
 }
 
 /* Nested (3rd level) flyout submenu — opens to the right */
