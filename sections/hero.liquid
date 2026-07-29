@@ -1,8 +1,29 @@
 {{ 'hero.css' | asset_url | stylesheet_tag }}
 
+{%- liquid
+  assign s = section.settings
+
+  assign overlay_opacity = s.overlay_opacity | divided_by: 100.0
+
+  assign hero_height = 'auto'
+
+  if s.hero_height == 'small'
+    assign hero_height = '400px'
+  elsif s.hero_height == 'medium'
+    assign hero_height = '600px'
+  elsif s.hero_height == 'large'
+    assign hero_height = '800px'
+  elsif s.hero_height == 'full'
+    assign hero_height = '100vh'
+  endif
+-%}
 
 {% style %}
-
+  .trop-hero {
+    min-height: {{ hero_height }};
+    position: relative;
+    overflow: hidden;
+  }
 {% endstyle %}
 
 <section class="trop-hero">
