@@ -138,11 +138,8 @@ svg {
   text-decoration: none;
 }
 
-.trop-header__icons > .trop-header__icons.trop-flex {
-  display: flex;
-  align-items: center;
+.trop-header__icons.trop-flex {
   gap: var(--trop-menu-icon-gap, 12px);
-  white-space: nowrap;
 }
 
 .trop-header__icons > a {
