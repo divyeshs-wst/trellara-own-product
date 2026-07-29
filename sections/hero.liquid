@@ -75,7 +75,7 @@
   }
 {% endstyle %}
 
-<section class="trop-hero">
+<section class="trop-hero {{ section.settings.header_width }}">
   <div class="trop-hero__media">
     {% if s.background_type == 'video' and s.video != blank %}
       {{ s.video | video_tag: autoplay: true, loop: true, muted: true, controls: false, playsinline: true }}
