@@ -1,0 +1,112 @@
+{%- comment -%}
+  Base header — logo, primary navigation, utility icons.
+  Kept intentionally lean; richer header composition can move to blocks later.
+{%- endcomment -%}
+<div class="trop-header color-{{ section.settings.color_scheme }}">
+  <div class="trop-container trop-header__inner">
+    <a href="{{ routes.root_url }}" class="trop-header__logo" aria-label="{{ shop.name }}">
+      {%- if settings.logo != blank -%}
+        {{ settings.logo | image_url: width: 400 | image_tag:
+          loading: 'eager',
+          fetchpriority: 'high',
+          widths: '120, 240, 400',
+          sizes: '(max-width: 749px) 120px, 240px',
+          alt: shop.name,
+          style: 'width:auto;max-width:100%;height:auto;',
+          class: 'trop-header__logo-img'
+        }}
+      {%- else -%}
+        <span class="trop-header__logo-text">{{ shop.name }}</span>
+      {%- endif -%}
+    </a>
+
+    {%- if section.settings.menu != blank -%}
+      <nav class="trop-header__nav" role="navigation" aria-label="{{ 'sections.header.menu' | t }}">
+        <ul class="trop-header__menu" role="list">
+          {%- for link in section.settings.menu.links -%}
+            <li>
+              <a href="{{ link.url }}" class="trop-header__link"{% if link.active %} aria-current="page"{% endif %}>
+                {{ link.title }}
+              </a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </nav>
+    {%- endif -%}
+
+    <div class="trop-header__actions">
+      {%- if section.settings.enable_search -%}
+        <a href="{{ routes.search_url }}" class="trop-header__action" aria-label="{{ 'general.search.search' | t }}">
+          {% render 'trop-icon', name: 'search' %}
+        </a>
+      {%- endif -%}
+      {%- if shop.customer_accounts_enabled -%}
+        <a href="{{ routes.account_url }}" class="trop-header__action" aria-label="{{ 'customer.account.title' | t }}">
+          {% render 'trop-icon', name: 'user' %}
+        </a>
+      {%- endif -%}
+      <a href="{{ routes.cart_url }}" class="trop-header__action" aria-label="{{ 'sections.cart.title' | t }}">
+        {% render 'trop-icon', name: 'cart' %}
+        <span class="trop-header__cart-count" aria-hidden="true">{{ cart.item_count }}</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+{%- style -%}
+  #shopify-section-{{ section.id }} .trop-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--trop-space-lg);
+    padding-block: var(--trop-space-md);
+  }
+  #shopify-section-{{ section.id }} .trop-header__menu {
+    display: flex;
+    gap: var(--trop-space-md);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  #shopify-section-{{ section.id }} .trop-header__link { text-decoration: none; }
+  #shopify-section-{{ section.id }} .trop-header__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--trop-space-md);
+    font-size: 1.25rem;
+  }
+  #shopify-section-{{ section.id }} .trop-header__action { text-decoration: none; position: relative; }
+  {% if settings.logo != blank %}
+  #shopify-section-{{ section.id }} .trop-header__logo-img { width: {{ settings.logo_width }}px; }
+  {% endif %}
+  @media screen and (max-width: 749px) {
+    #shopify-section-{{ section.id }} .trop-header__nav { display: none; }
+  }
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "t:sections.header.name",
+  "tag": "header",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "t:sections.header.menu",
+      "default": "main-menu"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_search",
+      "label": "t:sections.header.enable_search",
+      "default": true
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:common.color_scheme",
+      "default": "scheme-1"
+    }
+  ]
+}
+{% endschema %}
