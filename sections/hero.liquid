@@ -23,7 +23,6 @@
     max-height: {{ hero_height }};
     position: relative;
     overflow: hidden;
-    padding: {{ section.settings.hero_padding_topbottom }}px {{ section.settings.hero_padding_leftright }}px {{ section.settings.hero_padding_topbottom }}px {{ section.settings.hero_padding_leftright }}px;
   }
   .trop-hero__overlay {
     position: absolute;
@@ -49,6 +48,7 @@
     flex-wrap: wrap;
     justify-content: {{  s.vertical_position }};
     align-items: {{  s.horizontal_position }};
+    padding: {{ section.settings.hero_padding_topbottom }}px {{ section.settings.hero_padding_leftright }}px {{ section.settings.hero_padding_topbottom }}px {{ section.settings.hero_padding_leftright }}px;
   }
 
   .trop-hero__content {
