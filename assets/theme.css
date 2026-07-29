@@ -249,6 +249,142 @@ svg {
   transform: translateX(0);
 }
 
+/* Hamburger button - hidden on desktop */
+.trop-header__hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.trop-header__hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.trop-header__hamburger[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.trop-header__hamburger[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+.trop-header__hamburger[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Accordion toggle buttons - hidden on desktop, shown only on mobile */
+.trop-header__toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .trop-header__hamburger {
+    display: flex;
+  }
+
+  .trop-header__nav {
+    display: none;
+    width: 100%;
+    order: 3;
+  }
+
+  .trop-header__nav.is-open {
+    display: block;
+  }
+
+  .trop-header__menu {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+
+  .trop-header__menu-item {
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .trop-header__menu-item > a {
+    width: 100%;
+    padding: 12px 0;
+  }
+
+  /* Hide desktop hover-driven arrows on mobile, use toggle button instead */
+  .trop-header__menu-item.has-dropdown > a::after,
+  .trop-header__submenu li.has-dropdown > a::after {
+    display: none;
+  }
+
+  .trop-header__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 4px;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .trop-header__toggle::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-right: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+    transform: rotate(45deg);
+    transition: transform 0.2s ease;
+  }
+
+  .trop-header__toggle[aria-expanded="true"]::after {
+    transform: rotate(-135deg);
+  }
+
+  /* Submenus become static accordion panels instead of floating panels */
+  .trop-header__submenu {
+    position: static;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    display: none;
+    padding: 0 0 0 16px;
+    min-width: 0;
+    transition: none;
+  }
+
+  .trop-header__submenu.is-open {
+    display: block;
+  }
+
+  .trop-header__submenu li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .trop-header__submenu li > a {
+    padding: 10px 0;
+  }
+
+  /* Cancel the desktop nested-flyout positioning */
+  .trop-header__submenu .trop-header__submenu {
+    top: auto;
+    left: auto;
+    transform: none;
+  }
+}
+
 /* Mobile: stack menu, hide dropdowns by default (basic fallback) */
 @media (max-width: 768px) {
   .trop-header__menu {
