@@ -98,6 +98,12 @@ svg {
 }
 
 
+/* header CSS start */
+.trop-header__inner {
+    justify-content: space-between;
+    align-items: center;
+}
+
 /* Navigation menu */
 .trop-header__nav {
   position: relative;
@@ -107,7 +113,7 @@ svg {
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 28px;
+  gap: var(--trop-menu-gap, 12px);
   align-items: center;
 }
 
@@ -120,7 +126,8 @@ svg {
   align-items: center;
   gap: 6px;
   padding: 10px 0;
-  font-size: 15px;
+  font-family: var(--trop-menu-font-family, inherit);
+  font-size: var(--trop-menu-font-size, 15px);
   font-weight: 500;
   color: inherit;
   white-space: nowrap;
@@ -131,7 +138,7 @@ svg {
   color: #0070f3;
 }
 
-/* Dropdown arrow indicator */
+/* Dropdown arrow indicator (top-level items) */
 .trop-header__menu-item.has-dropdown > a::after {
   content: "";
   width: 7px;
@@ -180,14 +187,14 @@ svg {
 }
 
 .trop-header__submenu li > a {
-  padding: 10px 20px;
-  font-size: 14px;
-  color: #333;
-  white-space: nowrap;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #333;
+  white-space: nowrap;
 }
 
 .trop-header__submenu li > a:hover {
@@ -196,6 +203,7 @@ svg {
   color: #0070f3;
 }
 
+/* Arrow icon for submenu items that have their own children */
 .trop-header__submenu li.has-dropdown > a::after {
   content: "";
   width: 6px;
@@ -220,14 +228,6 @@ svg {
   transform: translateX(0);
 }
 
-/* header CSS start */
-.trop-header__inner {
-    justify-content: space-between;
-    align-items: center;
-}
-/* header CSS end */
-
-
 /* Mobile: stack menu, hide dropdowns by default (basic fallback) */
 @media (max-width: 768px) {
   .trop-header__menu {
@@ -249,3 +249,4 @@ svg {
     display: block;
   }
 }
+/* header CSS end */
