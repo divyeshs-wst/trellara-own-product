@@ -73,8 +73,7 @@ svg {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  /* Optional: prevent overflow issues */
-  overflow: hidden; 
+  /* overflow: hidden;  */
 }
 
 /* Full-Width Child */
