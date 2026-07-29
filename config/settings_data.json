@@ -36,8 +36,8 @@
           "menu_icon_color_hover": "#cfc7c7",
           "mobile_drawer_width": 300,
           "mobile_drawer_bg": "#CDCDCD",
-          "mobile_drawer_text_color": "#111111",
-          "mobile_drawer_border_color": "#eaeaea",
+          "mobile_drawer_text_color": "#FFFFFF",
+          "mobile_drawer_border_color": "#FDFDFD",
           "mobile_overlay_color": "#000000",
           "mobile_overlay_opacity": 50
         }
