@@ -48,6 +48,25 @@
     flex-wrap: wrap;
     align-content: center;
   }
+  .trop-hero__content h1 {
+    color: {{ s.heading_color }};
+    font-size: {{ s.heading_size }}px;
+  }
+
+  .trop-hero__content p {
+    color: {{ s.description_color }};
+  }
+
+  .trop-hero__button {
+    background: {{ s.button_bg }};
+    color: {{ s.button_color }};
+    border-radius: {{ s.button_radius }}px;
+  }
+
+  .trop-hero__button:hover {
+    background: {{ s.button_hover_bg }};
+    color: {{ s.button_hover_color }};
+  }
 {% endstyle %}
 
 <section class="trop-hero">
