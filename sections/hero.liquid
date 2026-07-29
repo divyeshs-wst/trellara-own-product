@@ -118,11 +118,11 @@
   <div class="trop-hero__container">
     <div class="trop-hero__content trop-hero__content--{{ s.horizontal_position }} trop-hero__content--{{ s.vertical_position }}">
       {% if s.subheading != blank %}
-        <span class="trop-hero__subheading">{{ s.subheading }}</span>
+        <{{ s.sub_heading_tag }} class="trop-hero__subheading">{{ s.subheading }}</{{ s.sub_heading_tag }}>
       {% endif %}
 
       {% if s.heading != blank %}
-        <h1>{{ s.heading }}</h1>
+        <{{ s.heading_tag }}>{{ s.heading }}</{{ s.sub_heading_tag }}>
       {% endif %}
 
       {% if s.description != blank %}
