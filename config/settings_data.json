@@ -22,11 +22,11 @@
           "menu_item_gap_dropdown": 12,
           "menu_item_ffamily": "mono",
           "menu_item_fsize": 16,
-          "menu_item_color": "#FF3131",
+          "menu_item_color": "#FFFFFF",
           "show_search": true,
           "show_account": true,
           "show_cart": true,
-          "header_bg_color": "#c5c4c4",
+          "header_bg_color": "#000000",
           "header_c_bg_color": ""
         }
       }
