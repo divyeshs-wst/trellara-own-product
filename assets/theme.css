@@ -69,6 +69,28 @@ svg {
 *
 */
 
+/* Parent Container: Fixed width and centered */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* Optional: prevent overflow issues */
+  overflow: hidden; 
+}
+
+/* Full-Width Child */
+.no-container {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  
+  /* Example styling */
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+}   
 
 .trop-flex {
     display: flex;
