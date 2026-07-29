@@ -13,6 +13,8 @@
             width="{{ section.settings.logo_width }}"
             loading="eager"
           >
+        {%- elsif section.settings.site_title != blank -%}
+          <span class="tr-header__logo-text">{{ section.settings.site_title }}</span>
         {%- else -%}
           <span class="tr-header__logo-text">{{ shop.name }}</span>
         {%- endif -%}
