@@ -15,6 +15,7 @@
         "hero_height": "small",
         "background_type": "image",
         "desktop_image": "shopify://shop_images/SSSBronzingDrops-Lifestyle3.jpg",
+        "video": "shopify://files/videos/Sauna reel 2.mp4",
         "enable_overlay": true,
         "overlay_color": "#000000",
         "overlay_opacity": 50,
