@@ -1,1 +1,76 @@
+<<<<<<< HEAD
 {"current":{"sections":{"header":{"type":"header","settings":{"header_width":"container","header_padding_leftright":15,"header_padding_topbottom":15,"header_bg_color":"#000000","header_c_bg_color":"","header_min_height":100,"site_title":"Trellara Own Product","logo":"shopify:\/\/shop_images\/logo.png","logo_width":300,"menu":"main-menu","menu_item_gap":32,"menu_item_gap_dropdown":12,"menu_item_ffamily":"mono","menu_item_fsize":16,"menu_item_color":"#ffffff","menu_item_color_hover":"#d0d0d0","show_search":true,"show_account":true,"show_cart":true,"menu_icon_gap":12,"menu_icon_fsize":16,"menu_icon_color":"#ffffff","menu_icon_color_hover":"#cfc7c7","mobile_drawer_width":300,"mobile_drawer_bg":"#fcfcfc","mobile_line_color":"#ffffff","mobile_drawer_text_color":"#000000","mobile_drawer_border_color":"#eaeaea","mobile_overlay_color":"#332f2f","mobile_overlay_opacity":80}},"hero":{"type":"hero","settings":{"background_type":"image","desktop_image":"shopify:\/\/shop_images\/SSSBronzingDrops-Lifestyle3.jpg","hero_height":"small","enable_overlay":true,"overlay_color":"#000000","overlay_opacity":40,"subheading":"Small heading","heading":"Your Hero Heading","description":"<p>This is Your Hero Heading.<\/p>","content_width":50,"text_alignment":"center","horizontal_position":"center","vertical_position":"center","heading_size":52,"heading_color":"#ffffff","description_color":"#ffffff"}}},"content_for_index":[]}}
+=======
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "current": {
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "header_width": "container",
+          "header_padding_leftright": 15,
+          "header_padding_topbottom": 15,
+          "header_bg_color": "#000000",
+          "header_c_bg_color": "",
+          "header_min_height": 100,
+          "site_title": "Trellara Own Product",
+          "logo": "shopify://shop_images/logo.png",
+          "logo_width": 300,
+          "menu": "main-menu",
+          "menu_item_gap": 32,
+          "menu_item_gap_dropdown": 12,
+          "menu_item_ffamily": "mono",
+          "menu_item_fsize": 16,
+          "menu_item_color": "#ffffff",
+          "menu_item_color_hover": "#d0d0d0",
+          "show_search": true,
+          "show_account": true,
+          "show_cart": true,
+          "menu_icon_gap": 12,
+          "menu_icon_fsize": 16,
+          "menu_icon_color": "#ffffff",
+          "menu_icon_color_hover": "#cfc7c7",
+          "mobile_drawer_width": 300,
+          "mobile_drawer_bg": "#fcfcfc",
+          "mobile_line_color": "#ffffff",
+          "mobile_drawer_text_color": "#000000",
+          "mobile_drawer_border_color": "#eaeaea",
+          "mobile_overlay_color": "#332f2f",
+          "mobile_overlay_opacity": 80
+        }
+      },
+      "hero": {
+        "type": "hero",
+        "settings": {
+          "background_type": "image",
+          "desktop_image": "shopify://shop_images/SSSBronzingDrops-Lifestyle3.jpg",
+          "hero_height": "small",
+          "enable_overlay": true,
+          "overlay_color": "#000000",
+          "overlay_opacity": 40,
+          "subheading": "Small heading",
+          "heading": "Your Hero Heading",
+          "description": "<p>This is Your Hero Heading.</p>",
+          "content_width": 50,
+          "text_alignment": "center",
+          "horizontal_position": "center",
+          "vertical_position": "center",
+          "heading_size": 52,
+          "heading_color": "#ffffff",
+          "description_color": "#ffffff"
+        }
+      }
+    },
+    "content_for_index": []
+  }
+}
+>>>>>>> 7c28c7079305a057e0bf265719a9bc3044765a1f
