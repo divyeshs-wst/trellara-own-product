@@ -1,4 +1,73 @@
+/* 1. Reset & Box Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Prevents width/height overflow issues */
+}
 
+html {
+  font-size: 100%; /* Base 16px in most browsers */
+  scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* 2. Body & Typography */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+               "Helvetica Neue", Arial, sans-serif; /* System font stack */
+  line-height: 1.5;
+  color: #333; /* Default text color */
+  background-color: #fff;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 3. Media Elements */
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Removes bottom whitespace in flex/grid containers */
+}
+
+/* 4. Links */
+a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 5. Selection */
+::selection {
+  background-color: #00f;
+  color: #fff;
+  text-shadow: none;
+}
+
+/* 6. SVGs */
+svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+  pointer-events: none; /* Prevents SVG from blocking click events */
+}
+
+/**
+*
+* CUSTOM CSS
+*
+*/
 
 
 .trop-flex {
