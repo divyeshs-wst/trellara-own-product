@@ -24,7 +24,7 @@
           "menu_item_fsize": 16,
           "menu_item_color": "#ffffff",
           "menu_item_color_hover": "#d0d0d0",
-          "menu_icon_gap": 12,
+          "menu_icon_gap": 32,
           "menu_icon_fsize": 16,
           "menu_icon_color": "#FFFFFF",
           "menu_icon_color_hover": "#CFC7C7",
