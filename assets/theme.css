@@ -124,7 +124,7 @@ svg {
 .trop-header__menu-item > a {
   display: flex;
   align-items: center;
-  gap: var(--trop-menu-gap-drodpown, 12);
+  gap: var(--trop-menu-gap-drodpown, 12px);
   padding: 10px 0;
   font-family: var(--trop-menu-font-family, inherit);
   font-size: var(--trop-menu-font-size, 15px);
@@ -136,6 +136,13 @@ svg {
 .trop-header__menu-item > a:hover {
   color: var(--trop-menu-text-color-hover, #0070f3);
   text-decoration: none;
+}
+
+.trop-header__icons > .trop-header__icons.trop-flex {
+  display: flex;
+  align-items: center;
+  gap: var(--trop-menu-icon-gap, 12px);
+  white-space: nowrap;
 }
 
 .trop-header__icons > a {
