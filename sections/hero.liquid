@@ -54,7 +54,7 @@
   }
 
   .trop-hero__content {
-    max-width: {{ s.content_width }}px;
+    max-width: {{ s.content_width }}%;
     text-align: {{ s.text_alignment }};
     padding: {{ s.hero_padding_top }}px {{ s.hero_padding_right }}px {{ s.hero_padding_bottom }}px {{ s.hero_padding_left }}px;
     background-color:  {{ s.content_bg_color | color_modify: 'alpha', alpha }}
@@ -327,7 +327,7 @@
       "id": "content_width",
       "label": "Content Width",
       "min": 1,
-      "max": 101,
+      "max": 100,
       "step": 1,
       "default": 100,
       "unit": "%"
