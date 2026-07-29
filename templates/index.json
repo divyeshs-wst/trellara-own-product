@@ -24,10 +24,15 @@
         "description": "<p>This is Your Hero Heading.</p>",
         "content_width": 600,
         "text_alignment": "center",
-        "horizontal_position": "center",
+        "horizontal_position": "left",
         "vertical_position": "center",
+        "sub_heading_tag": "h3",
+        "sub_heading_size": 18,
+        "sub_heading_color": "#ffffff",
+        "heading_tag": "h2",
         "heading_size": 52,
         "heading_color": "#ffffff",
+        "description_size": 16,
         "description_color": "#ffffff"
       }
     }
