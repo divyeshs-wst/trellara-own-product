@@ -1,1 +1,116 @@
-{}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+
+{
+  "general": {
+    "meta": {
+      "tags": "Tagged \"{{ tags }}\"",
+      "page": "Page {{ page }}"
+    },
+    "pagination": {
+      "label": "Pagination"
+    },
+    "search": {
+      "title": "Search",
+      "search": "Search",
+      "placeholder": "Search our store",
+      "results_with_count": {
+        "one": "{{ count }} result for \"{{ terms }}\"",
+        "other": "{{ count }} results for \"{{ terms }}\""
+      },
+      "no_results": "No results found for \"{{ terms }}\". Check the spelling or use a different word or phrase."
+    },
+    "password_page": {
+      "password_label": "Password",
+      "password_placeholder": "Your password",
+      "submit": "Enter"
+    },
+    "continue_shopping": "Continue shopping"
+  },
+  "accessibility": {
+    "skip_to_content": "Skip to content",
+    "refresh_page": "Choosing a selection results in a full page refresh."
+  },
+  "sections": {
+    "header": {
+      "menu": "Menu"
+    },
+    "footer": {
+      "menu": "Footer menu",
+      "copyright": "All rights reserved."
+    },
+    "cart": {
+      "title": "Your cart",
+      "quantity": "Quantity",
+      "remove": "Remove",
+      "subtotal": "Subtotal",
+      "update": "Update",
+      "checkout": "Check out",
+      "empty": "Your cart is empty."
+    },
+    "collection_template": {
+      "empty": "No products found."
+    },
+    "collection_list": {
+      "title": "Collections"
+    },
+    "404": {
+      "title": "Page not found",
+      "subtext": "The page you were looking for does not exist."
+    }
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "Add to cart",
+      "sold_out": "Sold out",
+      "on_sale": "Sale"
+    }
+  },
+  "blogs": {
+    "article": {
+      "comments": {
+        "one": "{{ count }} comment",
+        "other": "{{ count }} comments"
+      }
+    }
+  },
+  "customer": {
+    "account": {
+      "title": "Account"
+    }
+  },
+  "blocks": {
+    "image": {
+      "open_lightbox": "Open image in lightbox"
+    },
+    "slider": {
+      "previous_slide": "Previous slide",
+      "next_slide": "Next slide",
+      "go_to_slide": "Go to slide {{ index }}"
+    },
+    "accordion": {
+      "expand": "Expand"
+    },
+    "video": {
+      "play": "Play video"
+    },
+    "testimonials": {
+      "rating_out_of_five": "Rated {{ rating }} out of 5 stars"
+    }
+  },
+  "gift_cards": {
+    "issued": {
+      "title": "Here's your {{ value }} gift card for {{ shop }}!",
+      "subtext": "Your gift card",
+      "gift_card_code": "Gift card code",
+      "shop_link": "Visit online store"
+    }
+  }
+}

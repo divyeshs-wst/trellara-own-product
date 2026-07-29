@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Trellara Own Product",
+    "theme_version": "0.1.0",
+    "theme_author": "Trellara Own Product",
+    "theme_documentation_url": "https://trellara-own-product.example.com/docs",
+    "theme_support_url": "https://trellara-own-product.example.com/support"
+  },
+  {
+    "name": "t:settings.brand.name",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "t:settings.brand.logo"
+      },
+      {
+        "type": "range",
+        "id": "logo_width",
+        "label": "t:settings.brand.logo_width",
+        "min": 60,
+        "max": 320,
+        "step": 10,
+        "unit": "px",
+        "default": 120
+      },
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "t:settings.brand.favicon",
+        "info": "t:settings.brand.favicon_info"
+      }
+    ]
+  },
+]
