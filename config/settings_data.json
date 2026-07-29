@@ -18,10 +18,14 @@
           "logo": "shopify://shop_images/ChatGPT_Image_Jul_29_2026_03_02_39_PM.png",
           "logo_width": 240,
           "menu": "main-menu",
+          "menu_item_gap": 12,
+          "menu_item_ffamily": "mono",
+          "menu_item_fsize": 16,
           "show_search": true,
           "show_account": true,
           "show_cart": true,
-          "header_bg_color": "#c5c4c4"
+          "header_bg_color": "#c5c4c4",
+          "header_c_bg_color": ""
         }
       }
     },
