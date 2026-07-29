@@ -53,7 +53,18 @@
             {%- if link.links != blank -%}
               <ul class="trop-header__submenu">
                 {%- for childlink in link.links -%}
-                  <li><a href="{{ childlink.url }}">{{ childlink.title }}</a></li>
+                  <li class="{% if childlink.links != blank %}has-dropdown{% endif %}">
+                    <a href="{{ childlink.url }}"{% if childlink.current %} aria-current="page"{% endif %}>{{ childlink.title }}</a>
+                    {%- if childlink.links != blank -%}
+                      <ul class="trop-header__submenu">
+                        {%- for grandchildlink in childlink.links -%}
+                          <li>
+                            <a href="{{ grandchildlink.url }}"{% if grandchildlink.current %} aria-current="page"{% endif %}>{{ grandchildlink.title }}</a>
+                          </li>
+                        {%- endfor -%}
+                      </ul>
+                    {%- endif -%}
+                  </li>
                 {%- endfor -%}
               </ul>
             {%- endif -%}
