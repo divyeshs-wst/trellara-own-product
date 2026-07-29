@@ -34,8 +34,11 @@
     --trop-menu-text-color-hover: {{ s.menu_item_color_hover | default: "#ffffff" }};
   }
 
-  .trop-header__icons > a {
+  .trop-header__icons > .trop-header__icons.trop-flex {
     --trop-menu-icon-gap: {{ s.menu_icon_gap | default: 12 }}px;
+  }
+  
+  .trop-header__icons > a {
     --trop-menu-icon-text-size: {{ s.menu_icon_fsize | default: "100%" }};
     --trop-menu-icon-text-color: {{ s.menu_icon_color | default: "#000000" }};
     --trop-menu-icon-text-color-hover: {{ s.menu_icon_color_hover | default: "#ffffff" }};
