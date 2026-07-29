@@ -22,7 +22,7 @@
   }
   .trop-header__inner {
     background-color: {{ container_bg_color }};
-    background-color: {{ section.settings.header_min_height }};
+    min-height: {{ section.settings.header_min_height }};
   }
   .trop-header__menu {
     --trop-menu-gap: {{ s.menu_item_gap | default: 12 }}px;
