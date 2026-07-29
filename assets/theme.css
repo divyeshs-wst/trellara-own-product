@@ -124,7 +124,7 @@ svg {
 .trop-header__menu-item > a {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: var(--trop-menu-gap-drodpown, 6)px;
   padding: 10px 0;
   font-family: var(--trop-menu-font-family, inherit);
   font-size: var(--trop-menu-font-size, 15px);
