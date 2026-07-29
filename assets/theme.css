@@ -121,7 +121,8 @@ svg {
   position: relative;
 }
 
-.trop-header__menu-item > a {
+.trop-header__menu-item > a,
+.trop-header__icons > a {
   display: flex;
   align-items: center;
   gap: var(--trop-menu-gap-drodpown, 12);
@@ -133,7 +134,8 @@ svg {
   white-space: nowrap;
 }
 
-.trop-header__menu-item > a:hover {
+.trop-header__menu-item > a:hover,
+.trop-header__icons > a:hover {
   text-decoration: none;
   color: #0070f3;
 }
