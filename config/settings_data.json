@@ -57,7 +57,7 @@
           "subheading": "Small heading",
           "heading": "Your Hero Heading",
           "description": "<p>This is Your Hero Heading.</p>",
-          "content_width": 600,
+          "content_width": 50,
           "text_alignment": "center",
           "horizontal_position": "center",
           "vertical_position": "center",
