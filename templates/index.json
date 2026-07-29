@@ -29,7 +29,7 @@
         "description": "<p>This is Your Hero Heading.</p>",
         "content_width": 50,
         "text_alignment": "left",
-        "horizontal_position": "flex-start",
+        "horizontal_position": "stretch",
         "vertical_position": "flex-end",
         "sub_heading_tag": "h3",
         "sub_heading_size": 18,
