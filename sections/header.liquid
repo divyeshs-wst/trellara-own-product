@@ -24,6 +24,7 @@
   .trop-header__inner {
     background-color: {{ container_bg_color }};
     min-height: {{ section.settings.header_min_height }}px;
+    padding: {{ section.settings.header_padding_topbottom }}px {{ section.settings.header_padding_leftright }}px {{ section.settings.header_padding_topbottom }}px {{ section.settings.header_padding_leftright }}px;
   }
   .trop-header__menu {
     --trop-menu-gap: {{ s.menu_item_gap | default: 12 }}px;
