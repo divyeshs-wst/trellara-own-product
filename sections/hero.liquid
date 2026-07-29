@@ -60,7 +60,7 @@
   </div>
 
   {% if s.enable_overlay %}
-    <div class="trop-hero__overlay"></div>
+    <div class="trop-hero__overlay" style="--hero-overlay-color: {{ s.overlay_color }};--hero-overlay-opacity: {{ overlay_opacity }};"></div>
   {% endif %}
 </section>
 
