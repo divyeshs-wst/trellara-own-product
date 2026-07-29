@@ -38,7 +38,9 @@
         "heading_size": 52,
         "heading_color": "#fcfcfc",
         "description_size": 16,
-        "description_color": "#fcfcfc"
+        "description_color": "#fcfcfc",
+        "content_bg_color": "#332F2F",
+        "content_overlay_opacity": 50
       }
     }
   },
