@@ -7,11 +7,19 @@
   if s.header_bg_color != blank
     assign bg_color = s.header_bg_color | append: ';'
   endif
+  
+  assign container_bg_color = 'transparent'
+  if s.header_c_bg_color != blank
+    assign container_bg_color = s.header_c_bg_color | append: ';'
+  endif
 -%}
 
 {% style %}
   .trop-header {
     background-color: {{ bg_color }};
+  }
+  .trop-header__inner {
+    background-color: {{ container_bg_color }};
   }
 {% endstyle %}
 
