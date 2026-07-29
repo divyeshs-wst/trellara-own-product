@@ -12,7 +12,7 @@
     "hero": {
       "type": "hero",
       "settings": {
-        "background_type": "image",
+        "background_type": "video",
         "desktop_image": "shopify://shop_images/SSSBronzingDrops-Lifestyle3.jpg",
         "hero_height": "small",
         "enable_overlay": true,
