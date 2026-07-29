@@ -54,6 +54,31 @@
 
     {
       "type": "select",
+      "id": "hero_height",
+      "label": "Hero Height",
+      "options": [
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        },
+        {
+          "value": "full",
+          "label": "Full Screen"
+        }
+      ],
+      "default": "medium"
+    },
+
+    {
+      "type": "select",
       "id": "background_type",
       "label": "Background Type",
       "options": [
@@ -87,31 +112,6 @@
       "id": "video",
       "label": "Background Video",
       "visible_if": "{{ section.settings.background_type == 'video' }}"
-    },
-
-    {
-      "type": "select",
-      "id": "hero_height",
-      "label": "Hero Height",
-      "options": [
-        {
-          "value": "small",
-          "label": "Small"
-        },
-        {
-          "value": "medium",
-          "label": "Medium"
-        },
-        {
-          "value": "large",
-          "label": "Large"
-        },
-        {
-          "value": "full",
-          "label": "Full Screen"
-        }
-      ],
-      "default": "medium"
     },
 
     {
