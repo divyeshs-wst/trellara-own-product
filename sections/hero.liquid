@@ -73,6 +73,32 @@
   {% if s.enable_overlay %}
     <div class="trop-hero__overlay" style="--hero-overlay-color: {{ s.overlay_color }};--hero-overlay-opacity: {{ overlay_opacity }};"></div>
   {% endif %}
+
+  <div class="trop-hero__container">
+    <div class="trop-hero__content trop-hero__content--{{ s.horizontal_position }} trop-hero__content--{{ s.vertical_position }}">
+      {% if s.subheading != blank %}
+      <span class="trop-hero__subheading">{{ s.subheading }}</span>
+      {% endif %}
+
+      {% if s.heading != blank %}
+      <h1>{{ s.heading }}</h1>
+      {% endif %}
+
+      {% if s.description != blank %}
+      <div class="trop-hero__description">{{ s.description }}</div>
+      {% endif %}
+
+      <div class="trop-hero__buttons">
+        {% if s.button_text != blank %}
+        <a href="{{ s.button_link }}" class="trop-hero__button">{{ s.button_text }}</a>
+        {% endif %}
+
+        {% if s.button_text_2 != blank %}
+        <a href="{{ s.button_link_2 }}" class="trop-hero__button trop-hero__button--secondary">{{ s.button_text_2 }}</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
 </section>
 
 {% schema %}
