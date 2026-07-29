@@ -28,7 +28,7 @@
     --trop-menu-font-family: {{ s.menu_item_ffamily.family }}, {{ s.menu_item_ffamily.fallback_families }};
     --trop-menu-font-size: {{ s.menu_item_fsize | default: 15 }}px;
   }
-  .trop-header__menu-item >{
+  .trop-header__menu-item > a{
     --trop-menu-gap-drodpown: {{ s.menu_item_gap_dropdown | default: 12 }}px;
     --trop-menu-text-color: {{ s.menu_item_color | default: "#000000" }};
     --trop-menu-text-color-hover: {{ s.menu_item_color_hover | default: "#ffffff" }};
