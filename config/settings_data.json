@@ -42,7 +42,7 @@
           "mobile_drawer_text_color": "#000000",
           "mobile_drawer_border_color": "#eaeaea",
           "mobile_overlay_color": "#332f2f",
-          "mobile_overlay_opacity": 50
+          "mobile_overlay_opacity": 80
         }
       }
     },
