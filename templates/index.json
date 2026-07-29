@@ -13,7 +13,7 @@
       "type": "hero",
       "settings": {
         "header_width": "container",
-        "hero_height": "small",
+        "hero_height": "medium",
         "hero_padding_top": 25,
         "hero_padding_right": 25,
         "hero_padding_bottom": 25,
