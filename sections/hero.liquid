@@ -1,207 +1,18 @@
 {{ 'hero.css' | asset_url | stylesheet_tag }}
 
-{%- liquid
-  assign s = section.settings
-
-  assign overlay_opacity = s.overlay_opacity | divided_by: 100.0
-
-  assign hero_height = 'auto'
-
-  if s.hero_height == 'small'
-    assign hero_height = '400px'
-  elsif s.hero_height == 'medium'
-    assign hero_height = '600px'
-  elsif s.hero_height == 'large'
-    assign hero_height = '800px'
-  elsif s.hero_height == 'full'
-    assign hero_height = '100vh'
-  endif
--%}
-
 
 {% style %}
 
-.trop-hero {
-  min-height: {{ hero_height }};
-  --hero-overlay-color: {{ s.overlay_color }};
-  --hero-overlay-opacity: {{ overlay_opacity }};
-  position: relative;
-  overflow: hidden;
-}
-.trop-hero__media {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 1;
-}
-
-.trop-hero__overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 2;
-}
-
-.trop-hero__content {
-  max-width: {{ s.content_width }}px;
-  text-align: {{ s.text_alignment }};
-}
-
-
-.trop-hero__content h1 {
-  color: {{ s.heading_color }};
-  font-size: {{ s.heading_size }}px;
-}
-
-
-.trop-hero__content p {
-  color: {{ s.description_color }};
-}
-
-
-.trop-hero__button {
-  background: {{ s.button_bg }};
-  color: {{ s.button_color }};
-  border-radius: {{ s.button_radius }}px;
-}
-
-
-.trop-hero__button:hover {
-  background: {{ s.button_hover_bg }};
-  color: {{ s.button_hover_color }};
-}
-
-
 {% endstyle %}
 
-
 <section class="trop-hero trop-hero--{{ s.background_type }}">
-
-  <div class="trop-hero__media">
-
-    {% if s.background_type == 'video' and s.video != blank %}
-
-      {{
-        s.video
-        | video_tag:
-          autoplay: true,
-          loop: true,
-          muted: true,
-          controls: false,
-          playsinline: true
-      }}
-
-    {% elsif s.desktop_image != blank %}
-
-      <picture>
-
-        {% if s.mobile_image != blank %}
-          <source 
-            media="(max-width: 767px)"
-            srcset="{{ s.mobile_image | image_url: width: 900 }}"
-          >
-        {% endif %}
-
-
-        <img
-          src="{{ s.desktop_image | image_url: width: 2000 }}"
-          alt="{{ s.desktop_image.alt | escape }}"
-          loading="lazy"
-        >
-
-      </picture>
-
-    {% endif %}
-
-  </div>
-
-
-  {% if s.enable_overlay %}
-    <div class="trop-hero__overlay"></div>
-  {% endif %}
-
-
-
-  <div class="trop-hero__container">
-
-    <div class="trop-hero__content
-      trop-hero__content--{{ s.horizontal_position }}
-      trop-hero__content--{{ s.vertical_position }}">
-
-
-      {% if s.subheading != blank %}
-        <span class="trop-hero__subheading">
-          {{ s.subheading }}
-        </span>
-      {% endif %}
-
-
-
-      {% if s.heading != blank %}
-        <h1>
-          {{ s.heading }}
-        </h1>
-      {% endif %}
-
-
-
-      {% if s.description != blank %}
-        <div class="trop-hero__description">
-          {{ s.description }}
-        </div>
-      {% endif %}
-
-
-
-      <div class="trop-hero__buttons">
-
-
-        {% if s.button_text != blank %}
-
-          <a 
-            href="{{ s.button_link }}"
-            class="trop-hero__button"
-          >
-            {{ s.button_text }}
-          </a>
-
-        {% endif %}
-
-
-
-        {% if s.button_text_2 != blank %}
-
-          <a 
-            href="{{ s.button_link_2 }}"
-            class="trop-hero__button trop-hero__button--secondary"
-          >
-            {{ s.button_text_2 }}
-          </a>
-
-        {% endif %}
-
-
-      </div>
-
-
-    </div>
-
-  </div>
+  
 </section>
 
 {% schema %}
 {
   "name": "Hero Banner",
   "settings": [
-
     {
       "type": "header",
       "content": "Background"
@@ -224,13 +35,11 @@
       "default": "image"
     },
 
-
     {
       "type": "image_picker",
       "id": "desktop_image",
       "label": "Desktop Image"
     },
-
 
     {
       "type": "image_picker",
@@ -238,13 +47,11 @@
       "label": "Mobile Image"
     },
 
-
     {
       "type": "video",
       "id": "video",
       "label": "Background Video"
     },
-
 
     {
       "type": "select",
@@ -271,12 +78,10 @@
       "default": "medium"
     },
 
-
     {
       "type": "header",
       "content": "Overlay"
     },
-
 
     {
       "type": "checkbox",
@@ -285,14 +90,12 @@
       "default": true
     },
 
-
     {
       "type": "color",
       "id": "overlay_color",
       "label": "Overlay Color",
       "default": "#000000"
     },
-
 
     {
       "type": "range",
@@ -305,19 +108,16 @@
       "unit": "%"
     },
 
-
     {
       "type": "header",
       "content": "Content"
     },
-
 
     {
       "type": "text",
       "id": "subheading",
       "label": "Small Heading"
     },
-
 
     {
       "type": "text",
@@ -326,13 +126,11 @@
       "default": "Your Hero Heading"
     },
 
-
     {
       "type": "richtext",
       "id": "description",
       "label": "Description"
     },
-
 
     {
       "type": "range",
@@ -344,7 +142,6 @@
       "default": 600,
       "unit": "px"
     },
-
 
     {
       "type": "select",
@@ -367,7 +164,6 @@
       "default": "center"
     },
 
-
     {
       "type": "select",
       "id": "horizontal_position",
@@ -388,7 +184,6 @@
       ],
       "default": "center"
     },
-
 
     {
       "type": "select",
@@ -411,12 +206,10 @@
       "default": "center"
     },
 
-
     {
       "type": "header",
       "content": "Heading Style"
     },
-
 
     {
       "type": "range",
@@ -429,14 +222,12 @@
       "unit": "px"
     },
 
-
     {
       "type": "color",
       "id": "heading_color",
       "label": "Heading Color",
       "default": "#ffffff"
     },
-
 
     {
       "type": "color",
@@ -445,12 +236,10 @@
       "default": "#ffffff"
     },
 
-
     {
       "type": "header",
       "content": "Button 1"
     },
-
 
     {
       "type": "text",
@@ -459,13 +248,11 @@
       "default": "Shop Now"
     },
 
-
     {
       "type": "url",
       "id": "button_link",
       "label": "Button Link"
     },
-
 
     {
       "type": "color",
@@ -474,14 +261,12 @@
       "default": "#ffffff"
     },
 
-
     {
       "type": "color",
       "id": "button_color",
       "label": "Button Text Color",
       "default": "#000000"
     },
-
 
     {
       "type": "color",
@@ -490,14 +275,12 @@
       "default": "#000000"
     },
 
-
     {
       "type": "color",
       "id": "button_hover_color",
       "label": "Button Hover Text Color",
       "default": "#ffffff"
     },
-
 
     {
       "type": "range",
@@ -510,12 +293,10 @@
       "unit": "px"
     },
 
-
     {
       "type": "header",
       "content": "Button 2"
     },
-
 
     {
       "type": "text",
@@ -523,16 +304,12 @@
       "label": "Button Text"
     },
 
-
     {
       "type": "url",
       "id": "button_link_2",
       "label": "Button Link"
     }
-
-
   ],
-
 
   "presets": [
     {
