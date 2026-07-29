@@ -46,7 +46,8 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
   }
 
   .trop-hero__content {
@@ -312,16 +313,24 @@
       "label": "Horizontal Position",
       "options": [
         {
-          "value": "left",
-          "label": "Left"
+          "value": "flex-start",
+          "label": "Flex Start"
+        },
+        {
+          "value": "flex-end",
+          "label": "Flex End"
         },
         {
           "value": "center",
           "label": "Center"
         },
         {
-          "value": "right",
-          "label": "Right"
+          "value": "stretch",
+          "label": "Stretch"
+        },
+        {
+          "value": "baseline",
+          "label": "Baseline"
         }
       ],
       "default": "center"
@@ -333,16 +342,16 @@
       "label": "Vertical Position",
       "options": [
         {
-          "value": "top",
-          "label": "Top"
+          "value": "flex-start",
+          "label": "Flex Start"
+        },
+        {
+          "value": "flex-end",
+          "label": "Flex End"
         },
         {
           "value": "center",
           "label": "Center"
-        },
-        {
-          "value": "bottom",
-          "label": "Bottom"
         }
       ],
       "default": "center"
