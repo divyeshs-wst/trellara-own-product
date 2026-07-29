@@ -129,7 +129,7 @@ svg {
   font-family: var(--trop-menu-font-family, inherit);
   font-size: var(--trop-menu-font-size, 15px);
   font-weight: 500;
-  color: inherit;
+  color: var(--trop-menu-text-color, inherit);
   white-space: nowrap;
 }
 
