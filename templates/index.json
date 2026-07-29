@@ -14,8 +14,10 @@
       "settings": {
         "header_width": "container",
         "hero_height": "small",
-        "hero_padding_leftright": 15,
-        "hero_padding_topbottom": 15,
+        "hero_padding_top": 15,
+        "hero_padding_right": 15,
+        "hero_padding_bottom": 32,
+        "hero_padding_left": 15,
         "background_type": "image",
         "desktop_image": "shopify://shop_images/SSSBronzingDrops-Lifestyle3.jpg",
         "video": "shopify://files/videos/Sauna reel 2.mp4",
