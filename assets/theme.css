@@ -6,3 +6,11 @@
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+
+
+/* header CSS start */
+.trop-header__inner {
+    justify-content: space-between;
+}
+/* header CSS end */
