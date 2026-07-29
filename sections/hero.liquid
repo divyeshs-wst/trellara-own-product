@@ -60,7 +60,8 @@
   }
 
   .trop-hero__subheading {
-    color: {{ s.heading_color }};
+    color: {{ s.sub_heading_color }};
+    font-size: {{ s.sub_heading_size }}px;
   }
 
   .trop-hero__content {{ s.heading_tag }} {
@@ -70,17 +71,7 @@
 
   .trop-hero__content p {
     color: {{ s.description_color }};
-  }
-
-  .trop-hero__button {
-    background: {{ s.button_bg }};
-    color: {{ s.button_color }};
-    border-radius: {{ s.button_radius }}px;
-  }
-
-  .trop-hero__button:hover {
-    background: {{ s.button_hover_bg }};
-    color: {{ s.button_hover_color }};
+    font-size: {{ s.description_size }}px;
   }
 {% endstyle %}
 
