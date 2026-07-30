@@ -1,0 +1,160 @@
+/* trop-collection-list.css
+   Structural / static styles.
+   Settings-driven (dynamic) styles live in the section's {% style %} block. */
+
+.trop-collection-list {
+  width: 100%;
+}
+
+.trop-collection-list__inner {
+  margin: 0 auto;
+}
+
+.trop-collection-list__inner.container {
+  max-width: 1280px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.trop-collection-list__inner.no-container {
+  max-width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Header row: heading + arrows */
+.trop-collection-list__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.trop-collection-list__heading {
+  margin: 0;
+}
+
+/* Wrapper holds the track + arrows */
+.trop-collection-list__wrapper {
+  position: relative;
+}
+
+/* Track: carousel mode */
+.trop-collection-list__track {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.trop-collection-list__track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Track: grid mode */
+.trop-collection-list__track.trop-collection-list__track--grid {
+  display: grid;
+  overflow: visible;
+  grid-template-columns: repeat(var(--trop-columns-mobile, 1), 1fr);
+}
+
+@media screen and (min-width: 768px) {
+  .trop-collection-list__track.trop-collection-list__track--grid {
+    grid-template-columns: repeat(var(--trop-columns-desktop, 4), 1fr);
+  }
+}
+
+/* Card */
+.trop-collection-list__card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  text-decoration: none;
+  display: block;
+  width: var(--trop-item-width-mobile, 260px);
+}
+
+@media screen and (min-width: 768px) {
+  .trop-collection-list__card {
+    width: var(--trop-item-width-desktop, 300px);
+  }
+}
+
+.trop-collection-list__track--grid .trop-collection-list__card {
+  width: 100%;
+}
+
+.trop-collection-list__card-inner {
+  overflow: hidden;
+  position: relative;
+}
+
+.trop-collection-list__image-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.trop-collection-list__image-wrap img,
+.trop-collection-list__image-wrap svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-position: center;
+}
+
+/* Label */
+.trop-collection-list__label {
+  display: block;
+}
+
+.trop-collection-list__label--overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+.trop-collection-list__label--below {
+  margin-top: 12px;
+}
+
+/* Navigation arrows */
+.trop-collection-list__nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.trop-collection-list__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.2s ease;
+}
+
+.trop-collection-list__arrow svg {
+  width: 45%;
+  height: 45%;
+  pointer-events: none;
+}
+
+.trop-collection-list__arrow[disabled] {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.trop-collection-list__arrow--square {
+  border-radius: 4px;
+}
+
+.trop-collection-list__arrow--circle {
+  border-radius: 50%;
+}
