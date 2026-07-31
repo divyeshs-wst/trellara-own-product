@@ -176,22 +176,7 @@ svg {
   max-width: 1200px;
   margin: 0 auto;
   /* overflow: hidden;  */
-}
-
-/* Full-Width Child */
-.no-container {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  
-  /* Example styling */
-  background-color: #333;
-  color: white;
-  padding: 20px 0;
-}   
+}  
 
 .trop-flex {
     display: flex;
@@ -478,8 +463,9 @@ svg {
 
 /* Full-Width Child */
 .no-container {
-  width: calc( 100% );
+  width: calc(100% - 30px);
   overflow: hidden;
+  margin: 0 auto;
 }   
 
 .trop-flex {
