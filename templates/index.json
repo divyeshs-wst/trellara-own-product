@@ -51,7 +51,7 @@
           "settings": {
             "collection": "frontpage",
             "custom_title": "",
-            "custom_link": ""
+            "custom_link": "shopify://collections/frontpage"
           }
         },
         "collection_nhkVbe": {
@@ -59,7 +59,7 @@
           "settings": {
             "collection": "cable-cross",
             "custom_title": "",
-            "custom_link": ""
+            "custom_link": "shopify://collections/cable-cross"
           }
         },
         "collection_Ut4xBP": {
@@ -67,7 +67,7 @@
           "settings": {
             "collection": "cardio",
             "custom_title": "",
-            "custom_link": ""
+            "custom_link": "shopify://collections/cardio"
           }
         },
         "collection_maEjMA": {
@@ -75,7 +75,7 @@
           "settings": {
             "collection": "collection-1",
             "custom_title": "",
-            "custom_link": ""
+            "custom_link": "shopify://collections/collection-1"
           }
         },
         "collection_A3Qyzi": {
@@ -83,7 +83,7 @@
           "settings": {
             "collection": "collection-2-copy",
             "custom_title": "",
-            "custom_link": ""
+            "custom_link": "shopify://collections/collection-2-copy"
           }
         }
       },
