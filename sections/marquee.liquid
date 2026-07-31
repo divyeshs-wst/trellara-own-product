@@ -233,6 +233,17 @@
     },
     {
       "type": "range",
+      "id": "icon_size",
+      "label": "Icon Size",
+      "min": 10,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "default": 50,
+      "visible_if": "{{ section.settings.divider_style == 'icon' }}"
+    },
+    {
+      "type": "range",
       "id": "divider_thickness",
       "label": "Character Size",
       "min": 1,
