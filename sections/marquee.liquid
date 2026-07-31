@@ -56,13 +56,11 @@
   <div class="marquee-content">
     {%- for block in section.blocks -%}
         {%- if section.settings.divider_position == "before" -%}
-            {%- unless forloop.start -%}
-                {%- if section.settings.divider_style == 'icon' -%}
-                <span class="marquee-divider line"></span>
-                {%- elsif section.settings.divider_style == 'character' and section.settings.divider_char != blank -%}
-                <span class="marquee-divider">{{ section.settings.divider_char }}</span>
-                {%- endif -%}
-            {%- endunless -%}
+            {%- if section.settings.divider_style == 'icon' -%}
+            <span class="marquee-divider line"></span>
+            {%- elsif section.settings.divider_style == 'character' and section.settings.divider_char != blank -%}
+            <span class="marquee-divider">{{ section.settings.divider_char }}</span>
+            {%- endif -%}
         {%- endif -%}
       
       <span class="marquee-item">
@@ -76,18 +74,16 @@
       </span>
 
         {%- if section.settings.divider_position == "after" -%}
-            {%- unless forloop.last -%}
-                {%- if section.settings.divider_style == 'icon' -%}
-                <span class="marquee-divider line"></span>
-                {%- elsif section.settings.divider_style == 'character' and section.settings.divider_char != blank -%}
-                <span class="marquee-divider">{{ section.settings.divider_char }}</span>
-                {%- endif -%}
-            {%- endunless -%}
+            {%- if section.settings.divider_style == 'icon' -%}
+            <span class="marquee-divider line"></span>
+            {%- elsif section.settings.divider_style == 'character' and section.settings.divider_char != blank -%}
+            <span class="marquee-divider">{{ section.settings.divider_char }}</span>
+            {%- endif -%}
         {%- endif -%}
     {%- endfor -%}
 
     {%- comment -%} Duplicate for seamless loop {%- endcomment -%}
-    {% comment %} {%- for block in section.blocks -%}
+    {%- for block in section.blocks -%}
 
         {%- if section.settings.divider_position == "before" -%}
             {%- if section.settings.divider_style == 'icon' -%}
@@ -114,7 +110,7 @@
             <span class="marquee-divider">{{ section.settings.divider_char }}</span>
             {%- endif -%}
         {%- endif -%}
-    {%- endfor -%} {% endcomment %}
+    {%- endfor -%}
   </div>
 </div>
 
