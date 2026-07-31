@@ -179,59 +179,53 @@
 
 <script>
   (function () {
-    var section = document.currentScript.closest('.trop-collection-list-{{ section.id }}');
-    if (!section) return;
-
-    var track = section.querySelector('[data-trop-track]');
-    var prevBtn = section.querySelector('[data-trop-prev]');
-    var nextBtn = section.querySelector('[data-trop-next]');
-    if (!track) return;
-
-    function scrollAmount() {
-      var card = track.querySelector('.trop-collection-list__card');
-      var gap = parseInt(getComputedStyle(track).columnGap || getComputedStyle(track).gap || 0, 10) || 0;
-      return card ? card.getBoundingClientRect().width + gap : 300;
-    }
-
-    function updateArrows() {
-      if (!prevBtn || !nextBtn) return;
-      var maxScroll = track.scrollWidth - track.clientWidth - 1;
-      prevBtn.disabled = track.scrollLeft <= 0;
-      nextBtn.disabled = track.scrollLeft >= maxScroll;
-    }
-
-    if (prevBtn) {
-      prevBtn.addEventListener('click', function () {
-        track.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
-      });
-    }
-    if (nextBtn) {
-      nextBtn.addEventListener('click', function () {
-        track.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
-      });
-    }
-
-    track.addEventListener('scroll', updateArrows);
-    window.addEventListener('resize', updateArrows);
-    updateArrows();
-
     function initTropCollectionList(section) {
+      if (!section) return;
+
       var track = section.querySelector('[data-trop-track]');
       var prevBtn = section.querySelector('[data-trop-prev]');
       var nextBtn = section.querySelector('[data-trop-next]');
       if (!track) return;
-      // ...existing scrollAmount/updateArrows/listener logic...
-    }
 
-    document.addEventListener('shopify:section:load', function (e) {
-      var section = e.target.querySelector('.trop-collection-list-{{ section.id }}');
-      if (section) initTropCollectionList(section);
-    });
+      function scrollAmount() {
+        var card = track.querySelector('.trop-collection-list__card');
+        var gap = parseInt(getComputedStyle(track).columnGap || getComputedStyle(track).gap || 0, 10) || 0;
+        return card ? card.getBoundingClientRect().width + gap : 300;
+      }
+
+      function updateArrows() {
+        if (!prevBtn || !nextBtn) return;
+        var maxScroll = track.scrollWidth - track.clientWidth - 1;
+        prevBtn.disabled = track.scrollLeft <= 0;
+        nextBtn.disabled = track.scrollLeft >= maxScroll;
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', function () {
+          track.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', function () {
+          track.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+        });
+      }
+
+      track.addEventListener('scroll', updateArrows);
+      window.addEventListener('resize', updateArrows);
+      updateArrows();
+    }
 
     (function () {
       var section = document.currentScript.closest('.trop-collection-list-{{ section.id }}');
-      if (section) initTropCollectionList(section);
+      initTropCollectionList(section);
     })();
+
+    document.addEventListener('shopify:section:load', function (event) {
+      var section = event.target.querySelector('.trop-collection-list-{{ section.id }}');
+      initTropCollectionList(section);
+    });
   })();
 </script>
 
