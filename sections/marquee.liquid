@@ -152,7 +152,7 @@
       "options": [
         { "value": "none", "label": "None" },
         { "value": "character", "label": "Character (e.g., |, •)" },
-        { "value": "line", "label": "Vertical Line" }
+        { "value": "Icon", "label": "Icon" }
       ],
       "default": "none"
     },
@@ -161,29 +161,20 @@
       "id": "divider_char",
       "label": "Divider Character",
       "default": "|",
-      "info": "Used only if 'Character' style is selected."
+      "info": "Used only if 'Character' style is selected.",
+      "visible_if": "{{ section.settings.divider_style == 'character' }}"
     },
     {
       "type": "range",
       "id": "divider_thickness",
-      "label": "Line Thickness",
+      "label": "Character Size",
       "min": 1,
-      "max": 10,
+      "max": 100,
       "step": 1,
       "unit": "px",
       "default": 1,
-      "info": "Used only if 'Vertical Line' style is selected."
-    },
-    {
-      "type": "range",
-      "id": "divider_height",
-      "label": "Line Height",
-      "min": 5,
-      "max": 50,
-      "step": 1,
-      "unit": "px",
-      "default": 16,
-      "info": "Used only if 'Vertical Line' style is selected."
+      "info": "Used only if 'Vertical Line' style is selected.",
+      "visible_if": "{{ section.settings.divider_style == 'character' }}"
     },
     {
       "type": "range",
