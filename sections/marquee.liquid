@@ -87,7 +87,7 @@
     {%- endfor -%}
 
     {%- comment -%} Duplicate for seamless loop {%- endcomment -%}
-    {%- for block in section.blocks -%}
+    {% comment %} {%- for block in section.blocks -%}
 
         {%- if section.settings.divider_position == "before" -%}
             {%- if section.settings.divider_style == 'icon' -%}
@@ -114,7 +114,7 @@
             <span class="marquee-divider">{{ section.settings.divider_char }}</span>
             {%- endif -%}
         {%- endif -%}
-    {%- endfor -%}
+    {%- endfor -%} {% endcomment %}
   </div>
 </div>
 
