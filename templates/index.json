@@ -199,6 +199,7 @@
         "speed": 30,
         "spacing": 50,
         "divider_style": "character",
+        "divider_position": "before",
         "divider_char": "|",
         "divider_thickness": 1,
         "divider_spacing": 20,
