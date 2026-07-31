@@ -60,23 +60,12 @@
             <span class="marquee-divider marquee-divider-icon">
               <picture>
                 {% if section.settings.icon_image != blank %}
-                  <source
-                    media="(max-width: 767px)"
-                    srcset="
-                      {{ section.settings.icon_image | image_url: width: 375 }} 375w,
-                      {{ section.settings.icon_image | image_url: width: 550 }} 550w,
-                      {{ section.settings.icon_image | image_url: width: 750 }} 750w,
-                      {{ section.settings.icon_image | image_url: width: 900 }} 900w
-                    "
-                    sizes="100vw"
-                  >
-                {% endif %}
-
-                {{
-                  section.settings.icon_image
-                  | image_url: width: 2000
-                  | image_tag: loading: 'lazy', widths: '750,1100,1500,2000', sizes: '100vw', alt: section.settings.icon_image.alt
-                }}
+                  {{
+                    section.settings.icon_image
+                    | image_url: width: auto
+                    | image_tag: loading: 'lazy', alt: section.settings.icon_image.alt
+                  }}
+                {%  endif %}
               </picture>
             </span>
             {%- elsif section.settings.divider_style == 'character' and section.settings.divider_char != blank -%}
