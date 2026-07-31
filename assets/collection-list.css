@@ -6,22 +6,6 @@
   width: 100%;
 }
 
-.trop-collection-list__inner {
-  margin: 0 auto;
-}
-
-/* .trop-collection-list__inner.container {
-  max-width: 1280px;
-  padding-left: 20px;
-  padding-right: 20px;
-} */
-
-.trop-collection-list__inner.no-container {
-  max-width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
 /* Header row: heading + arrows */
 .trop-collection-list__header {
   align-items: center;
