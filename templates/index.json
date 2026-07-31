@@ -196,7 +196,7 @@
         "color_background": "#000000",
         "color_text": "#ffffff",
         "font_size": 46,
-        "speed": 60,
+        "speed": 20,
         "spacing": 50,
         "divider_style": "character",
         "divider_position": "after",
