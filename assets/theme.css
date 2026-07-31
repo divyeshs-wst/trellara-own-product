@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* 1. Reset & Box Sizing */
 *,
 *::before,
@@ -20,7 +19,7 @@ html {
 /* 2. Body & Typography */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
                "Helvetica Neue", Arial, sans-serif; /* System font stack */
   line-height: 1.5;
   color: #333; /* Default text color */
@@ -64,302 +63,105 @@ svg {
   pointer-events: none; /* Prevents SVG from blocking click events */
 }
 
-/**
-*
-* CUSTOM CSS
-*
-*/
+/* Margin - All Sides */
+.m-0 { margin: 0; }
+.m-5 { margin: 5px; }
+.m-10 { margin: 10px; }
+.m-15 { margin: 15px; }
+.m-20 { margin: 20px; }
+.m-25 { margin: 25px; }
+.m-30 { margin: 30px; }
+.m-40 { margin: 40px; }
+.m-50 { margin: 50px; }
+.m-auto { margin: auto; }
 
-/* Parent Container: Fixed width and centered */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  /* overflow: hidden;  */
-}
+/* Margin Top */
+.mt-0 { margin-top: 0; }
+.mt-5 { margin-top: 5px; }
+.mt-10 { margin-top: 10px; }
+.mt-15 { margin-top: 15px; }
+.mt-20 { margin-top: 20px; }
+.mt-25 { margin-top: 25px; }
+.mt-30 { margin-top: 30px; }
+.mt-40 { margin-top: 40px; }
+.mt-50 { margin-top: 50px; }
+.mt-auto { margin-top: auto; }
 
-/* Full-Width Child */
-.no-container {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  
-  /* Example styling */
-  background-color: #333;
-  color: white;
-  padding: 20px 0;
-}   
+/* Margin Right */
+.mr-0 { margin-right: 0; }
+.mr-5 { margin-right: 5px; }
+.mr-10 { margin-right: 10px; }
+.mr-15 { margin-right: 15px; }
+.mr-20 { margin-right: 20px; }
+.mr-25 { margin-right: 25px; }
+.mr-30 { margin-right: 30px; }
+.mr-40 { margin-right: 40px; }
+.mr-50 { margin-right: 50px; }
+.mr-auto { margin-right: auto; }
 
-.trop-flex {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
+/* Margin Bottom */
+.mb-0 { margin-bottom: 0; }
+.mb-5 { margin-bottom: 5px; }
+.mb-10 { margin-bottom: 10px; }
+.mb-15 { margin-bottom: 15px; }
+.mb-20 { margin-bottom: 20px; }
+.mb-25 { margin-bottom: 25px; }
+.mb-30 { margin-bottom: 30px; }
+.mb-40 { margin-bottom: 40px; }
+.mb-50 { margin-bottom: 50px; }
+.mb-auto { margin-bottom: auto; }
 
+/* Margin Left */
+.ml-0 { margin-left: 0; }
+.ml-5 { margin-left: 5px; }
+.ml-10 { margin-left: 10px; }
+.ml-15 { margin-left: 15px; }
+.ml-20 { margin-left: 20px; }
+.ml-25 { margin-left: 25px; }
+.ml-30 { margin-left: 30px; }
+.ml-40 { margin-left: 40px; }
+.ml-50 { margin-left: 50px; }
+.ml-auto { margin-left: auto; }
 
-/* header CSS start */
-.trop-header__inner {
-    justify-content: space-between;
-    align-items: center;
-}
+/* Horizontal Margin */
+.mx-0 { margin-left: 0; margin-right: 0; }
+.mx-5 { margin-left: 5px; margin-right: 5px; }
+.mx-10 { margin-left: 10px; margin-right: 10px; }
+.mx-15 { margin-left: 15px; margin-right: 15px; }
+.mx-20 { margin-left: 20px; margin-right: 20px; }
+.mx-25 { margin-left: 25px; margin-right: 25px; }
+.mx-30 { margin-left: 30px; margin-right: 30px; }
+.mx-40 { margin-left: 40px; margin-right: 40px; }
+.mx-50 { margin-left: 50px; margin-right: 50px; }
+.mx-auto { margin-left: auto; margin-right: auto; }
 
-/* Navigation menu */
-.trop-header__nav {
-  position: relative;
-}
+/* Vertical Margin */
+.my-0 { margin-top: 0; margin-bottom: 0; }
+.my-5 { margin-top: 5px; margin-bottom: 5px; }
+.my-10 { margin-top: 10px; margin-bottom: 10px; }
+.my-15 { margin-top: 15px; margin-bottom: 15px; }
+.my-20 { margin-top: 20px; margin-bottom: 20px; }
+.my-25 { margin-top: 25px; margin-bottom: 25px; }
+.my-30 { margin-top: 30px; margin-bottom: 30px; }
+.my-40 { margin-top: 40px; margin-bottom: 40px; }
+.my-50 { margin-top: 50px; margin-bottom: 50px; }
+.my-auto { margin-top: auto; margin-bottom: auto; }
 
-.trop-header__menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: var(--trop-menu-gap, 12px);
-  align-items: center;
-}
+/* Tablet/Desktop */
+@media (min-width: 768px) {
+  .md-mt-0 { margin-top: 0; }
+  .md-mt-10 { margin-top: 10px; }
+  .md-mt-20 { margin-top: 20px; }
+  .md-mt-30 { margin-top: 30px; }
+  .md-mt-40 { margin-top: 40px; }
+  .md-mt-50 { margin-top: 50px; }
 
-.trop-header__menu-item {
-  position: relative;
-}
-
-.trop-header__menu-item > a {
-  display: flex;
-  align-items: center;
-  gap: var(--trop-menu-gap-drodpown, 12px);
-  padding: 10px 0;
-  font-family: var(--trop-menu-font-family, inherit);
-  font-size: var(--trop-menu-font-size, 15px);
-  font-weight: 500;
-  color: var(--trop-menu-text-color, inherit);
-  white-space: nowrap;
-}
-
-.trop-header__menu-item > a:hover {
-  color: var(--trop-menu-text-color-hover, #0070f3);
-  text-decoration: none;
-}
-
-.trop-header__icons.trop-flex {
-  gap: var(--trop-menu-icon-gap, 12px);
-}
-
-.trop-header__icons > a {
-  display: flex;
-  align-items: center;
-  gap: var(--trop-menu-icon-gap, 12px);
-  padding: 10px 0;
-  font-family: var(--trop-menu-font-family, inherit);
-  font-size: var(--trop-menu-icon-text-size, 100%);
-  font-weight: 500;
-  color: var(--trop-menu-icon-text-color, inherit);
-  white-space: nowrap;
-}
-
-.trop-header__icons > a:hover {
-  color: var(--trop-menu-icon-text-color-hover, #0070f3);
-  text-decoration: none;
-}
-
-/* Dropdown arrow indicator (top-level items) */
-.trop-header__menu-item.has-dropdown > a::after {
-  content: "";
-  width: 7px;
-  height: 7px;
-  border-right: 1.5px solid currentColor;
-  border-bottom: 1.5px solid currentColor;
-  transform: rotate(45deg);
-  margin-top: -3px;
-  transition: transform 0.2s ease;
-}
-
-.trop-header__menu-item.has-dropdown:hover > a::after {
-  transform: rotate(-135deg);
-  margin-top: 3px;
-}
-
-/* Submenu (dropdown panel) */
-.trop-header__submenu {
-  list-style: none;
-  margin: 0;
-  padding: 8px 0;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  min-width: 220px;
-  background: #fff;
-  border-radius: 6px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  z-index: 20;
-
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(8px);
-  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
-}
-
-.trop-header__menu-item.has-dropdown:hover > .trop-header__submenu,
-.trop-header__menu-item.has-dropdown:focus-within > .trop-header__submenu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.trop-header__submenu li {
-  position: relative;
-}
-
-.trop-header__submenu li > a {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 10px 20px;
-  font-size: 14px;
-  color: #333;
-  white-space: nowrap;
-}
-
-.trop-header__submenu li > a:hover {
-  background: #f5f5f5;
-  text-decoration: none;
-  color: #0070f3;
-}
-
-/* Arrow icon for submenu items that have their own children */
-.trop-header__submenu li.has-dropdown > a::after {
-  content: "";
-  width: 6px;
-  height: 6px;
-  flex-shrink: 0;
-  border-right: 1.5px solid currentColor;
-  border-bottom: 1.5px solid currentColor;
-  transform: rotate(-45deg);
-}
-
-/* Nested (3rd level) flyout submenu — opens to the right */
-.trop-header__submenu .trop-header__submenu {
-  top: 0;
-  left: 100%;
-  transform: translateX(8px);
-}
-
-.trop-header__submenu li:hover > .trop-header__submenu,
-.trop-header__submenu li:focus-within > .trop-header__submenu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(0);
-}
-
-/* Hamburger button - hidden on desktop */
-.trop-header__hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  z-index: 2;
-}
-
-.trop-header__hamburger span {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: var(--trop-line-bg, #fff);
-}
-
-/* Overlay backdrop */
-.trop-header__overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: var(--trop-overlay-color, #000);
-  opacity: var(--trop-overlay-opacity, 0.5);
-  z-index: 90;
-}
-
-.trop-header__overlay.is-open {
-  display: block;
-}
-
-/* Accordion toggle buttons - hidden on desktop */
-.trop-header__toggle {
-  display: none;
-}
-
-.trop-header__nav-head,
-.trop-header__close {
-  display: none;
-}
-
-=======
-/* 1. Reset & Box Sizing */
-*,
-*::before,
-*::after {
-  box-sizing: border-box; /* Prevents width/height overflow issues */
-}
-
-html {
-  font-size: 100%; /* Base 16px in most browsers */
-  scroll-behavior: smooth; /* Smooth scrolling for anchor links */
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    scroll-behavior: smooth;
-  }
-}
-
-/* 2. Body & Typography */
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
-               "Helvetica Neue", Arial, sans-serif; /* System font stack */
-  line-height: 1.5;
-  color: #333; /* Default text color */
-  background-color: #fff;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* 3. Media Elements */
-img,
-video,
-iframe {
-  max-width: 100%;
-  height: auto;
-  display: block; /* Removes bottom whitespace in flex/grid containers */
-}
-
-/* 4. Links */
-a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* 5. Selection */
-::selection {
-  background-color: #00f;
-  color: #fff;
-  text-shadow: none;
-}
-
-/* 6. SVGs */
-svg {
-  width: 100%;
-  height: 100%;
-  fill: currentColor;
-  pointer-events: none; /* Prevents SVG from blocking click events */
+  .md-mb-0 { margin-bottom: 0; }
+  .md-mb-10 { margin-bottom: 10px; }
+  .md-mb-20 { margin-bottom: 20px; }
+  .md-mb-30 { margin-bottom: 30px; }
+  .md-mb-40 { margin-bottom: 40px; }
+  .md-mb-50 { margin-bottom: 50px; }
 }
 
 /**
@@ -377,18 +179,10 @@ svg {
 
 /* Full-Width Child */
 .no-container {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  
-  /* Example styling */
-  background-color: #333;
-  color: white;
-  padding: 20px 0;
-}   
+  width: calc(100% - 30px);
+  overflow: hidden;
+  margin: 0 auto;
+}
 
 .trop-flex {
     display: flex;
@@ -666,8 +460,8 @@ svg {
   .trop-header__menu {
     flex-direction: column;
     gap: 0;
-    width: 100%;
-    padding: 8px 20px 24px;
+    width: initial;
+    padding: 8px 0px 24px 20px;
   }
 
   .trop-header__menu-item {
@@ -750,27 +544,3 @@ svg {
     transform: none;
   }
 }
-
-/* Mobile: stack menu, hide dropdowns by default (basic fallback) */
-@media (max-width: 768px) {
-  .trop-header__menu {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .trop-header__submenu {
-    position: static;
-    box-shadow: none;
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-    display: none;
-    padding-left: 16px;
-  }
-
-  .trop-header__menu-item.has-dropdown:hover .trop-header__submenu {
-    display: block;
-  }
-}
-/* header CSS end */
->>>>>>> 937be17f5c4c8fb55337b9d429508602af0d05a9

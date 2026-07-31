@@ -156,27 +156,6 @@
   }
 }
 
-/* Mobile: stack menu, hide dropdowns by default (basic fallback) */
-@media (max-width: 768px) {
-  .trop-header__menu {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .trop-header__submenu {
-    position: static;
-    box-shadow: none;
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-    display: none;
-    padding-left: 16px;
-  }
-
-  .trop-header__menu-item.has-dropdown:hover .trop-header__submenu {
-    display: block;
-  }
-}
 =======
 @media (max-width: 768px) {
   .trop-header__hamburger {
@@ -350,10 +329,6 @@
     transform: none;
     display: none;
     padding-left: 16px;
-  }
-
-  .trop-header__menu-item.has-dropdown:hover .trop-header__submenu {
-    display: block;
   }
 }
 >>>>>>> 937be17f5c4c8fb55337b9d429508602af0d05a9
