@@ -187,6 +187,12 @@
       "visible_if": "{{ section.settings.divider_style != 'none' }}"
     },
     {
+      "type": "image_picker",
+      "id": "icon_image",
+      "label": "Icon Image",
+      "visible_if": "{{ section.settings.divider_style == 'icon' }}"
+    },
+    {
       "type": "text",
       "id": "divider_char",
       "label": "Divider Character",
