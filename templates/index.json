@@ -98,11 +98,11 @@
       "settings": {
         "layout_style": "carousel",
         "container_width": "container",
-        "columns_desktop": 2,
+        "columns_desktop": 4,
         "columns_mobile": 1,
         "item_width_desktop": 300,
         "item_width_mobile": 220,
-        "item_gap": 20,
+        "item_gap": 40,
         "section_padding_top": 60,
         "section_padding_bottom": 60,
         "section_bg_color": "#ffffff",
