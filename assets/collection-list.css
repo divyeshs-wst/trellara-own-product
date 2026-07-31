@@ -2,10 +2,6 @@
    Structural / static styles.
    Settings-driven (dynamic) styles live in the section's {% style %} block. */
 
-.trop-collection-list {
-  width: 100%;
-}
-
 /* Header row: heading + arrows */
 .trop-collection-list__header {
   align-items: center;
