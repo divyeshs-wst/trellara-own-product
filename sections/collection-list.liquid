@@ -100,7 +100,7 @@
         <{{ s.heading_tag }} class="trop-collection-list__heading">{{ s.heading }}</{{ s.heading_tag }}>
       {% endif %}
 
-      {% if s.layout_style == 'carousel' and s.enable_arrows %}
+      {% if s.arrow_position == 'top' and  s.layout_style == 'carousel' and s.enable_arrows %}
         <div class="trop-collection-list__nav">
           <button
             type="button"
