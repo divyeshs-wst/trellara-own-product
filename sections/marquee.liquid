@@ -76,7 +76,7 @@
       </span>
 
         {%- if section.settings.divider_position == "after" -%}
-            {%- unless forloop.end -%}
+            {%- unless forloop.start -%}
                 {%- if section.settings.divider_style == 'icon' -%}
                 <span class="marquee-divider line"></span>
                 {%- elsif section.settings.divider_style == 'character' and section.settings.divider_char != blank -%}
