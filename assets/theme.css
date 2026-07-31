@@ -478,17 +478,8 @@ svg {
 
 /* Full-Width Child */
 .no-container {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  
-  /* Example styling */
-  background-color: #333;
-  color: white;
-  padding: 20px 0;
+  width: calc( 100% );
+  overflow: hidden;
 }   
 
 .trop-flex {
