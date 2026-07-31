@@ -25,9 +25,7 @@
 /* Header row: heading + arrows */
 .trop-collection-list__header {
   align-items: center;
-  /* justify-content: space-between; */
   gap: 16px;
-  margin-bottom: 24px;
 }
 
 .trop-collection-list__heading {
