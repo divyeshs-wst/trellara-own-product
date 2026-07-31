@@ -12,7 +12,7 @@
     "hero": {
       "type": "hero",
       "settings": {
-        "header_width": "no-container",
+        "header_width": "container",
         "hero_height": "medium",
         "hero_padding_top": 25,
         "hero_padding_right": 25,
@@ -97,7 +97,7 @@
       "name": "Collection List",
       "settings": {
         "layout_style": "carousel",
-        "container_width": "no-container",
+        "container_width": "container",
         "columns_desktop": 4,
         "columns_mobile": 1,
         "item_width_desktop": 300,
