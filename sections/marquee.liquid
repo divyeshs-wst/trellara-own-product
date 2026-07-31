@@ -57,7 +57,7 @@
     {%- for block in section.blocks -%}
         {%- if section.settings.divider_position == "before" -%}
             {%- if section.settings.divider_style == 'icon' -%}
-            <span class="marquee-divider">
+            <span class="marquee-divider marquee-divider-icon">
               <picture>
                 {% if section.settings.icon_image != blank %}
                   <source
@@ -96,7 +96,7 @@
 
         {%- if section.settings.divider_position == "after" -%}
             {%- if section.settings.divider_style == 'icon' -%}
-            <span class="marquee-divider">
+            <span class="marquee-divider marquee-divider-icon">
               <picture>
                 {% if section.settings.icon_image != blank %}
                   <source
@@ -129,7 +129,7 @@
 
         {%- if section.settings.divider_position == "before" -%}
             {%- if section.settings.divider_style == 'icon' -%}
-            <span class="marquee-divider">
+            <span class="marquee-divider marquee-divider-icon">
               <picture>
                 {% if section.settings.icon_image != blank %}
                   <source
@@ -168,7 +168,7 @@
 
         {%- if section.settings.divider_position == "after" -%}
             {%- if section.settings.divider_style == 'icon' -%}
-            <span class="marquee-divider">
+            <span class="marquee-divider marquee-divider-icon">
               <picture>
                 {% if section.settings.icon_image != blank %}
                   <source
