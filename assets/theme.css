@@ -27,6 +27,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 
 /* 3. Media Elements */
@@ -386,10 +387,6 @@ svg {
 .trop-header__nav-head,
 .trop-header__close {
   display: none;
-}
-
-.overflow-hidden {
-    overflow: hidden;
 }
 
 @media (max-width: 768px) {
