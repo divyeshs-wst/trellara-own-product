@@ -183,7 +183,7 @@
         "color_text": "#000000",
         "font_size": 32,
         "speed": 20,
-        "spacing": 50,
+        "spacing": 120,
         "divider_style": "icon",
         "divider_position": "before",
         "icon_image": "shopify://shop_images/hammer.png",
