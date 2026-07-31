@@ -522,6 +522,18 @@
     },
     {
       "type": "select",
+      "id": "arrow_space",
+      "label": "Arrow Space",
+      "options": [
+        { "value": "flex-start", "label": "Both Start" },
+        { "value": "flex-end", "label": "Both End" },
+        { "value": "space-between", "label": "Start & End" }
+      ],
+      "default": "flex-start",
+      "visible_if": "{{ section.settings.arrow_position == 'top_after_heading' }}"
+    },
+    {
+      "type": "select",
       "id": "arrow_style",
       "label": "Arrow Shape",
       "options": [
