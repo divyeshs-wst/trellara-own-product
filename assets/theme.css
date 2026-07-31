@@ -846,9 +846,9 @@ svg {
     padding-left: 16px;
   }
 
-  .trop-header__menu-item.has-dropdown:hover .trop-header__submenu {
+  /* .trop-header__menu-item.has-dropdown:hover .trop-header__submenu {
     display: block;
-  }
+  } */
 }
 /* header CSS end */
 >>>>>>> 937be17f5c4c8fb55337b9d429508602af0d05a9
