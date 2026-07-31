@@ -156,40 +156,26 @@
         "text_ri9M99": {
           "type": "text",
           "settings": {
-            "text": "Your Marquee Text Here"
+            "text": "Marquee 1"
           }
         },
-        "text_AVWmYz": {
+        "text_NDcigx": {
           "type": "text",
           "settings": {
-            "text": "Your Marquee Text Here"
+            "text": "Marquee 1"
           }
         },
-        "text_aPAh88": {
+        "text_3mUJwA": {
           "type": "text",
           "settings": {
-            "text": "Your Marquee Text Here"
-          }
-        },
-        "text_V3QgRd": {
-          "type": "text",
-          "settings": {
-            "text": "Your Marquee Text Here"
-          }
-        },
-        "text_9jfUaf": {
-          "type": "text",
-          "settings": {
-            "text": "Your Marquee Text Here"
+            "text": "Marquee 1"
           }
         }
       },
       "block_order": [
         "text_ri9M99",
-        "text_AVWmYz",
-        "text_aPAh88",
-        "text_V3QgRd",
-        "text_9jfUaf"
+        "text_NDcigx",
+        "text_3mUJwA"
       ],
       "name": "Marquee Text",
       "settings": {
