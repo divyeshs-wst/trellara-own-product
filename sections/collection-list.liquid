@@ -217,14 +217,18 @@
       updateArrows();
     }
 
-    (function () {
-      var section = document.currentScript.closest('.trop-collection-list-{{ section.id }}');
+    function trop_initSection_{{ section.id | replace: '-', '_' }}() {
+      var section = document.querySelector('.trop-collection-list-{{ section.id }}');
       initTropCollectionList(section);
-    })();
+    }
+
+    trop_initSection_{{ section.id | replace: '-', '_' }}();
 
     document.addEventListener('shopify:section:load', function (event) {
-      var section = event.target.querySelector('.trop-collection-list-{{ section.id }}');
-      initTropCollectionList(section);
+      var reloadedSection = event.target.querySelector('.trop-collection-list-{{ section.id }}');
+      if (reloadedSection) {
+        initTropCollectionList(reloadedSection);
+      }
     });
   })();
 </script>
