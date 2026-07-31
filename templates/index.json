@@ -188,6 +188,7 @@
         "divider_position": "before",
         "icon_image": "shopify://shop_images/hammer.png",
         "divider_char": "|",
+        "icon_size": 32,
         "divider_thickness": 1,
         "divider_spacing": 20,
         "link": "",
