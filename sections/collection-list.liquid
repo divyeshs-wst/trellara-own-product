@@ -26,10 +26,8 @@
   }
 
   .trop-collection-list-{{ section.id }} .trop-collection-list__header {
-    justify-content: {{ s.arrow_space }};
+    justify-content: {% if s.arrow_position == 'top' %} {{ s.arrow_space }}; {%  elsif s.arrow_position == 'bottom' %} {{ s.arrow_bottom_align }}; {%  endif %}
   }
-
-  
 
   .trop-collection-list-{{ section.id }} .trop-collection-list__heading {
     color: {{ s.heading_color }};
