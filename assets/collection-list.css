@@ -10,11 +10,11 @@
   margin: 0 auto;
 }
 
-.trop-collection-list__inner.container {
+/* .trop-collection-list__inner.container {
   max-width: 1280px;
   padding-left: 20px;
   padding-right: 20px;
-}
+} */
 
 .trop-collection-list__inner.no-container {
   max-width: 100%;
