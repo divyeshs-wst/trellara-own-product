@@ -1,1 +1,158 @@
-{"sections":{"hero":{"type":"hero","settings":{"header_width":"container","hero_height":"medium","hero_padding_top":25,"hero_padding_right":25,"hero_padding_bottom":25,"hero_padding_left":25,"background_type":"image","desktop_image":"shopify:\/\/shop_images\/SSSBronzingDrops-Lifestyle3.jpg","video":"shopify:\/\/files\/videos\/Sauna reel 2.mp4","enable_overlay":true,"overlay_color":"#000000","overlay_opacity":50,"subheading":"Small heading","heading":"Your Hero Heading","description":"<p>This is Your Hero Heading.<\/p>","content_width":50,"text_alignment":"left","horizontal_position":"stretch","vertical_position":"flex-end","sub_heading_tag":"h3","sub_heading_size":18,"sub_heading_color":"#fcfcfc","heading_tag":"h2","heading_size":52,"heading_color":"#fcfcfc","description_size":16,"description_color":"#fcfcfc","content_bg_color":"#332f2f","content_overlay_opacity":60}},"collection_list_ejKEpy":{"type":"collection-list","blocks":{"collection_QciziD":{"type":"collection","settings":{"collection":"frontpage","custom_title":"","custom_link":"shopify:\/\/collections\/frontpage"}},"collection_nhkVbe":{"type":"collection","settings":{"collection":"cable-cross","custom_title":"","custom_link":"shopify:\/\/collections\/cable-cross"}},"collection_Ut4xBP":{"type":"collection","settings":{"collection":"cardio","custom_title":"","custom_link":"shopify:\/\/collections\/cardio"}},"collection_maEjMA":{"type":"collection","settings":{"collection":"collection-1","custom_title":"","custom_link":"shopify:\/\/collections\/collection-1"}},"collection_A3Qyzi":{"type":"collection","settings":{"collection":"collection-2-copy","custom_title":"","custom_link":"shopify:\/\/collections\/collection-2-copy"}}},"block_order":["collection_QciziD","collection_nhkVbe","collection_Ut4xBP","collection_maEjMA","collection_A3Qyzi"],"name":"Collection List","settings":{"layout_style":"carousel","container_width":"container","columns_desktop":4,"columns_mobile":1,"item_width_desktop":300,"item_width_mobile":220,"item_gap":22,"section_padding_top":120,"section_padding_bottom":120,"section_bg_color":"#ffffff","heading":"Shop the Essentials","heading_tag":"h2","heading_size":26,"heading_color":"#1a1a1a","heading_alignment":"start","heading_transform":"uppercase","card_bg_color":"#FFFFFF","card_border_radius":0,"image_aspect_ratio":"square","image_fit":"cover","image_border_radius":20,"label_position":"below","label_color":"#1a1a1a","label_size":16,"label_font_weight":"600","label_transform":"uppercase","enable_arrows":true,"arrow_position":"bottom","arrow_space":"space-between","arrow_bottom_align":"flex-end","arrow_style":"circle","arrow_size":36,"arrow_bg_color":"#949494","arrow_icon_color":"#1a1a1a"}}},"order":["hero","collection_list_ejKEpy"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "header_width": "container",
+        "hero_height": "medium",
+        "hero_padding_top": 25,
+        "hero_padding_right": 25,
+        "hero_padding_bottom": 25,
+        "hero_padding_left": 25,
+        "background_type": "image",
+        "desktop_image": "shopify://shop_images/SSSBronzingDrops-Lifestyle3.jpg",
+        "video": "shopify://files/videos/Sauna reel 2.mp4",
+        "enable_overlay": true,
+        "overlay_color": "#000000",
+        "overlay_opacity": 50,
+        "subheading": "Small heading",
+        "heading": "Your Hero Heading",
+        "description": "<p>This is Your Hero Heading.</p>",
+        "content_width": 50,
+        "text_alignment": "left",
+        "horizontal_position": "stretch",
+        "vertical_position": "flex-end",
+        "sub_heading_tag": "h3",
+        "sub_heading_size": 18,
+        "sub_heading_color": "#fcfcfc",
+        "heading_tag": "h2",
+        "heading_size": 52,
+        "heading_color": "#fcfcfc",
+        "description_size": 16,
+        "description_color": "#fcfcfc",
+        "content_bg_color": "#332f2f",
+        "content_overlay_opacity": 60
+      }
+    },
+    "collection_list_ejKEpy": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_QciziD": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage",
+            "custom_title": "",
+            "custom_link": "shopify://collections/frontpage"
+          }
+        },
+        "collection_nhkVbe": {
+          "type": "collection",
+          "settings": {
+            "collection": "cable-cross",
+            "custom_title": "",
+            "custom_link": "shopify://collections/cable-cross"
+          }
+        },
+        "collection_Ut4xBP": {
+          "type": "collection",
+          "settings": {
+            "collection": "cardio",
+            "custom_title": "",
+            "custom_link": "shopify://collections/cardio"
+          }
+        },
+        "collection_maEjMA": {
+          "type": "collection",
+          "settings": {
+            "collection": "collection-1",
+            "custom_title": "",
+            "custom_link": "shopify://collections/collection-1"
+          }
+        },
+        "collection_Wc43RL": {
+          "type": "collection",
+          "settings": {
+            "collection": "cable-cross",
+            "custom_title": "",
+            "custom_link": "shopify://collections/cable-cross"
+          }
+        },
+        "collection_pGmJNp": {
+          "type": "collection",
+          "settings": {
+            "collection": "cardio",
+            "custom_title": "",
+            "custom_link": "shopify://collections/cardio"
+          }
+        },
+        "collection_A3Qyzi": {
+          "type": "collection",
+          "settings": {
+            "collection": "collection-2-copy",
+            "custom_title": "",
+            "custom_link": "shopify://collections/collection-2-copy"
+          }
+        }
+      },
+      "block_order": [
+        "collection_QciziD",
+        "collection_nhkVbe",
+        "collection_Ut4xBP",
+        "collection_maEjMA",
+        "collection_Wc43RL",
+        "collection_pGmJNp",
+        "collection_A3Qyzi"
+      ],
+      "name": "Collection List",
+      "settings": {
+        "layout_style": "carousel",
+        "container_width": "container",
+        "columns_desktop": 4,
+        "columns_mobile": 1,
+        "item_width_desktop": 300,
+        "item_width_mobile": 220,
+        "item_gap": 22,
+        "section_padding_top": 120,
+        "section_padding_bottom": 120,
+        "section_bg_color": "#ffffff",
+        "heading": "Shop the Essentials",
+        "heading_tag": "h2",
+        "heading_size": 26,
+        "heading_color": "#1a1a1a",
+        "heading_alignment": "start",
+        "heading_transform": "uppercase",
+        "card_bg_color": "#FFFFFF",
+        "card_border_radius": 0,
+        "image_aspect_ratio": "square",
+        "image_fit": "cover",
+        "image_border_radius": 20,
+        "label_position": "below",
+        "label_color": "#1a1a1a",
+        "label_size": 16,
+        "label_font_weight": "600",
+        "label_transform": "uppercase",
+        "enable_arrows": true,
+        "arrow_position": "bottom",
+        "arrow_space": "space-between",
+        "arrow_bottom_align": "flex-end",
+        "arrow_style": "circle",
+        "arrow_size": 36,
+        "arrow_bg_color": "#949494",
+        "arrow_icon_color": "#1a1a1a"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "collection_list_ejKEpy"
+  ]
+}
