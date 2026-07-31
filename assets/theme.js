@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 document.addEventListener('DOMContentLoaded', function () {
   var hamburger = document.querySelector('.trop-header__hamburger');
   var nav = document.getElementById('trop-header-nav');
@@ -42,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
       toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
   });
-=======
+  
 document.addEventListener('DOMContentLoaded', function () {
   var hamburger = document.querySelector('.trop-header__hamburger');
   var nav = document.getElementById('trop-header-nav');
@@ -86,5 +85,4 @@ document.addEventListener('DOMContentLoaded', function () {
       toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
   });
->>>>>>> 937be17f5c4c8fb55337b9d429508602af0d05a9
 });
