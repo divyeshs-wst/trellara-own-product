@@ -745,7 +745,7 @@ svg {
     flex-direction: column;
     gap: 0;
     width: initial;
-    padding: 8px 20px 24px;
+    padding: 8px 0px 24px 20px;
   }
 
   .trop-header__menu-item {
