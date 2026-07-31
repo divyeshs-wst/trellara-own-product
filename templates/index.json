@@ -116,7 +116,7 @@
         "card_border_radius": 0,
         "image_aspect_ratio": "square",
         "image_fit": "cover",
-        "label_position": "overlay",
+        "label_position": "below",
         "label_color": "#1a1a1a",
         "label_size": 16,
         "label_font_weight": "600",
