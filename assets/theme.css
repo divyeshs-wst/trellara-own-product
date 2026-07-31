@@ -388,6 +388,10 @@ svg {
   display: none;
 }
 
+.overflow-hidden {
+    overflow: hidden;
+}
+
 @media (max-width: 768px) {
   .trop-header__hamburger {
     display: flex;
