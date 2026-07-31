@@ -102,7 +102,7 @@
         "columns_mobile": 1,
         "item_width_desktop": 300,
         "item_width_mobile": 220,
-        "item_gap": 40,
+        "item_gap": 22,
         "section_padding_top": 80,
         "section_padding_bottom": 80,
         "section_bg_color": "#ffffff",
