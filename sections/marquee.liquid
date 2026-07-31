@@ -88,11 +88,14 @@
 
     {%- comment -%} Duplicate for seamless loop {%- endcomment -%}
     {%- for block in section.blocks -%}
-      {%- if section.settings.divider_style == 'line' -%}
-        <span class="marquee-divider line"></span>
-      {%- elsif section.settings.divider_style == 'character' and section.settings.divider_char != blank -%}
-        <span class="marquee-divider">{{ section.settings.divider_char }}</span>
-      {%- endif -%}
+
+        {%- if section.settings.divider_position == "before" -%}
+            {%- if section.settings.divider_style == 'icon' -%}
+            <span class="marquee-divider line"></span>
+            {%- elsif section.settings.divider_style == 'character' and section.settings.divider_char != blank -%}
+            <span class="marquee-divider">{{ section.settings.divider_char }}</span>
+            {%- endif -%}
+        {%- endif -%}
 
       <span class="marquee-item">
         {%- if section.settings.link != blank -%}
@@ -103,6 +106,14 @@
           {{ block.settings.text | escape }}
         {%- endif -%}
       </span>
+
+        {%- if section.settings.divider_position == "after" -%}
+            {%- if section.settings.divider_style == 'icon' -%}
+            <span class="marquee-divider line"></span>
+            {%- elsif section.settings.divider_style == 'character' and section.settings.divider_char != blank -%}
+            <span class="marquee-divider">{{ section.settings.divider_char }}</span>
+            {%- endif -%}
+        {%- endif -%}
     {%- endfor -%}
   </div>
 </div>
