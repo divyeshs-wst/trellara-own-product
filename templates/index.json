@@ -181,7 +181,7 @@
       "settings": {
         "color_background": "#000000",
         "color_text": "#ffffff",
-        "font_size": 46,
+        "font_size": 16,
         "speed": 20,
         "spacing": 50,
         "divider_style": "icon",
