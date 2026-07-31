@@ -513,12 +513,10 @@
       "id": "arrow_position",
       "label": "Arrow Position",
       "options": [
-        { "value": "top_after_heading", "label": "Top After Heading" },
-        { "value": "bottom_left", "label": "Bottom Left" },
-        { "value": "bottom_right", "label": "Bottom Right" },
-        { "value": "bottom_center", "label": "Bottom Center" }
+        { "value": "top", "label": "Top" },
+        { "value": "bottom", "label": "Bottom" }
       ],
-      "default": "top_after_heading",
+      "default": "top",
       "visible_if": "{{ section.settings.enable_arrows == true }}"
     },
     {
@@ -531,7 +529,19 @@
         { "value": "space-between", "label": "Space Between" }
       ],
       "default": "flex-start",
-      "visible_if": "{{ section.settings.arrow_position == 'top_after_heading' }}"
+      "visible_if": "{{ section.settings.arrow_position == 'top' }}"
+    },
+    {
+      "type": "select",
+      "id": "arrow_bottom_align",
+      "label": "Arrow Bottom Align",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" },
+        { "value": "center", "label": "Center" }
+      ],
+      "default": "left",
+      "visible_if": "{{ section.settings.arrow_position == 'top' }}"
     },
     {
       "type": "select",
