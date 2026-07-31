@@ -10,7 +10,7 @@
   }
 
   .marquee-content {
-    display: inline-block;
+    display: inline-flex;
     padding-left: 100%;
     animation: marquee-scroll {{ section.settings.speed | default: 20 }}s linear infinite;
   }
@@ -28,7 +28,7 @@
 
   /* Divider Styles */
   .marquee-divider {
-    display: inline-block;
+    display: inline-flex;
     font-size: {{ section.settings.font_size | default: 16 }}px;
     opacity: 0.7;
     user-select: none;
