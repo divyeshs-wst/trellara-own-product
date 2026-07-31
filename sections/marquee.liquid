@@ -157,6 +157,17 @@
       "default": "none"
     },
     {
+      "type": "select",
+      "id": "divider_position",
+      "label": "Divider Position",
+      "options": [
+        { "value": "after", "label": "After" },
+        { "value": "before", "label": "Before" }
+      ],
+      "default": "after",
+      "visible_if": "{{ section.settings.divider_style != 'none' }}"
+    },
+    {
       "type": "text",
       "id": "divider_char",
       "label": "Divider Character",
