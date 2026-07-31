@@ -36,12 +36,8 @@
     flex-direction: row;
   }
 
-  .marquee-divider.line {
-    width: {{ section.settings.divider_thickness | default: 1 }}px;
-    height: {{ section.settings.divider_height | default: 16 }}px;
-    background-color: {{ section.settings.color_text | default: '#ffffff' }};
-    margin: 0 {{ section.settings.divider_spacing | default: 20 }}px;
-    vertical-align: middle;
+  .marquee-divider-icon img {
+    margin: auto;
   }
 
   .marquee-item:hover {
