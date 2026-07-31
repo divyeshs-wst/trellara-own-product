@@ -97,7 +97,7 @@
       "name": "Collection List",
       "settings": {
         "layout_style": "carousel",
-        "container_width": "container",
+        "container_width": "no-container",
         "columns_desktop": 4,
         "columns_mobile": 1,
         "item_width_desktop": 300,
