@@ -176,6 +176,19 @@
       </div>
     </div>
 
+    <div class="trop-collection-list__header trop-flex">
+      {% if s.arrow_position == 'bottom' and  s.layout_style == 'carousel' and s.enable_arrows %}
+        <div class="trop-collection-list__nav">
+          <button type="button" class="{{ arrow_shape_class }}" data-trop-prev aria-label="Previous">
+            <svg viewBox="0 0 24 24"><path d="M15.5 4.5 8 12l7.5 7.5 1.5-1.5L11 12l6-6z"/></svg>
+          </button>
+          <button type="button" class="{{ arrow_shape_class }}" data-trop-next aria-label="Next">
+            <svg viewBox="0 0 24 24"><path d="M8.5 4.5 16 12l-7.5 7.5L7 18l6-6-6-6z"/></svg>
+          </button>
+        </div>
+      {% endif %}
+    </div>
+
   </div>
 </section>
 
