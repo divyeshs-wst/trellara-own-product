@@ -156,23 +156,6 @@
   }
 }
 
-/* Mobile: stack menu, hide dropdowns by default (basic fallback) */
-@media (max-width: 768px) {
-  .trop-header__menu {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .trop-header__submenu {
-    position: static;
-    box-shadow: none;
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-    display: none;
-    padding-left: 16px;
-  }
-}
 =======
 @media (max-width: 768px) {
   .trop-header__hamburger {
