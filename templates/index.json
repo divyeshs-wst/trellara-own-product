@@ -124,7 +124,7 @@
         "enable_arrows": true,
         "arrow_position": "bottom",
         "arrow_space": "space-between",
-        "arrow_bottom_align": "left",
+        "arrow_bottom_align": "flex-end",
         "arrow_style": "circle",
         "arrow_size": 36,
         "arrow_bg_color": "#f2f2f2",
