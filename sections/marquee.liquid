@@ -57,7 +57,28 @@
     {%- for block in section.blocks -%}
         {%- if section.settings.divider_position == "before" -%}
             {%- if section.settings.divider_style == 'icon' -%}
-            <span class="marquee-divider line"></span>
+            <span class="marquee-divider">
+              <picture>
+                {% if s.icon_image != blank %}
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      {{ s.icon_image | image_url: width: 375 }} 375w,
+                      {{ s.icon_image | image_url: width: 550 }} 550w,
+                      {{ s.icon_image | image_url: width: 750 }} 750w,
+                      {{ s.icon_image | image_url: width: 900 }} 900w
+                    "
+                    sizes="100vw"
+                  >
+                {% endif %}
+
+                {{
+                  s.icon_image
+                  | image_url: width: 2000
+                  | image_tag: loading: 'lazy', widths: '750,1100,1500,2000', sizes: '100vw', alt: s.icon_image.alt
+                }}
+              </picture>
+            </span>
             {%- elsif section.settings.divider_style == 'character' and section.settings.divider_char != blank -%}
             <span class="marquee-divider">{{ section.settings.divider_char }}</span>
             {%- endif -%}
@@ -75,7 +96,28 @@
 
         {%- if section.settings.divider_position == "after" -%}
             {%- if section.settings.divider_style == 'icon' -%}
-            <span class="marquee-divider line"></span>
+            <span class="marquee-divider">
+              <picture>
+                {% if s.icon_image != blank %}
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      {{ s.icon_image | image_url: width: 375 }} 375w,
+                      {{ s.icon_image | image_url: width: 550 }} 550w,
+                      {{ s.icon_image | image_url: width: 750 }} 750w,
+                      {{ s.icon_image | image_url: width: 900 }} 900w
+                    "
+                    sizes="100vw"
+                  >
+                {% endif %}
+
+                {{
+                  s.icon_image
+                  | image_url: width: 2000
+                  | image_tag: loading: 'lazy', widths: '750,1100,1500,2000', sizes: '100vw', alt: s.icon_image.alt
+                }}
+              </picture>
+            </span>
             {%- elsif section.settings.divider_style == 'character' and section.settings.divider_char != blank -%}
             <span class="marquee-divider">{{ section.settings.divider_char }}</span>
             {%- endif -%}
@@ -87,7 +129,28 @@
 
         {%- if section.settings.divider_position == "before" -%}
             {%- if section.settings.divider_style == 'icon' -%}
-            <span class="marquee-divider line"></span>
+            <span class="marquee-divider">
+              <picture>
+                {% if s.icon_image != blank %}
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      {{ s.icon_image | image_url: width: 375 }} 375w,
+                      {{ s.icon_image | image_url: width: 550 }} 550w,
+                      {{ s.icon_image | image_url: width: 750 }} 750w,
+                      {{ s.icon_image | image_url: width: 900 }} 900w
+                    "
+                    sizes="100vw"
+                  >
+                {% endif %}
+
+                {{
+                  s.icon_image
+                  | image_url: width: 2000
+                  | image_tag: loading: 'lazy', widths: '750,1100,1500,2000', sizes: '100vw', alt: s.icon_image.alt
+                }}
+              </picture>
+            </span>
             {%- elsif section.settings.divider_style == 'character' and section.settings.divider_char != blank -%}
             <span class="marquee-divider">{{ section.settings.divider_char }}</span>
             {%- endif -%}
@@ -105,7 +168,28 @@
 
         {%- if section.settings.divider_position == "after" -%}
             {%- if section.settings.divider_style == 'icon' -%}
-            <span class="marquee-divider line"></span>
+            <span class="marquee-divider">
+              <picture>
+                {% if s.icon_image != blank %}
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      {{ s.icon_image | image_url: width: 375 }} 375w,
+                      {{ s.icon_image | image_url: width: 550 }} 550w,
+                      {{ s.icon_image | image_url: width: 750 }} 750w,
+                      {{ s.icon_image | image_url: width: 900 }} 900w
+                    "
+                    sizes="100vw"
+                  >
+                {% endif %}
+
+                {{
+                  s.icon_image
+                  | image_url: width: 2000
+                  | image_tag: loading: 'lazy', widths: '750,1100,1500,2000', sizes: '100vw', alt: s.icon_image.alt
+                }}
+              </picture>
+            </span>
             {%- elsif section.settings.divider_style == 'character' and section.settings.divider_char != blank -%}
             <span class="marquee-divider">{{ section.settings.divider_char }}</span>
             {%- endif -%}
