@@ -98,7 +98,7 @@
       "settings": {
         "layout_style": "carousel",
         "container_width": "container",
-        "columns_desktop": 4,
+        "columns_desktop": 2,
         "columns_mobile": 1,
         "item_width_desktop": 300,
         "item_width_mobile": 220,
