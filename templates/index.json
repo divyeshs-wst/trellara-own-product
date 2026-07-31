@@ -130,7 +130,7 @@
         "heading_color": "#1a1a1a",
         "heading_alignment": "start",
         "heading_transform": "uppercase",
-        "card_bg_color": "#FFFFFF",
+        "card_bg_color": "#ffffff",
         "card_border_radius": 0,
         "image_aspect_ratio": "square",
         "image_fit": "cover",
@@ -149,10 +149,65 @@
         "arrow_bg_color": "#949494",
         "arrow_icon_color": "#1a1a1a"
       }
+    },
+    "marquee_nP73QW": {
+      "type": "marquee",
+      "blocks": {
+        "text_ri9M99": {
+          "type": "text",
+          "settings": {
+            "text": "Your Marquee Text Here"
+          }
+        },
+        "text_AVWmYz": {
+          "type": "text",
+          "settings": {
+            "text": "Your Marquee Text Here"
+          }
+        },
+        "text_aPAh88": {
+          "type": "text",
+          "settings": {
+            "text": "Your Marquee Text Here"
+          }
+        },
+        "text_V3QgRd": {
+          "type": "text",
+          "settings": {
+            "text": "Your Marquee Text Here"
+          }
+        },
+        "text_9jfUaf": {
+          "type": "text",
+          "settings": {
+            "text": "Your Marquee Text Here"
+          }
+        }
+      },
+      "block_order": [
+        "text_ri9M99",
+        "text_AVWmYz",
+        "text_aPAh88",
+        "text_V3QgRd",
+        "text_9jfUaf"
+      ],
+      "name": "Marquee Text",
+      "settings": {
+        "color_background": "#000000",
+        "color_text": "#ffffff",
+        "font_size": 46,
+        "speed": 30,
+        "spacing": 50,
+        "link": "",
+        "link_target": "_self",
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
     }
   },
   "order": [
     "hero",
-    "collection_list_ejKEpy"
+    "collection_list_ejKEpy",
+    "marquee_nP73QW"
   ]
 }
