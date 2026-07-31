@@ -214,6 +214,24 @@
     track.addEventListener('scroll', updateArrows);
     window.addEventListener('resize', updateArrows);
     updateArrows();
+
+    function initTropCollectionList(section) {
+      var track = section.querySelector('[data-trop-track]');
+      var prevBtn = section.querySelector('[data-trop-prev]');
+      var nextBtn = section.querySelector('[data-trop-next]');
+      if (!track) return;
+      // ...existing scrollAmount/updateArrows/listener logic...
+    }
+
+    document.addEventListener('shopify:section:load', function (e) {
+      var section = e.target.querySelector('.trop-collection-list-{{ section.id }}');
+      if (section) initTropCollectionList(section);
+    });
+
+    (function () {
+      var section = document.currentScript.closest('.trop-collection-list-{{ section.id }}');
+      if (section) initTropCollectionList(section);
+    })();
   })();
 </script>
 
