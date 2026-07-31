@@ -508,6 +508,20 @@
     },
     {
       "type": "select",
+      "id": "arrow_position",
+      "label": "Arrow Position",
+      "options": [
+        { "value": "top_after_heading", "label": "Top After Heading" },
+        { "value": "top_end", "label": "Top at End" },
+        { "value": "bottom_left", "label": "Bottom Left" },
+        { "value": "bottom_right", "label": "Bottom Right" },
+        { "value": "bottom_center", "label": "Bottom Center" }
+      ],
+      "default": "top_after_heading",
+      "visible_if": "{{ section.settings.enable_arrows == true }}"
+    },
+    {
+      "type": "select",
       "id": "arrow_style",
       "label": "Arrow Shape",
       "options": [
