@@ -515,7 +515,7 @@
         { "value": "square", "label": "Square" }
       ],
       "default": "circle",
-      "visible_if": "{{ section.settings.arrow_style == true }}"
+      "visible_if": "{{ section.settings.enable_arrows == true }}"
     },
     {
       "type": "range",
@@ -526,21 +526,21 @@
       "step": 2,
       "default": 36,
       "unit": "px",
-      "visible_if": "{{ section.settings.arrow_style == true }}"
+      "visible_if": "{{ section.settings.enable_arrows == true }}"
     },
     {
       "type": "color",
       "id": "arrow_bg_color",
       "label": "Arrow Background Color",
       "default": "#f2f2f2",
-      "visible_if": "{{ section.settings.arrow_style == true }}"
+      "visible_if": "{{ section.settings.enable_arrows == true }}"
     },
     {
       "type": "color",
       "id": "arrow_icon_color",
       "label": "Arrow Icon Color",
       "default": "#1a1a1a",
-      "visible_if": "{{ section.settings.arrow_style == true }}"
+      "visible_if": "{{ section.settings.enable_arrows == true }}"
     }
   ],
 
