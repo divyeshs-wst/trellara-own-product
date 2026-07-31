@@ -55,13 +55,15 @@
 <div class="marquee-container">
   <div class="marquee-content">
     {%- for block in section.blocks -%}
-      {%- unless forloop.first -%}
-        {%- if section.settings.divider_style == 'line' -%}
-          <span class="marquee-divider line"></span>
-        {%- elsif section.settings.divider_style == 'character' and section.settings.divider_char != blank -%}
-          <span class="marquee-divider">{{ section.settings.divider_char }}</span>
+        {%- if section.settings.divider_position == "before" -%}
+            {%- unless forloop.end -%}
+                {%- if section.settings.divider_style == 'icon' -%}
+                <span class="marquee-divider line"></span>
+                {%- elsif section.settings.divider_style == 'character' and section.settings.divider_char != blank -%}
+                <span class="marquee-divider">{{ section.settings.divider_char }}</span>
+                {%- endif -%}
+            {%- endunless -%}
         {%- endif -%}
-      {%- endunless -%}
       
       <span class="marquee-item">
         {%- if section.settings.link != blank -%}
@@ -72,6 +74,16 @@
           {{ block.settings.text | escape }}
         {%- endif -%}
       </span>
+
+        {%- if section.settings.divider_position == "after" -%}
+            {%- unless forloop.first -%}
+                {%- if section.settings.divider_style == 'icon' -%}
+                <span class="marquee-divider line"></span>
+                {%- elsif section.settings.divider_style == 'character' and section.settings.divider_char != blank -%}
+                <span class="marquee-divider">{{ section.settings.divider_char }}</span>
+                {%- endif -%}
+            {%- endunless -%}
+        {%- endif -%}
     {%- endfor -%}
 
     {%- comment -%} Duplicate for seamless loop {%- endcomment -%}
