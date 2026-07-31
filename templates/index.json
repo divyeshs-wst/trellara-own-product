@@ -12,7 +12,7 @@
     "hero": {
       "type": "hero",
       "settings": {
-        "header_width": "container",
+        "header_width": "no-container",
         "hero_height": "medium",
         "hero_padding_top": 25,
         "hero_padding_right": 25,
