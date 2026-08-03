@@ -252,7 +252,7 @@
         "color_background": "#f6f6f6",
         "color_text": "#000000",
         "font_size": 16,
-        "speed": 20,
+        "speed": 50,
         "spacing": 16,
         "item_gap": 70,
         "divider_style": "icon",
