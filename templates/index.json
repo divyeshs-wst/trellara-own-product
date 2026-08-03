@@ -533,7 +533,7 @@
         "cards_width": "container",
         "columns_desktop": 4,
         "columns_mobile": 1,
-        "item_width_desktop": 300,
+        "item_width_desktop": 440,
         "item_width_mobile": 220,
         "item_gap": 20,
         "section_padding_top": 60,
