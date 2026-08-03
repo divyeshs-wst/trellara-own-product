@@ -291,7 +291,7 @@
       "step": 1,
       "unit": "px",
       "default": 20,
-      "visible_if": "{{ section.settings.background_type == 'image' }}"
+      "visible_if": "{{ section.settings.divider_border_show == 'show' }}"
     },
     {
       "type": "select",
@@ -308,14 +308,14 @@
         }
       ],
       "default": "image",
-      "visible_if": "{{ section.settings.background_type == 'image' }}"
+      "visible_if": "{{ section.settings.divider_border_show == 'show' }}"
     },
     {
       "type": "color",
       "id": "divider_border_color",
       "label": "Divider Border Color",
       "default": "#000000",
-      "visible_if": "{{ section.settings.background_type == 'image' }}"
+      "visible_if": "{{ section.settings.divider_border_show == 'show' }}"
     },
     {
       "type": "header",
