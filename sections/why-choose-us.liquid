@@ -1,0 +1,768 @@
+{{ 'why-choose-us.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign s = section.settings
+
+  assign container_class = 'container'
+  if s.container_width == 'no-container'
+    assign container_class = 'no-container'
+  endif
+
+  assign track_class = 'trop-why-choose-us__track'
+  if s.layout_style == 'grid'
+    assign track_class = track_class | append: ' trop-why-choose-us__track--grid'
+  endif
+
+  assign wrapper_class = 'trop-why-choose-us__wrapper'
+  if s.cards_width == 'full-width' and s.container_width == 'container'
+    assign wrapper_class = wrapper_class | append: ' trop-why-choose-us__wrapper--bleed-right'
+  elsif s.cards_width == 'container' and s.container_width == 'no-container'
+    assign wrapper_class = wrapper_class | append: ' trop-why-choose-us__wrapper--contained'
+  endif
+
+  assign label_class = 'trop-why-choose-us__label trop-why-choose-us__label--' | append: s.label_position
+
+  assign arrow_shape_class = 'trop-why-choose-us__arrow trop-why-choose-us__arrow--' | append: s.arrow_style
+-%}
+
+{% style %}
+  .trop-why-choose-us-{{ section.id }} {
+    background-color: {{ s.section_bg_color }};
+    padding-top: {{ s.section_padding_top }}px;
+    padding-bottom: {{ s.section_padding_bottom }}px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  /* Top header: only holds the heading (plus arrows if arrow_position = top).
+     Falls back to flex-start so the heading position is never hijacked by
+     arrow_bottom_align when arrows live in the bottom header instead. */
+  .trop-why-choose-us-{{ section.id }} .trop-why-choose-us__header--top {
+    justify-content: {% if s.arrow_position == 'top' %}{{ s.arrow_space }}{% else %}flex-start{% endif %};
+  }
+
+  /* Bottom header: only holds arrows (if arrow_position = bottom). */
+  .trop-why-choose-us-{{ section.id }} .trop-why-choose-us__header--bottom {
+    justify-content: {% if s.arrow_position == 'bottom' %}{{ s.arrow_bottom_align }}{% else %}flex-start{% endif %};
+  }
+
+  .trop-why-choose-us-{{ section.id }} .trop-why-choose-us__heading {
+    color: {{ s.heading_color }};
+    font-size: {{ s.heading_size }}px;
+    text-transform: {{ s.heading_transform }};
+    text-align: {{ s.heading_alignment }};
+    flex: max-content;
+  }
+  
+  .trop-why-choose-us-{{ section.id }} .trop-why-choose-us__sub_heading {
+    color: {{ s.sub_heading_color }};
+    font-size: {{ s.sub_heading_size }}px;
+    text-transform: {{ s.sub_heading_transform }};
+    text-align: {{ s.sub_heading_alignment }};
+    flex: max-content;
+  }
+
+  .trop-why-choose-us-{{ section.id }} .trop-why-choose-us__track {
+    gap: {{ s.item_gap }}px;
+  }
+
+  .trop-why-choose-us-{{ section.id }} {
+    --trop-columns-desktop: {{ s.columns_desktop }};
+    --trop-columns-mobile: {{ s.columns_mobile }};
+    --trop-item-width-desktop: {{ s.item_width_desktop }}px;
+    --trop-item-width-mobile: {{ s.item_width_mobile }}px;
+  }
+
+  .trop-why-choose-us-{{ section.id }} .trop-why-choose-us__card-inner {
+    background-color: {{ s.card_bg_color }};
+    border-radius: {{ s.card_border_radius }}px;
+  }
+
+  .trop-why-choose-us-{{ section.id }} .trop-why-choose-us__image-wrap {
+    border-radius: {{ s.image_border_radius }}px;
+    {% if s.image_aspect_ratio == 'square' %}
+      aspect-ratio: 1 / 1;
+    {% elsif s.image_aspect_ratio == 'portrait' %}
+      aspect-ratio: 3 / 4;
+    {% elsif s.image_aspect_ratio == 'landscape' %}
+      aspect-ratio: 4 / 3;
+    {% endif %}
+  }
+
+  .trop-why-choose-us-{{ section.id }} .trop-why-choose-us__image-wrap img {
+    object-fit: {{ s.image_fit }};
+    {% if s.image_aspect_ratio == 'auto' %}
+      height: auto;
+    {% endif %}
+  }
+
+  .trop-why-choose-us-{{ section.id }} .trop-why-choose-us__label {
+    color: {{ s.label_color }};
+    font-size: {{ s.label_size }}px;
+    font-weight: {{ s.label_font_weight }};
+    text-transform: {{ s.label_transform }};
+  }
+
+  .trop-why-choose-us-{{ section.id }} .trop-why-choose-us__label--overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 12px;
+    height: calc(100% - 24px);
+  }
+
+  .trop-why-choose-us-{{ section.id }} .trop-why-choose-us__label--overlay::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgb(0 0 0 / 80%), rgba(0, 0, 0, 0));
+    z-index: -1;
+  }
+
+  .trop-why-choose-us-{{ section.id }} .trop-why-choose-us__arrow {
+    width: {{ s.arrow_size }}px;
+    height: {{ s.arrow_size }}px;
+    background-color: {{ s.arrow_bg_color }};
+  }
+
+  .trop-why-choose-us-{{ section.id }} .trop-why-choose-us__arrow svg {
+    fill: {{ s.arrow_icon_color }};
+  }
+{% endstyle %}
+
+<section class="trop-why-choose-us trop-why-choose-us-{{ section.id }} {{ container_class }}">
+  <div class="trop-why-choose-us__inner">
+
+    <div class="trop-why-choose-us__header trop-why-choose-us__header--top trop-flex mb-25">
+      <div class="trop-why-choose-us-content">
+        {% if s.sub_heading != blank %}
+          <{{ s.sub_heading_tag }} class="trop-why-choose-us__sub_heading">{{ s.sub_heading }}</{{ s.sub_heading_tag }}>
+        {% endif %}
+        {% if s.heading != blank %}
+          <{{ s.heading_tag }} class="trop-why-choose-us__heading">{{ s.heading }}</{{ s.heading_tag }}>
+        {% endif %}
+      </div>
+
+      {% if s.arrow_position == 'top' and s.layout_style == 'carousel' and s.enable_arrows %}
+        <div class="trop-why-choose-us__nav">
+          <button
+            type="button"
+            class="{{ arrow_shape_class }}"
+            data-trop-prev
+            aria-label="Previous"
+          >
+            <svg viewBox="0 0 24 24"><path d="M15.5 4.5 8 12l7.5 7.5 1.5-1.5L11 12l6-6z"/></svg>
+          </button>
+          <button
+            type="button"
+            class="{{ arrow_shape_class }}"
+            data-trop-next
+            aria-label="Next"
+          >
+            <svg viewBox="0 0 24 24"><path d="M8.5 4.5 16 12l-7.5 7.5L7 18l6-6-6-6z"/></svg>
+          </button>
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="{{ wrapper_class }}">
+      <div class="{{ track_class }}" data-trop-track>
+        {% for block in section.blocks %}
+          {%- liquid
+            assign block_settings = block.settings
+            assign the_collection = block_settings.collection
+
+            assign card_title = block_settings.custom_title
+            if card_title == blank and the_collection != blank
+              assign card_title = the_collection.title
+            endif
+
+            assign card_link = block_settings.custom_link
+            if card_link == blank and the_collection != blank
+              assign card_link = the_collection.url
+            endif
+
+            assign card_image = block_settings.custom_image
+            if card_image == blank and the_collection != blank
+              assign card_image = the_collection.image
+            endif
+          -%}
+
+          <a
+            href="{{ card_link | default: '#' }}"
+            class="trop-why-choose-us__card"
+            {{ block.shopify_attributes }}
+          >
+            <div class="trop-why-choose-us__card-inner">
+              <div class="trop-why-choose-us__image-wrap">
+                {% if card_image != blank %}
+                  {{
+                    card_image
+                    | image_url: width: 800
+                    | image_tag: loading: 'lazy', widths: '300,450,600,800', sizes: '(min-width: 768px) 25vw, 80vw', alt: card_title
+                  }}
+                {% else %}
+                  {{ 'collection-1' | placeholder_svg_tag }}
+                {% endif %}
+
+                {% if s.label_position == 'overlay' and card_title != blank %}
+                  <span class="{{ label_class }}">{{ card_title }}</span>
+                {% endif %}
+              </div>
+
+              {% if s.label_position == 'below' and card_title != blank %}
+                <span class="{{ label_class }}">{{ card_title }}</span>
+              {% endif %}
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="trop-why-choose-us__header trop-why-choose-us__header--bottom trop-flex mt-25">
+      {% if s.arrow_position == 'bottom' and s.layout_style == 'carousel' and s.enable_arrows %}
+        <div class="trop-why-choose-us__nav">
+          <button type="button" class="{{ arrow_shape_class }}" data-trop-prev aria-label="Previous">
+            <svg viewBox="0 0 24 24"><path d="M15.5 4.5 8 12l7.5 7.5 1.5-1.5L11 12l6-6z"/></svg>
+          </button>
+          <button type="button" class="{{ arrow_shape_class }}" data-trop-next aria-label="Next">
+            <svg viewBox="0 0 24 24"><path d="M8.5 4.5 16 12l-7.5 7.5L7 18l6-6-6-6z"/></svg>
+          </button>
+        </div>
+      {% endif %}
+    </div>
+
+  </div>
+</section>
+
+<script>
+  (function () {
+    function initTropCollectionList(section) {
+      if (!section) return;
+
+      var track = section.querySelector('[data-trop-track]');
+      var prevBtn = section.querySelector('[data-trop-prev]');
+      var nextBtn = section.querySelector('[data-trop-next]');
+      if (!track) return;
+
+      function scrollAmount() {
+        var card = track.querySelector('.trop-why-choose-us__card');
+        var gap = parseInt(getComputedStyle(track).columnGap || getComputedStyle(track).gap || 0, 10) || 0;
+        return card ? card.getBoundingClientRect().width + gap : 300;
+      }
+
+      function updateArrows() {
+        if (!prevBtn || !nextBtn) return;
+        var maxScroll = track.scrollWidth - track.clientWidth - 1;
+        prevBtn.disabled = track.scrollLeft <= 0;
+        nextBtn.disabled = track.scrollLeft >= maxScroll;
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', function () {
+          track.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', function () {
+          track.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+        });
+      }
+
+      track.addEventListener('scroll', updateArrows);
+      window.addEventListener('resize', updateArrows);
+      updateArrows();
+    }
+
+    function trop_initSection_{{ section.id | replace: '-', '_' }}() {
+      var section = document.querySelector('.trop-why-choose-us-{{ section.id }}');
+      initTropCollectionList(section);
+    }
+
+    trop_initSection_{{ section.id | replace: '-', '_' }}();
+
+    document.addEventListener('shopify:section:load', function (event) {
+      var reloadedSection = event.target.querySelector('.trop-why-choose-us-{{ section.id }}');
+      if (reloadedSection) {
+        initTropCollectionList(reloadedSection);
+      }
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Why Choose Us",
+  "class": "trop-why-choose-us-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "layout_style",
+      "label": "Layout Style",
+      "options": [
+        { "value": "carousel", "label": "Carousel (scrollable)" },
+        { "value": "grid", "label": "Grid" }
+      ],
+      "default": "carousel"
+    },
+    {
+      "type": "select",
+      "id": "container_width",
+      "label": "Section Width",
+      "options": [
+        { "value": "container", "label": "Container" },
+        { "value": "no-container", "label": "Full Width" }
+      ],
+      "default": "container"
+    },
+    {
+      "type": "select",
+      "id": "cards_width",
+      "label": "Cards List Width",
+      "options": [
+        { "value": "container", "label": "Container" },
+        { "value": "full-width", "label": "Full Width" }
+      ],
+      "default": "container",
+      "info": "Full Width Option bleeds the row to the right edge of the screen while keeping it aligned with the heading on the left."
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "label": "Columns (Desktop, Grid only)",
+      "min": 2,
+      "max": 6,
+      "step": 1,
+      "default": 4,
+      "visible_if": "{{ section.settings.layout_style == 'grid' }}"
+    },
+    {
+      "type": "range",
+      "id": "columns_mobile",
+      "label": "Columns (Mobile, Grid only)",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "default": 1,
+      "visible_if": "{{ section.settings.layout_style == 'grid' }}"
+    },
+    {
+      "type": "range",
+      "id": "item_width_desktop",
+      "label": "Card Width (Desktop, Carousel only)",
+      "min": 150,
+      "max": 500,
+      "step": 10,
+      "default": 300,
+      "unit": "px",
+      "visible_if": "{{ section.settings.layout_style == 'carousel' }}"
+    },
+    {
+      "type": "range",
+      "id": "item_width_mobile",
+      "label": "Card Width (Mobile, Carousel only)",
+      "min": 120,
+      "max": 350,
+      "step": 10,
+      "default": 220,
+      "unit": "px",
+      "visible_if": "{{ section.settings.layout_style == 'carousel' }}"
+    },
+    {
+      "type": "range",
+      "id": "item_gap",
+      "label": "Gap Between Cards",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "label": "Section Top Padding",
+      "min": 0,
+      "max": 150,
+      "step": 2,
+      "default": 60,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "label": "Section Bottom Padding",
+      "min": 0,
+      "max": 150,
+      "step": 2,
+      "default": 60,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Section Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Sub Heading"
+    },
+    {
+      "type": "text",
+      "id": "sub_heading",
+      "label": "Sub Heading",
+      "default": "Shop the Essentials"
+    },
+    {
+      "type": "select",
+      "id": "sub_heading_tag",
+      "label": "Sub Heading Tag",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "h4", "label": "H4" },
+        { "value": "p", "label": "p" }
+      ],
+      "default": "p"
+    },
+    {
+      "type": "range",
+      "id": "sub_heading_size",
+      "label": "Sub Heading Font Size",
+      "min": 12,
+      "max": 60,
+      "step": 1,
+      "default": 12,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "sub_heading_color",
+      "label": "Sub Heading Color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "select",
+      "id": "sub_heading_alignment",
+      "label": "Sub Heading Alignment",
+      "options": [
+        { "value": "start", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "end", "label": "Right" }
+      ],
+      "default": "start"
+    },
+    {
+      "type": "select",
+      "id": "sub_heading_transform",
+      "label": "Sub Heading Text Transform",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "uppercase", "label": "Uppercase" }
+      ],
+      "default": "uppercase"
+    },
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Shop the Essentials"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading Tag",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "h4", "label": "H4" },
+        { "value": "p", "label": "p" }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Heading Font Size",
+      "min": 12,
+      "max": 60,
+      "step": 1,
+      "default": 22,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Heading Alignment",
+      "options": [
+        { "value": "start", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "end", "label": "Right" }
+      ],
+      "default": "start"
+    },
+    {
+      "type": "select",
+      "id": "heading_transform",
+      "label": "Heading Text Transform",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "uppercase", "label": "Uppercase" }
+      ],
+      "default": "uppercase"
+    },
+    {
+      "type": "header",
+      "content": "Card Style"
+    },
+    {
+      "type": "color",
+      "id": "card_bg_color",
+      "label": "Card Background Color",
+      "default": "#f2f2f2"
+    },
+    {
+      "type": "range",
+      "id": "card_border_radius",
+      "label": "Card Corner Radius",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "image_aspect_ratio",
+      "label": "Image Aspect Ratio",
+      "options": [
+        { "value": "auto", "label": "Natural" },
+        { "value": "square", "label": "Square (1:1)" },
+        { "value": "portrait", "label": "Portrait (3:4)" },
+        { "value": "landscape", "label": "Landscape (4:3)" }
+      ],
+      "default": "square"
+    },
+    {
+      "type": "select",
+      "id": "image_fit",
+      "label": "Image Fit",
+      "options": [
+        { "value": "cover", "label": "Cover" },
+        { "value": "contain", "label": "Contain" }
+      ],
+      "default": "cover"
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "label": "Image Corner Radius",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Label Style"
+    },
+    {
+      "type": "select",
+      "id": "label_position",
+      "label": "Label Position",
+      "options": [
+        { "value": "below", "label": "Below Image" },
+        { "value": "overlay", "label": "Overlay on Image" }
+      ],
+      "default": "below"
+    },
+    {
+      "type": "color",
+      "id": "label_color",
+      "label": "Label Color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "range",
+      "id": "label_size",
+      "label": "Label Font Size",
+      "min": 8,
+      "max": 40,
+      "step": 1,
+      "default": 14,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "label_font_weight",
+      "label": "Label Font Weight",
+      "options": [
+        { "value": "400", "label": "Normal" },
+        { "value": "600", "label": "Semibold" },
+        { "value": "700", "label": "Bold" }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "select",
+      "id": "label_transform",
+      "label": "Label Text Transform",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "uppercase", "label": "Uppercase" }
+      ],
+      "default": "uppercase"
+    },
+
+    {
+      "type": "header",
+      "content": "Navigation Arrows (Carousel only)"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_arrows",
+      "label": "Enable Arrows",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "arrow_position",
+      "label": "Arrow Position",
+      "options": [
+        { "value": "top", "label": "Top" },
+        { "value": "bottom", "label": "Bottom" }
+      ],
+      "default": "top",
+      "visible_if": "{{ section.settings.enable_arrows == true }}"
+    },
+    {
+      "type": "select",
+      "id": "arrow_space",
+      "label": "Arrow Space",
+      "options": [
+        { "value": "flex-start", "label": "Both Start" },
+        { "value": "flex-end", "label": "Both End" },
+        { "value": "space-between", "label": "Space Between" }
+      ],
+      "default": "flex-start",
+      "visible_if": "{{ section.settings.arrow_position == 'top' }}"
+    },
+    {
+      "type": "select",
+      "id": "arrow_bottom_align",
+      "label": "Arrow Bottom Align",
+      "options": [
+        { "value": "flex-start", "label": "Left" },
+        { "value": "flex-end", "label": "Right" },
+        { "value": "center", "label": "Center" }
+      ],
+      "default": "flex-start",
+      "visible_if": "{{ section.settings.arrow_position == 'bottom' }}"
+    },
+    {
+      "type": "select",
+      "id": "arrow_style",
+      "label": "Arrow Shape",
+      "options": [
+        { "value": "circle", "label": "Circle" },
+        { "value": "square", "label": "Square" }
+      ],
+      "default": "circle",
+      "visible_if": "{{ section.settings.enable_arrows == true }}"
+    },
+    {
+      "type": "range",
+      "id": "arrow_size",
+      "label": "Arrow Button Size",
+      "min": 24,
+      "max": 64,
+      "step": 2,
+      "default": 36,
+      "unit": "px",
+      "visible_if": "{{ section.settings.enable_arrows == true }}"
+    },
+    {
+      "type": "color",
+      "id": "arrow_bg_color",
+      "label": "Arrow Background Color",
+      "default": "#f2f2f2",
+      "visible_if": "{{ section.settings.enable_arrows == true }}"
+    },
+    {
+      "type": "color",
+      "id": "arrow_icon_color",
+      "label": "Arrow Icon Color",
+      "default": "#1a1a1a",
+      "visible_if": "{{ section.settings.enable_arrows == true }}"
+    }
+  ],
+
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "text",
+          "id": "custom_title",
+          "label": "Custom Title (optional)",
+          "info": "Leave blank to use the collection's title"
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_image",
+          "label": "Custom Image (optional)",
+          "info": "Leave blank to use the collection's featured image"
+        },
+        {
+          "type": "url",
+          "id": "custom_link",
+          "label": "Custom Link (optional)",
+          "info": "Leave blank to link to the collection page"
+        }
+      ]
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Collection List",
+      "blocks": [
+        { "type": "collection" },
+        { "type": "collection" },
+        { "type": "collection" },
+        { "type": "collection" }
+      ]
+    }
+  ]
+}
+{% endschema %}
