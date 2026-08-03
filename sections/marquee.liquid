@@ -11,7 +11,6 @@
 
   .marquee-content {
     display: inline-flex;
-    {% comment %} padding-left: 100%; {% endcomment %}
     animation: marquee-scroll {{ section.settings.speed | default: 20 }}s linear infinite;
   }
 
@@ -267,21 +266,6 @@
       "info": "Horizontal space around the divider."
     },
     {
-      "type": "url",
-      "id": "link",
-      "label": "Link URL (Optional)"
-    },
-    {
-      "type": "select",
-      "id": "link_target",
-      "label": "Link Target",
-      "options": [
-        { "value": "_self", "label": "Same Tab" },
-        { "value": "_blank", "label": "New Tab" }
-      ],
-      "default": "_self"
-    },
-    {
       "type": "header",
       "content": "Padding"
     },
@@ -317,6 +301,21 @@
           "id": "text",
           "label": "Text",
           "default": "Your Marquee Text Here"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link URL (Optional)"
+        },
+        {
+          "type": "select",
+          "id": "link_target",
+          "label": "Link Target",
+          "options": [
+            { "value": "_self", "label": "Same Tab" },
+            { "value": "_blank", "label": "New Tab" }
+          ],
+          "default": "_self"
         }
       ]
     }
@@ -325,9 +324,15 @@
     {
       "name": "Marquee Text",
       "blocks": [
-        { "type": "text" },
-        { "type": "text" },
-        { "type": "text" }
+        { 
+          "type": "text"
+        },
+        { 
+          "type": "text"
+        },
+        { 
+          "type": "text"
+        }
       ]
     }
   ]
