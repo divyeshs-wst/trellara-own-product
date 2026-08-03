@@ -38,6 +38,10 @@ iframe {
   display: block; /* Removes bottom whitespace in flex/grid containers */
 }
 
+.shopify-section {
+  overflow: hidden;
+}
+
 /* 4. Links */
 a {
   color: #0070f3;
