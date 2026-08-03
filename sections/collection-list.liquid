@@ -131,12 +131,14 @@
   <div class="trop-collection-list__inner">
 
     <div class="trop-collection-list__header trop-collection-list__header--top trop-flex mb-25">
-      {% if s.sub_heading != blank %}
-        <{{ s.sub_heading_tag }} class="trop-collection-list__heading">{{ s.sub_heading }}</{{ s.sub_heading_tag }}>
-      {% endif %}
-      {% if s.heading != blank %}
-        <{{ s.heading_tag }} class="trop-collection-list__heading">{{ s.heading }}</{{ s.heading_tag }}>
-      {% endif %}
+      <div class="trop-collection-list-content">
+        {% if s.sub_heading != blank %}
+          <{{ s.sub_heading_tag }} class="trop-collection-list__sub_heading">{{ s.sub_heading }}</{{ s.sub_heading_tag }}>
+        {% endif %}
+        {% if s.heading != blank %}
+          <{{ s.heading_tag }} class="trop-collection-list__heading">{{ s.heading }}</{{ s.heading_tag }}>
+        {% endif %}
+      </div>
 
       {% if s.arrow_position == 'top' and s.layout_style == 'carousel' and s.enable_arrows %}
         <div class="trop-collection-list__nav">
