@@ -98,13 +98,6 @@
 
   .trop-collection-list-{{ section.id }} .trop-collection-list__image-wrap {
     border-radius: {{ s.image_border_radius }}px;
-    {% if s.image_aspect_ratio == 'square' %}
-      aspect-ratio: 1 / 1;
-    {% elsif s.image_aspect_ratio == 'portrait' %}
-      aspect-ratio: 3 / 4;
-    {% elsif s.image_aspect_ratio == 'landscape' %}
-      aspect-ratio: 4 / 3;
-    {% endif %}
   }
 
   .trop-collection-list-{{ section.id }} .trop-collection-list__image-wrap img {
