@@ -311,7 +311,7 @@
       "settings": {
         "container_width": "container",
         "left_column_width": 350,
-        "column_gap": 40,
+        "column_gap": 60,
         "section_padding_top": 140,
         "section_padding_bottom": 140,
         "section_bg_color": "#ffffff",
@@ -321,7 +321,7 @@
         "label_transform": "uppercase",
         "heading": "Gym Packages for Your Spaces",
         "heading_tag": "h2",
-        "heading_size": 34,
+        "heading_size": 44,
         "heading_line_height": 1.2,
         "heading_color": "#14123a",
         "diagram_image": "shopify://shop_images/image_38.png",
