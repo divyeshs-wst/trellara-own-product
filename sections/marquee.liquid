@@ -63,8 +63,9 @@
 <div class="marquee-container">
   <div class="marquee-content">
     {%- for block in section.blocks -%}
-        {%- if section.settings.divider_position == "before" -%}
-            {%- if section.settings.divider_style == 'icon' -%}
+      <div class="marquee-item">
+        {%- if section.settings.divider_position == 'before' -%}
+          {%- if section.settings.divider_style == 'icon' -%}
             <span class="marquee-divider marquee-divider-icon">
               {% if section.settings.icon_image != blank %}
                 {{
@@ -72,14 +73,13 @@
                   | image_url: width: auto
                   | image_tag: loading: 'lazy', alt: section.settings.icon_image.alt
                 }}
-              {%  endif %}
+              {% endif %}
             </span>
-            {%- elsif section.settings.divider_style == 'character' and section.settings.divider_char != blank -%}
+          {%- elsif section.settings.divider_style == 'character' and section.settings.divider_char != blank -%}
             <span class="marquee-divider">{{ section.settings.divider_char }}</span>
-            {%- endif -%}
+          {%- endif -%}
         {%- endif -%}
-      
-      <span class="marquee-item">
+        
         {%- if block.settings.link != blank -%}
           <a href="{{ block.settings.link }}" target="{{ block.settings.link_target }}">
             {{ block.settings.text | escape }}
@@ -87,10 +87,9 @@
         {%- else -%}
           {{ block.settings.text | escape }}
         {%- endif -%}
-      </span>
 
-        {%- if section.settings.divider_position == "after" -%}
-            {%- if section.settings.divider_style == 'icon' -%}
+        {%- if section.settings.divider_position == 'after' -%}
+          {%- if section.settings.divider_style == 'icon' -%}
             <span class="marquee-divider marquee-divider-icon">
               {% if section.settings.icon_image != blank %}
                 {{
@@ -98,45 +97,20 @@
                   | image_url: width: auto
                   | image_tag: loading: 'lazy', alt: section.settings.icon_image.alt
                 }}
-              {%  endif %}
+              {% endif %}
             </span>
-            {%- elsif section.settings.divider_style == 'character' and section.settings.divider_char != blank -%}
+          {%- elsif section.settings.divider_style == 'character' and section.settings.divider_char != blank -%}
             <span class="marquee-divider">{{ section.settings.divider_char }}</span>
-            {%- endif -%}
+          {%- endif -%}
         {%- endif -%}
-    {%- endfor -%}
+      {%- endfor -%}
+      </div>
 
     {%- comment -%} Duplicate for seamless loop {%- endcomment -%}
     {%- for block in section.blocks -%}
-
-        {%- if section.settings.divider_position == "before" -%}
-            {%- if section.settings.divider_style == 'icon' -%}
-            <span class="marquee-divider marquee-divider-icon">
-                {% if section.settings.icon_image != blank %}
-                  {{
-                    section.settings.icon_image
-                    | image_url: width: auto
-                    | image_tag: loading: 'lazy', alt: section.settings.icon_image.alt
-                  }}
-                {%  endif %}
-            </span>
-            {%- elsif section.settings.divider_style == 'character' and section.settings.divider_char != blank -%}
-            <span class="marquee-divider">{{ section.settings.divider_char }}</span>
-            {%- endif -%}
-        {%- endif -%}
-
-      <span class="marquee-item">
-        {%- if block.settings.link != blank -%}
-          <a href="{{ block.settings.link }}" target="{{ block.settings.link_target }}">
-            {{ block.settings.text | escape }}
-          </a>
-        {%- else -%}
-          {{ block.settings.text | escape }}
-        {%- endif -%}
-      </span>
-
-        {%- if section.settings.divider_position == "after" -%}
-            {%- if section.settings.divider_style == 'icon' -%}
+      <div class="marquee-item">
+        {%- if section.settings.divider_position == 'before' -%}
+          {%- if section.settings.divider_style == 'icon' -%}
             <span class="marquee-divider marquee-divider-icon">
               {% if section.settings.icon_image != blank %}
                 {{
@@ -144,13 +118,38 @@
                   | image_url: width: auto
                   | image_tag: loading: 'lazy', alt: section.settings.icon_image.alt
                 }}
-              {%  endif %}
+              {% endif %}
             </span>
-            {%- elsif section.settings.divider_style == 'character' and section.settings.divider_char != blank -%}
+          {%- elsif section.settings.divider_style == 'character' and section.settings.divider_char != blank -%}
             <span class="marquee-divider">{{ section.settings.divider_char }}</span>
-            {%- endif -%}
+          {%- endif -%}
         {%- endif -%}
-    {%- endfor -%}
+        
+        {%- if block.settings.link != blank -%}
+          <a href="{{ block.settings.link }}" target="{{ block.settings.link_target }}">
+            {{ block.settings.text | escape }}
+          </a>
+        {%- else -%}
+          {{ block.settings.text | escape }}
+        {%- endif -%}
+
+        {%- if section.settings.divider_position == 'after' -%}
+          {%- if section.settings.divider_style == 'icon' -%}
+            <span class="marquee-divider marquee-divider-icon">
+              {% if section.settings.icon_image != blank %}
+                {{
+                  section.settings.icon_image
+                  | image_url: width: auto
+                  | image_tag: loading: 'lazy', alt: section.settings.icon_image.alt
+                }}
+              {% endif %}
+            </span>
+          {%- elsif section.settings.divider_style == 'character' and section.settings.divider_char != blank -%}
+            <span class="marquee-divider">{{ section.settings.divider_char }}</span>
+          {%- endif -%}
+        {%- endif -%}
+      {%- endfor -%}
+      </div>
   </div>
 </div>
 
