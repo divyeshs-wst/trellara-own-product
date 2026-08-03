@@ -479,8 +479,10 @@
           "type": "collection",
           "settings": {
             "collection": "",
-            "custom_title": "",
-            "custom_link": ""
+            "custom_title": "Materials",
+            "custom_description": "11-gauge steel. Commercial load ratings. Precision engineering. Built to US commercial specifications.",
+            "custom_link_text": "",
+            "custom_link": "shopify://pages/contact"
           }
         },
         "collection_dzLgCT": {
@@ -488,6 +490,8 @@
           "settings": {
             "collection": "",
             "custom_title": "",
+            "custom_description": "",
+            "custom_link_text": "",
             "custom_link": ""
           }
         },
@@ -496,6 +500,8 @@
           "settings": {
             "collection": "",
             "custom_title": "",
+            "custom_description": "",
+            "custom_link_text": "",
             "custom_link": ""
           }
         },
@@ -504,6 +510,8 @@
           "settings": {
             "collection": "",
             "custom_title": "",
+            "custom_description": "",
+            "custom_link_text": "",
             "custom_link": ""
           }
         }
