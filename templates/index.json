@@ -158,7 +158,7 @@
           "type": "text",
           "settings": {
             "text": "Commercial-grade build",
-            "link": "shopify://pages/contact",
+            "link": "",
             "link_target": "_blank"
           }
         },
@@ -198,7 +198,7 @@
           "type": "text",
           "settings": {
             "text": "Commercial-grade build",
-            "link": "shopify://pages/contact",
+            "link": "",
             "link_target": "_blank"
           }
         },
