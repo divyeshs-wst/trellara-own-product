@@ -172,7 +172,7 @@ svg {
 
 /* Parent Container: Fixed width and centered */
 .container {
-  max-width: 1200px;
+  max-width: 1120px;
   margin: 0 auto;
   /* overflow: hidden;  */
 }
