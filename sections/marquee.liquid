@@ -14,7 +14,8 @@
     animation: marquee-scroll {{ section.settings.speed | default: 20 }}s linear infinite;
   }
 
-  .marquee-item {
+  .marquee-item,
+  .marquee-item a {
     display: inline-block;
     font-size: {{ section.settings.font_size | default: 16 }}px;
     padding: 0 {{ section.settings.spacing | default: 50 }}px;
