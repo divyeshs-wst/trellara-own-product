@@ -1,0 +1,706 @@
+{{ 'packages.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign s = section.settings
+
+  assign container_class = 'container'
+  if s.container_width == 'no-container'
+    assign container_class = 'no-container'
+  endif
+
+  assign arrow_shape_class = 'trop-gym-packages__arrow trop-gym-packages__arrow--' | append: s.arrow_style
+-%}
+
+{% style %}
+  .trop-gym-packages-{{ section.id }} {
+    background-color: {{ s.section_bg_color }};
+    padding-top: {{ s.section_padding_top }}px;
+    padding-bottom: {{ s.section_padding_bottom }}px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .trop-gym-packages-{{ section.id }} .trop-gym-packages__inner {
+    gap: {{ s.column_gap }}px;
+  }
+
+  .trop-gym-packages-{{ section.id }} {
+    --trop-left-width: {{ s.left_column_width }}px;
+    --trop-card-width-desktop: {{ s.card_width_desktop }}px;
+    --trop-card-width-mobile: {{ s.card_width_mobile }}px;
+  }
+
+  .trop-gym-packages-{{ section.id }} .trop-gym-packages__label {
+    color: {{ s.label_color }};
+    font-size: {{ s.label_size }}px;
+    text-transform: {{ s.label_transform }};
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+  }
+
+  .trop-gym-packages-{{ section.id }} .trop-gym-packages__heading {
+    color: {{ s.heading_color }};
+    font-size: {{ s.heading_size }}px;
+    line-height: {{ s.heading_line_height }};
+  }
+
+  .trop-gym-packages-{{ section.id }} .trop-gym-packages__diagram {
+    margin-top: {{ s.diagram_spacing }}px;
+    max-width: {{ s.diagram_width }}%;
+  }
+
+  .trop-gym-packages-{{ section.id }} .trop-gym-packages__track {
+    gap: {{ s.card_gap }}px;
+  }
+
+  .trop-gym-packages-{{ section.id }} .trop-gym-packages__card-inner {
+    background-color: {{ s.card_bg_color }};
+    border-radius: {{ s.card_border_radius }}px;
+  }
+
+  .trop-gym-packages-{{ section.id }} .trop-gym-packages__card-image {
+    border-radius: {{ s.image_border_radius }}px;
+    {% if s.image_aspect_ratio == 'square' %}
+      aspect-ratio: 1 / 1;
+    {% elsif s.image_aspect_ratio == 'portrait' %}
+      aspect-ratio: 3 / 4;
+    {% elsif s.image_aspect_ratio == 'landscape' %}
+      aspect-ratio: 4 / 3;
+    {% endif %}
+  }
+
+  .trop-gym-packages-{{ section.id }} .trop-gym-packages__card-image img {
+    object-fit: {{ s.image_fit }};
+    {% if s.image_aspect_ratio == 'auto' %}
+      height: auto;
+    {% endif %}
+  }
+
+  .trop-gym-packages-{{ section.id }} .trop-gym-packages__card-body {
+    padding: {{ s.card_text_spacing }}px {{ s.card_padding_x }}px;
+  }
+
+  .trop-gym-packages-{{ section.id }} .trop-gym-packages__card-title {
+    color: {{ s.title_color }};
+    font-size: {{ s.title_size }}px;
+    text-transform: {{ s.title_transform }};
+  }
+
+  .trop-gym-packages-{{ section.id }} .trop-gym-packages__card-desc {
+    color: {{ s.description_color }};
+    font-size: {{ s.description_size }}px;
+    margin-top: {{ s.description_spacing }}px;
+  }
+
+  .trop-gym-packages-{{ section.id }} .trop-gym-packages__nav {
+    margin-top: {{ s.arrow_spacing }}px;
+    justify-content: {{ s.arrow_align }};
+  }
+
+  .trop-gym-packages-{{ section.id }} .trop-gym-packages__arrow {
+    width: {{ s.arrow_size }}px;
+    height: {{ s.arrow_size }}px;
+    background-color: {{ s.arrow_bg_color }};
+  }
+
+  .trop-gym-packages-{{ section.id }} .trop-gym-packages__arrow svg {
+    fill: {{ s.arrow_icon_color }};
+  }
+{% endstyle %}
+
+<section class="trop-gym-packages trop-gym-packages-{{ section.id }} {{ container_class }}">
+  <div class="trop-gym-packages__inner">
+
+    <div class="trop-gym-packages__left">
+      {% if s.label != blank %}
+        <span class="trop-gym-packages__label">{{ s.label }}</span>
+      {% endif %}
+
+      {% if s.heading != blank %}
+        <{{ s.heading_tag }} class="trop-gym-packages__heading">{{ s.heading }}</{{ s.heading_tag }}>
+      {% endif %}
+
+      {% if s.diagram_image != blank %}
+        <div class="trop-gym-packages__diagram">
+          {{
+            s.diagram_image
+            | image_url: width: 1000
+            | image_tag: loading: 'lazy', widths: '400,600,800,1000', alt: s.diagram_image.alt
+          }}
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="trop-gym-packages__right">
+      <div class="trop-gym-packages__wrapper">
+        <div class="trop-gym-packages__track" data-trop-track>
+          {% for block in section.blocks %}
+            {%- liquid
+              assign block_settings = block.settings
+              assign card_link = block_settings.link
+            -%}
+
+            {% if card_link != blank %}
+              <a href="{{ card_link }}" class="trop-gym-packages__card" {{ block.shopify_attributes }}>
+            {% else %}
+              <div class="trop-gym-packages__card" {{ block.shopify_attributes }}>
+            {% endif %}
+
+              <div class="trop-gym-packages__card-inner">
+                <div class="trop-gym-packages__card-image">
+                  {% if block_settings.image != blank %}
+                    {{
+                      block_settings.image
+                      | image_url: width: 800
+                      | image_tag: loading: 'lazy', widths: '300,450,600,800', sizes: '(min-width: 990px) 25vw, 80vw', alt: block_settings.title
+                    }}
+                  {% else %}
+                    {{ 'product-1' | placeholder_svg_tag }}
+                  {% endif %}
+                </div>
+
+                <div class="trop-gym-packages__card-body">
+                  {% if block_settings.title != blank %}
+                    <h3 class="trop-gym-packages__card-title">{{ block_settings.title }}</h3>
+                  {% endif %}
+
+                  {% if block_settings.description != blank %}
+                    <div class="trop-gym-packages__card-desc">{{ block_settings.description }}</div>
+                  {% endif %}
+                </div>
+              </div>
+
+            {% if card_link != blank %}
+              </a>
+            {% else %}
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+
+      {% if s.enable_arrows %}
+        <div class="trop-gym-packages__nav">
+          <button type="button" class="{{ arrow_shape_class }}" data-trop-prev aria-label="Previous">
+            <svg viewBox="0 0 24 24"><path d="M15.5 4.5 8 12l7.5 7.5 1.5-1.5L11 12l6-6z"/></svg>
+          </button>
+          <button type="button" class="{{ arrow_shape_class }}" data-trop-next aria-label="Next">
+            <svg viewBox="0 0 24 24"><path d="M8.5 4.5 16 12l-7.5 7.5L7 18l6-6-6-6z"/></svg>
+          </button>
+        </div>
+      {% endif %}
+    </div>
+
+  </div>
+</section>
+
+<script>
+  (function () {
+    function initTropGymPackages(section) {
+      if (!section) return;
+
+      var track = section.querySelector('[data-trop-track]');
+      var prevBtn = section.querySelector('[data-trop-prev]');
+      var nextBtn = section.querySelector('[data-trop-next]');
+      if (!track) return;
+
+      function scrollAmount() {
+        var card = track.querySelector('.trop-gym-packages__card');
+        var gap = parseInt(getComputedStyle(track).columnGap || getComputedStyle(track).gap || 0, 10) || 0;
+        return card ? card.getBoundingClientRect().width + gap : 280;
+      }
+
+      function updateArrows() {
+        if (!prevBtn || !nextBtn) return;
+        var maxScroll = track.scrollWidth - track.clientWidth - 1;
+        prevBtn.disabled = track.scrollLeft <= 0;
+        nextBtn.disabled = track.scrollLeft >= maxScroll;
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', function () {
+          track.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', function () {
+          track.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+        });
+      }
+
+      track.addEventListener('scroll', updateArrows);
+      window.addEventListener('resize', updateArrows);
+      updateArrows();
+    }
+
+    function trop_initSection_{{ section.id | replace: '-', '_' }}() {
+      var section = document.querySelector('.trop-gym-packages-{{ section.id }}');
+      initTropGymPackages(section);
+    }
+
+    trop_initSection_{{ section.id | replace: '-', '_' }}();
+
+    document.addEventListener('shopify:section:load', function (event) {
+      var reloadedSection = event.target.querySelector('.trop-gym-packages-{{ section.id }}');
+      if (reloadedSection) {
+        initTropGymPackages(reloadedSection);
+      }
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Gym Packages",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "container_width",
+      "label": "Section Width",
+      "options": [
+        { "value": "container", "label": "Container" },
+        { "value": "no-container", "label": "Full Width" }
+      ],
+      "default": "container"
+    },
+    {
+      "type": "range",
+      "id": "left_column_width",
+      "label": "Left Column Width (Desktop)",
+      "min": 200,
+      "max": 500,
+      "step": 10,
+      "default": 340,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "column_gap",
+      "label": "Gap Between Columns",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 40,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "label": "Section Top Padding",
+      "min": 0,
+      "max": 150,
+      "step": 2,
+      "default": 60,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "label": "Section Bottom Padding",
+      "min": 0,
+      "max": 150,
+      "step": 2,
+      "default": 60,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Section Background Color",
+      "default": "#ffffff"
+    },
+
+    {
+      "type": "header",
+      "content": "Left Column: Label"
+    },
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Label Text",
+      "default": "Gym Packages"
+    },
+    {
+      "type": "color",
+      "id": "label_color",
+      "label": "Label Color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "range",
+      "id": "label_size",
+      "label": "Label Font Size",
+      "min": 8,
+      "max": 30,
+      "step": 1,
+      "default": 13,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "label_transform",
+      "label": "Label Text Transform",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "uppercase", "label": "Uppercase" }
+      ],
+      "default": "uppercase"
+    },
+
+    {
+      "type": "header",
+      "content": "Left Column: Heading"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Gym Packages for Your Spaces"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading Tag",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "p", "label": "p" }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Heading Font Size",
+      "min": 18,
+      "max": 60,
+      "step": 1,
+      "default": 34,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "heading_line_height",
+      "label": "Heading Line Height",
+      "min": 1,
+      "max": 1.6,
+      "step": 0.1,
+      "default": 1.2
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#14123a"
+    },
+
+    {
+      "type": "header",
+      "content": "Left Column: Diagram Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "diagram_image",
+      "label": "Diagram Image"
+    },
+    {
+      "type": "range",
+      "id": "diagram_width",
+      "label": "Diagram Width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "default": 100,
+      "unit": "%"
+    },
+    {
+      "type": "range",
+      "id": "diagram_spacing",
+      "label": "Space Above Diagram",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 40,
+      "unit": "px"
+    },
+
+    {
+      "type": "header",
+      "content": "Card Style"
+    },
+    {
+      "type": "range",
+      "id": "card_width_desktop",
+      "label": "Card Width (Desktop)",
+      "min": 180,
+      "max": 400,
+      "step": 10,
+      "default": 280,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "card_width_mobile",
+      "label": "Card Width (Mobile)",
+      "min": 140,
+      "max": 320,
+      "step": 10,
+      "default": 220,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "card_gap",
+      "label": "Gap Between Cards",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "default": 24,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "card_bg_color",
+      "label": "Card Background Color",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "range",
+      "id": "card_border_radius",
+      "label": "Card Corner Radius",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 8,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "card_padding_x",
+      "label": "Card Horizontal Padding",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "card_text_spacing",
+      "label": "Card Text Top Spacing",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "image_aspect_ratio",
+      "label": "Image Aspect Ratio",
+      "options": [
+        { "value": "auto", "label": "Natural" },
+        { "value": "square", "label": "Square (1:1)" },
+        { "value": "portrait", "label": "Portrait (3:4)" },
+        { "value": "landscape", "label": "Landscape (4:3)" }
+      ],
+      "default": "square"
+    },
+    {
+      "type": "select",
+      "id": "image_fit",
+      "label": "Image Fit",
+      "options": [
+        { "value": "cover", "label": "Cover" },
+        { "value": "contain", "label": "Contain" }
+      ],
+      "default": "contain"
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "label": "Image Corner Radius",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 0,
+      "unit": "px"
+    },
+
+    {
+      "type": "header",
+      "content": "Card Text Style"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Title Font Size",
+      "min": 12,
+      "max": 30,
+      "step": 1,
+      "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "title_transform",
+      "label": "Title Text Transform",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "uppercase", "label": "Uppercase" }
+      ],
+      "default": "uppercase"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description Color",
+      "default": "#666666"
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "label": "Description Font Size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "default": 14,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "description_spacing",
+      "label": "Space Above Description",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "default": 10,
+      "unit": "px"
+    },
+
+    {
+      "type": "header",
+      "content": "Navigation Arrows"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_arrows",
+      "label": "Enable Arrows",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "arrow_align",
+      "label": "Arrow Alignment",
+      "options": [
+        { "value": "flex-start", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "flex-end", "label": "Right" }
+      ],
+      "default": "flex-end",
+      "visible_if": "{{ section.settings.enable_arrows == true }}"
+    },
+    {
+      "type": "range",
+      "id": "arrow_spacing",
+      "label": "Space Above Arrows",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "default": 24,
+      "unit": "px",
+      "visible_if": "{{ section.settings.enable_arrows == true }}"
+    },
+    {
+      "type": "select",
+      "id": "arrow_style",
+      "label": "Arrow Shape",
+      "options": [
+        { "value": "circle", "label": "Circle" },
+        { "value": "square", "label": "Square" }
+      ],
+      "default": "circle",
+      "visible_if": "{{ section.settings.enable_arrows == true }}"
+    },
+    {
+      "type": "range",
+      "id": "arrow_size",
+      "label": "Arrow Button Size",
+      "min": 24,
+      "max": 64,
+      "step": 2,
+      "default": 36,
+      "unit": "px",
+      "visible_if": "{{ section.settings.enable_arrows == true }}"
+    },
+    {
+      "type": "color",
+      "id": "arrow_bg_color",
+      "label": "Arrow Background Color",
+      "default": "#f2f2f2",
+      "visible_if": "{{ section.settings.enable_arrows == true }}"
+    },
+    {
+      "type": "color",
+      "id": "arrow_icon_color",
+      "label": "Arrow Icon Color",
+      "default": "#1a1a1a",
+      "visible_if": "{{ section.settings.enable_arrows == true }}"
+    }
+  ],
+
+  "blocks": [
+    {
+      "type": "package",
+      "name": "Package Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Package Title"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description",
+          "default": "<p>Transcenda o comum com a nossa linha de produtos.</p>"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link (optional)"
+        }
+      ]
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Gym Packages",
+      "blocks": [
+        { "type": "package" },
+        { "type": "package" },
+        { "type": "package" }
+      ]
+    }
+  ]
+}
+{% endschema %}
