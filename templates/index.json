@@ -479,48 +479,52 @@
           "type": "collection",
           "settings": {
             "collection": "",
+            "custom_image": "shopify://shop_images/hammer.png",
             "custom_title": "Materials",
             "custom_description": "11-gauge steel. Commercial load ratings. Precision engineering. Built to US commercial specifications.",
             "custom_link_text": "See our standards",
             "custom_link": "shopify://pages/contact"
           }
         },
-        "collection_dzLgCT": {
+        "collection_aRX4pM": {
           "type": "collection",
           "settings": {
             "collection": "",
-            "custom_title": "",
-            "custom_description": "",
-            "custom_link_text": "",
-            "custom_link": ""
+            "custom_image": "shopify://shop_images/hammer.png",
+            "custom_title": "Materials",
+            "custom_description": "11-gauge steel. Commercial load ratings. Precision engineering. Built to US commercial specifications.",
+            "custom_link_text": "See our standards",
+            "custom_link": "shopify://pages/contact"
           }
         },
-        "collection_bWByx6": {
+        "collection_VjaC7L": {
           "type": "collection",
           "settings": {
             "collection": "",
-            "custom_title": "",
-            "custom_description": "",
-            "custom_link_text": "",
-            "custom_link": ""
+            "custom_image": "shopify://shop_images/hammer.png",
+            "custom_title": "Materials",
+            "custom_description": "11-gauge steel. Commercial load ratings. Precision engineering. Built to US commercial specifications.",
+            "custom_link_text": "See our standards",
+            "custom_link": "shopify://pages/contact"
           }
         },
-        "collection_xPqHNy": {
+        "collection_hBdNBN": {
           "type": "collection",
           "settings": {
             "collection": "",
-            "custom_title": "",
-            "custom_description": "",
-            "custom_link_text": "",
-            "custom_link": ""
+            "custom_image": "shopify://shop_images/hammer.png",
+            "custom_title": "Materials",
+            "custom_description": "11-gauge steel. Commercial load ratings. Precision engineering. Built to US commercial specifications.",
+            "custom_link_text": "See our standards",
+            "custom_link": "shopify://pages/contact"
           }
         }
       },
       "block_order": [
         "collection_J9enic",
-        "collection_dzLgCT",
-        "collection_bWByx6",
-        "collection_xPqHNy"
+        "collection_aRX4pM",
+        "collection_VjaC7L",
+        "collection_hBdNBN"
       ],
       "name": "Why Choose Us",
       "settings": {
