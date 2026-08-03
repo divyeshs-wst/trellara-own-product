@@ -157,7 +157,7 @@
         "text_ri9M99": {
           "type": "text",
           "settings": {
-            "text": "Marquee 1",
+            "text": "Commercial-grade build",
             "link": "shopify://pages/contact",
             "link_target": "_blank"
           }
@@ -165,7 +165,7 @@
         "text_NDcigx": {
           "type": "text",
           "settings": {
-            "text": "Marquee 2",
+            "text": "Design-led finish",
             "link": "",
             "link_target": "_self"
           }
@@ -173,7 +173,7 @@
         "text_3mUJwA": {
           "type": "text",
           "settings": {
-            "text": "Marquee 3",
+            "text": "Warranty",
             "link": "",
             "link_target": "_self"
           }
@@ -181,7 +181,7 @@
         "text_PiW8fX": {
           "type": "text",
           "settings": {
-            "text": "Marquee 4",
+            "text": "Delivery + install",
             "link": "",
             "link_target": "_self"
           }
@@ -189,31 +189,47 @@
         "text_9iJpQp": {
           "type": "text",
           "settings": {
-            "text": "Marquee 5",
+            "text": "QC standards",
             "link": "",
             "link_target": "_self"
           }
         },
-        "text_yxgAwP": {
+        "text_JBMdXt": {
           "type": "text",
           "settings": {
-            "text": "Marquee 6",
+            "text": "Commercial-grade build",
+            "link": "shopify://pages/contact",
+            "link_target": "_blank"
+          }
+        },
+        "text_hLrfKH": {
+          "type": "text",
+          "settings": {
+            "text": "Design-led finish",
             "link": "",
             "link_target": "_self"
           }
         },
-        "text_XcpMtE": {
+        "text_hyatew": {
           "type": "text",
           "settings": {
-            "text": "Marquee 7",
+            "text": "Warranty",
             "link": "",
             "link_target": "_self"
           }
         },
-        "text_iCkTPy": {
+        "text_U7RLcd": {
           "type": "text",
           "settings": {
-            "text": "Marquee 8",
+            "text": "Delivery + install",
+            "link": "",
+            "link_target": "_self"
+          }
+        },
+        "text_64eRkM": {
+          "type": "text",
+          "settings": {
+            "text": "QC standards",
             "link": "",
             "link_target": "_self"
           }
@@ -225,9 +241,11 @@
         "text_3mUJwA",
         "text_PiW8fX",
         "text_9iJpQp",
-        "text_yxgAwP",
-        "text_XcpMtE",
-        "text_iCkTPy"
+        "text_JBMdXt",
+        "text_hLrfKH",
+        "text_hyatew",
+        "text_U7RLcd",
+        "text_64eRkM"
       ],
       "name": "Marquee Text",
       "settings": {
