@@ -64,7 +64,7 @@
   }
 </style>
 
-<div class="marquee-container">
+<div class="marquee-container" data-check="{{ section.blocks.length }}">
   <div class="marquee-content">
     {%- for block in section.blocks -%}
       <div class="marquee-item">
