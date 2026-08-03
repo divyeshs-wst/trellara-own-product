@@ -13,6 +13,13 @@
     assign track_class = track_class | append: ' trop-collection-list__track--grid'
   endif
 
+  assign wrapper_class = 'trop-collection-list__wrapper'
+  if s.cards_width == 'full-width' and s.container_width == 'container'
+    assign wrapper_class = wrapper_class | append: ' trop-collection-list__wrapper--bleed-right'
+  elsif s.cards_width == 'container' and s.container_width == 'no-container'
+    assign wrapper_class = wrapper_class | append: ' trop-collection-list__wrapper--contained'
+  endif
+
   assign label_class = 'trop-collection-list__label trop-collection-list__label--' | append: s.label_position
 
   assign arrow_shape_class = 'trop-collection-list__arrow trop-collection-list__arrow--' | append: s.arrow_style
@@ -150,7 +157,7 @@
       {% endif %}
     </div>
 
-    <div class="trop-collection-list__wrapper">
+    <div class="{{ wrapper_class }}">
       <div class="{{ track_class }}" data-trop-track>
         {% for block in section.blocks %}
           {%- liquid
@@ -301,6 +308,17 @@
       "options": [
         { "value": "container", "label": "Container" },
         { "value": "no-container", "label": "Full Width" }
+      ],
+      "default": "container"
+    },
+    {
+      "type": "select",
+      "id": "cards_width",
+      "label": "Cards List Width",
+      "info": "Controls the card row/slider independently of the Section Width above. Full Width bleeds the row to the right edge of the screen while keeping it aligned with the heading on the left.",
+      "options": [
+        { "value": "container", "label": "Container (match heading width)" },
+        { "value": "full-width", "label": "Full Width (bleed right edge)" }
       ],
       "default": "container"
     },
