@@ -190,7 +190,7 @@
         "color_text": "#000000",
         "font_size": 32,
         "speed": 20,
-        "spacing": 15,
+        "spacing": 16,
         "item_gap": 70,
         "divider_style": "icon",
         "divider_position": "before",
