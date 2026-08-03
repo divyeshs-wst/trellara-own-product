@@ -185,7 +185,7 @@
                     assign card_description = the_collection.description
                     endif
 
-                    assign card_text = block_settings.custom_link_text
+                    assign card_text = block_settings.custom_text
                     if card_text == blank and the_collection != blank
                     assign card_text = the_collection.title
                     endif
@@ -217,7 +217,13 @@
                                     {% endif %}
                                 </div>
                                 <div class="trop-link">
-                                    <a href="{{ card_link | default: '#' }}" class="trop-card-link" {{ block.shopify_attributes }}>{{ card_text }}</a>
+                                    <a href="{{ card_link | default: '#' }}" class="trop-card-link trop-flex" {{ block.shopify_attributes }}>
+                                        {{ card_text }}
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7 17L17 7" stroke="#FFB302" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M7 7H17V17" stroke="#FFB302" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
                                 </div>
                             </div>
 
