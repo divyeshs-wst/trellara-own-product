@@ -310,7 +310,7 @@
       "name": "Packages",
       "settings": {
         "container_width": "container",
-        "left_column_width": 340,
+        "left_column_width": 350,
         "column_gap": 40,
         "section_padding_top": 140,
         "section_padding_bottom": 140,
