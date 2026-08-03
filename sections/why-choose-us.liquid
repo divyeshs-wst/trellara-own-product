@@ -1,4 +1,4 @@
-{{ 'why-choose-us.css' | asset_url | stylesheet_tag }}
+{{ 'collection-list.css' | asset_url | stylesheet_tag }}
 
 {%- liquid
   assign s = section.settings
@@ -8,25 +8,25 @@
     assign container_class = 'no-container'
   endif
 
-  assign track_class = 'trop-why-choose-us__track'
+  assign track_class = 'trop-collection-list__track'
   if s.layout_style == 'grid'
-    assign track_class = track_class | append: ' trop-why-choose-us__track--grid'
+    assign track_class = track_class | append: ' trop-collection-list__track--grid'
   endif
 
-  assign wrapper_class = 'trop-why-choose-us__wrapper'
+  assign wrapper_class = 'trop-collection-list__wrapper'
   if s.cards_width == 'full-width' and s.container_width == 'container'
-    assign wrapper_class = wrapper_class | append: ' trop-why-choose-us__wrapper--bleed-right'
+    assign wrapper_class = wrapper_class | append: ' trop-collection-list__wrapper--bleed-right'
   elsif s.cards_width == 'container' and s.container_width == 'no-container'
-    assign wrapper_class = wrapper_class | append: ' trop-why-choose-us__wrapper--contained'
+    assign wrapper_class = wrapper_class | append: ' trop-collection-list__wrapper--contained'
   endif
 
-  assign label_class = 'trop-why-choose-us__label trop-why-choose-us__label--' | append: s.label_position
+  assign label_class = 'trop-collection-list__label trop-collection-list__label--' | append: s.label_position
 
-  assign arrow_shape_class = 'trop-why-choose-us__arrow trop-why-choose-us__arrow--' | append: s.arrow_style
+  assign arrow_shape_class = 'trop-collection-list__arrow trop-collection-list__arrow--' | append: s.arrow_style
 -%}
 
 {% style %}
-  .trop-why-choose-us-{{ section.id }} {
+  .trop-collection-list-{{ section.id }} {
     background-color: {{ s.section_bg_color }};
     padding-top: {{ s.section_padding_top }}px;
     padding-bottom: {{ s.section_padding_bottom }}px;
@@ -37,16 +37,16 @@
   /* Top header: only holds the heading (plus arrows if arrow_position = top).
      Falls back to flex-start so the heading position is never hijacked by
      arrow_bottom_align when arrows live in the bottom header instead. */
-  .trop-why-choose-us-{{ section.id }} .trop-why-choose-us__header--top {
+  .trop-collection-list-{{ section.id }} .trop-collection-list__header--top {
     justify-content: {% if s.arrow_position == 'top' %}{{ s.arrow_space }}{% else %}flex-start{% endif %};
   }
 
   /* Bottom header: only holds arrows (if arrow_position = bottom). */
-  .trop-why-choose-us-{{ section.id }} .trop-why-choose-us__header--bottom {
+  .trop-collection-list-{{ section.id }} .trop-collection-list__header--bottom {
     justify-content: {% if s.arrow_position == 'bottom' %}{{ s.arrow_bottom_align }}{% else %}flex-start{% endif %};
   }
 
-  .trop-why-choose-us-{{ section.id }} .trop-why-choose-us__heading {
+  .trop-collection-list-{{ section.id }} .trop-collection-list__heading {
     color: {{ s.heading_color }};
     font-size: {{ s.heading_size }}px;
     text-transform: {{ s.heading_transform }};
@@ -54,7 +54,7 @@
     flex: max-content;
   }
   
-  .trop-why-choose-us-{{ section.id }} .trop-why-choose-us__sub_heading {
+  .trop-collection-list-{{ section.id }} .trop-collection-list__sub_heading {
     color: {{ s.sub_heading_color }};
     font-size: {{ s.sub_heading_size }}px;
     text-transform: {{ s.sub_heading_transform }};
@@ -62,23 +62,23 @@
     flex: max-content;
   }
 
-  .trop-why-choose-us-{{ section.id }} .trop-why-choose-us__track {
+  .trop-collection-list-{{ section.id }} .trop-collection-list__track {
     gap: {{ s.item_gap }}px;
   }
 
-  .trop-why-choose-us-{{ section.id }} {
+  .trop-collection-list-{{ section.id }} {
     --trop-columns-desktop: {{ s.columns_desktop }};
     --trop-columns-mobile: {{ s.columns_mobile }};
     --trop-item-width-desktop: {{ s.item_width_desktop }}px;
     --trop-item-width-mobile: {{ s.item_width_mobile }}px;
   }
 
-  .trop-why-choose-us-{{ section.id }} .trop-why-choose-us__card-inner {
+  .trop-collection-list-{{ section.id }} .trop-collection-list__card-inner {
     background-color: {{ s.card_bg_color }};
     border-radius: {{ s.card_border_radius }}px;
   }
 
-  .trop-why-choose-us-{{ section.id }} .trop-why-choose-us__image-wrap {
+  .trop-collection-list-{{ section.id }} .trop-collection-list__image-wrap {
     border-radius: {{ s.image_border_radius }}px;
     {% if s.image_aspect_ratio == 'square' %}
       aspect-ratio: 1 / 1;
@@ -89,21 +89,21 @@
     {% endif %}
   }
 
-  .trop-why-choose-us-{{ section.id }} .trop-why-choose-us__image-wrap img {
+  .trop-collection-list-{{ section.id }} .trop-collection-list__image-wrap img {
     object-fit: {{ s.image_fit }};
     {% if s.image_aspect_ratio == 'auto' %}
       height: auto;
     {% endif %}
   }
 
-  .trop-why-choose-us-{{ section.id }} .trop-why-choose-us__label {
+  .trop-collection-list-{{ section.id }} .trop-collection-list__label {
     color: {{ s.label_color }};
     font-size: {{ s.label_size }}px;
     font-weight: {{ s.label_font_weight }};
     text-transform: {{ s.label_transform }};
   }
 
-  .trop-why-choose-us-{{ section.id }} .trop-why-choose-us__label--overlay {
+  .trop-collection-list-{{ section.id }} .trop-collection-list__label--overlay {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -111,7 +111,7 @@
     height: calc(100% - 24px);
   }
 
-  .trop-why-choose-us-{{ section.id }} .trop-why-choose-us__label--overlay::before {
+  .trop-collection-list-{{ section.id }} .trop-collection-list__label--overlay::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -124,32 +124,32 @@
     z-index: -1;
   }
 
-  .trop-why-choose-us-{{ section.id }} .trop-why-choose-us__arrow {
+  .trop-collection-list-{{ section.id }} .trop-collection-list__arrow {
     width: {{ s.arrow_size }}px;
     height: {{ s.arrow_size }}px;
     background-color: {{ s.arrow_bg_color }};
   }
 
-  .trop-why-choose-us-{{ section.id }} .trop-why-choose-us__arrow svg {
+  .trop-collection-list-{{ section.id }} .trop-collection-list__arrow svg {
     fill: {{ s.arrow_icon_color }};
   }
 {% endstyle %}
 
-<section class="trop-why-choose-us trop-why-choose-us-{{ section.id }} {{ container_class }}">
-  <div class="trop-why-choose-us__inner">
+<section class="trop-collection-list trop-collection-list-{{ section.id }} {{ container_class }}">
+  <div class="trop-collection-list__inner">
 
-    <div class="trop-why-choose-us__header trop-why-choose-us__header--top trop-flex mb-25">
-      <div class="trop-why-choose-us-content">
+    <div class="trop-collection-list__header trop-collection-list__header--top trop-flex mb-25">
+      <div class="trop-collection-list-content">
         {% if s.sub_heading != blank %}
-          <{{ s.sub_heading_tag }} class="trop-why-choose-us__sub_heading">{{ s.sub_heading }}</{{ s.sub_heading_tag }}>
+          <{{ s.sub_heading_tag }} class="trop-collection-list__sub_heading">{{ s.sub_heading }}</{{ s.sub_heading_tag }}>
         {% endif %}
         {% if s.heading != blank %}
-          <{{ s.heading_tag }} class="trop-why-choose-us__heading">{{ s.heading }}</{{ s.heading_tag }}>
+          <{{ s.heading_tag }} class="trop-collection-list__heading">{{ s.heading }}</{{ s.heading_tag }}>
         {% endif %}
       </div>
 
       {% if s.arrow_position == 'top' and s.layout_style == 'carousel' and s.enable_arrows %}
-        <div class="trop-why-choose-us__nav">
+        <div class="trop-collection-list__nav">
           <button
             type="button"
             class="{{ arrow_shape_class }}"
@@ -195,11 +195,11 @@
 
           <a
             href="{{ card_link | default: '#' }}"
-            class="trop-why-choose-us__card"
+            class="trop-collection-list__card"
             {{ block.shopify_attributes }}
           >
-            <div class="trop-why-choose-us__card-inner">
-              <div class="trop-why-choose-us__image-wrap">
+            <div class="trop-collection-list__card-inner">
+              <div class="trop-collection-list__image-wrap">
                 {% if card_image != blank %}
                   {{
                     card_image
@@ -224,9 +224,9 @@
       </div>
     </div>
 
-    <div class="trop-why-choose-us__header trop-why-choose-us__header--bottom trop-flex mt-25">
+    <div class="trop-collection-list__header trop-collection-list__header--bottom trop-flex mt-25">
       {% if s.arrow_position == 'bottom' and s.layout_style == 'carousel' and s.enable_arrows %}
-        <div class="trop-why-choose-us__nav">
+        <div class="trop-collection-list__nav">
           <button type="button" class="{{ arrow_shape_class }}" data-trop-prev aria-label="Previous">
             <svg viewBox="0 0 24 24"><path d="M15.5 4.5 8 12l7.5 7.5 1.5-1.5L11 12l6-6z"/></svg>
           </button>
@@ -251,7 +251,7 @@
       if (!track) return;
 
       function scrollAmount() {
-        var card = track.querySelector('.trop-why-choose-us__card');
+        var card = track.querySelector('.trop-collection-list__card');
         var gap = parseInt(getComputedStyle(track).columnGap || getComputedStyle(track).gap || 0, 10) || 0;
         return card ? card.getBoundingClientRect().width + gap : 300;
       }
@@ -281,14 +281,14 @@
     }
 
     function trop_initSection_{{ section.id | replace: '-', '_' }}() {
-      var section = document.querySelector('.trop-why-choose-us-{{ section.id }}');
+      var section = document.querySelector('.trop-collection-list-{{ section.id }}');
       initTropCollectionList(section);
     }
 
     trop_initSection_{{ section.id | replace: '-', '_' }}();
 
     document.addEventListener('shopify:section:load', function (event) {
-      var reloadedSection = event.target.querySelector('.trop-why-choose-us-{{ section.id }}');
+      var reloadedSection = event.target.querySelector('.trop-collection-list-{{ section.id }}');
       if (reloadedSection) {
         initTropCollectionList(reloadedSection);
       }
