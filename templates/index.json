@@ -526,7 +526,7 @@
         "item_gap": 20,
         "section_padding_top": 60,
         "section_padding_bottom": 60,
-        "section_bg_color": "#ffffff",
+        "section_bg_color": "#F6F6F6",
         "sub_heading": "Why Choose",
         "sub_heading_tag": "p",
         "sub_heading_size": 12,
