@@ -2,9 +2,24 @@
    Structural / static styles.
    Settings-driven (dynamic) styles live in the section's {% style %} block. */
 
+.trop-collection-list {
+  width: 100%;
+}
+
+/* Self-contained container / full-width so this works even if
+   the theme's global .container/.no-container utility isn't loaded */
+.trop-collection-list.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.trop-collection-list.no-container {
+  width: 100%;
+}
+
 /* Header row: heading + arrows */
 .trop-collection-list__header {
-  display: flex
+  display: flex;
   align-items: center;
   gap: 16px;
 }
@@ -61,7 +76,7 @@
 }
 
 .trop-collection-list__track--grid .trop-collection-list__card {
-  width: 100%;
+  width: 100% !important;
 }
 
 .trop-collection-list__card-inner {
