@@ -270,11 +270,90 @@
         "padding_top": 40,
         "padding_bottom": 40
       }
+    },
+    "packages_AEECQU": {
+      "type": "packages",
+      "blocks": {
+        "package_AzxDrG": {
+          "type": "package",
+          "settings": {
+            "title": "Package Title",
+            "description": "<p>Transcenda o comum com a nossa linha de produtos.</p>",
+            "link": ""
+          }
+        },
+        "package_wrBHYP": {
+          "type": "package",
+          "settings": {
+            "title": "Package Title",
+            "description": "<p>Transcenda o comum com a nossa linha de produtos.</p>",
+            "link": ""
+          }
+        },
+        "package_RXRaay": {
+          "type": "package",
+          "settings": {
+            "title": "Package Title",
+            "description": "<p>Transcenda o comum com a nossa linha de produtos.</p>",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "package_AzxDrG",
+        "package_wrBHYP",
+        "package_RXRaay"
+      ],
+      "name": "Packages",
+      "settings": {
+        "container_width": "container",
+        "left_column_width": 340,
+        "column_gap": 40,
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "section_bg_color": "#D7D7D7",
+        "label": "Gym Packages",
+        "label_color": "#1a1a1a",
+        "label_size": 13,
+        "label_transform": "uppercase",
+        "heading": "Gym Packages for Your Spaces",
+        "heading_tag": "h2",
+        "heading_size": 34,
+        "heading_line_height": 1.2,
+        "heading_color": "#14123a",
+        "diagram_image": "shopify://shop_images/image_38.png",
+        "diagram_width": 100,
+        "diagram_spacing": 40,
+        "card_width_desktop": 280,
+        "card_width_mobile": 220,
+        "card_gap": 24,
+        "card_bg_color": "#f5f5f5",
+        "card_border_radius": 8,
+        "card_padding_x": 20,
+        "card_text_spacing": 20,
+        "image_aspect_ratio": "square",
+        "image_fit": "contain",
+        "image_border_radius": 0,
+        "title_color": "#1a1a1a",
+        "title_size": 16,
+        "title_transform": "uppercase",
+        "description_color": "#666666",
+        "description_size": 14,
+        "description_spacing": 10,
+        "enable_arrows": true,
+        "arrow_align": "flex-end",
+        "arrow_spacing": 24,
+        "arrow_style": "circle",
+        "arrow_size": 36,
+        "arrow_bg_color": "#f2f2f2",
+        "arrow_icon_color": "#1a1a1a"
+      }
     }
   },
   "order": [
     "hero",
     "collection_list_ejKEpy",
-    "marquee_nP73QW"
+    "marquee_nP73QW",
+    "packages_AEECQU"
   ]
 }
