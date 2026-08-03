@@ -201,7 +201,7 @@
                     endif
                 -%}
 
-                <a href="{{ card_link | default: '#' }}" class="trop-collection-list__card" {{ block.shopify_attributes }}>
+                <div class="trop-collection-list__card" {{ block.shopify_attributes }}>
                     <div class="trop-collection-list__card-inner">
                         <div class="trop-collection-list__image-wrap">
                             <div class="trop-flex">
@@ -234,7 +234,7 @@
                             {% endif %}
                         </div>
                     </div>
-                </a>
+                </div>
             {% endfor %}
         </div>
         </div>
