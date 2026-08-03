@@ -18,6 +18,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex-shrink: 0;
   }
   .marquee-item .marquee-text {
     padding: 0 0 0 {{ section.settings.spacing | default: 50 }}px;
@@ -57,9 +58,14 @@
     opacity: 0.8;
   }
 
-  @keyframes marquee-scroll {
+  {% comment %} @keyframes marquee-scroll {
     0% { transform: translateX(0); }
     100% { transform: translateX(-100%); }
+  } {% endcomment %}
+
+  @keyframes marquee-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
   }
 </style>
 
