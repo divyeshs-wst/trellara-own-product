@@ -27,8 +27,16 @@
     padding-left: 15px;
   }
 
-  .trop-collection-list-{{ section.id }} .trop-collection-list__header {
-    justify-content: {% if s.arrow_position == 'top' %} {{ s.arrow_space }}; {%  elsif s.arrow_position == 'bottom' %} {{ s.arrow_bottom_align }}; {%  endif %}
+  /* Top header: only holds the heading (plus arrows if arrow_position = top).
+     Falls back to flex-start so the heading position is never hijacked by
+     arrow_bottom_align when arrows live in the bottom header instead. */
+  .trop-collection-list-{{ section.id }} .trop-collection-list__header--top {
+    justify-content: {% if s.arrow_position == 'top' %}{{ s.arrow_space }}{% else %}flex-start{% endif %};
+  }
+
+  /* Bottom header: only holds arrows (if arrow_position = bottom). */
+  .trop-collection-list-{{ section.id }} .trop-collection-list__header--bottom {
+    justify-content: {% if s.arrow_position == 'bottom' %}{{ s.arrow_bottom_align }}{% else %}flex-start{% endif %};
   }
 
   .trop-collection-list-{{ section.id }} .trop-collection-list__heading {
@@ -68,6 +76,9 @@
 
   .trop-collection-list-{{ section.id }} .trop-collection-list__image-wrap img {
     object-fit: {{ s.image_fit }};
+    {% if s.image_aspect_ratio == 'auto' %}
+      height: auto;
+    {% endif %}
   }
 
   .trop-collection-list-{{ section.id }} .trop-collection-list__label {
@@ -112,12 +123,12 @@
 <section class="trop-collection-list trop-collection-list-{{ section.id }} {{ container_class }}">
   <div class="trop-collection-list__inner">
 
-    <div class="trop-collection-list__header trop-flex mb-25">
+    <div class="trop-collection-list__header trop-collection-list__header--top trop-flex mb-25">
       {% if s.heading != blank %}
         <{{ s.heading_tag }} class="trop-collection-list__heading">{{ s.heading }}</{{ s.heading_tag }}>
       {% endif %}
 
-      {% if s.arrow_position == 'top' and  s.layout_style == 'carousel' and s.enable_arrows %}
+      {% if s.arrow_position == 'top' and s.layout_style == 'carousel' and s.enable_arrows %}
         <div class="trop-collection-list__nav">
           <button
             type="button"
@@ -193,8 +204,8 @@
       </div>
     </div>
 
-    <div class="trop-collection-list__header trop-flex mt-25">
-      {% if s.arrow_position == 'bottom' and  s.layout_style == 'carousel' and s.enable_arrows %}
+    <div class="trop-collection-list__header trop-collection-list__header--bottom trop-flex mt-25">
+      {% if s.arrow_position == 'bottom' and s.layout_style == 'carousel' and s.enable_arrows %}
         <div class="trop-collection-list__nav">
           <button type="button" class="{{ arrow_shape_class }}" data-trop-prev aria-label="Previous">
             <svg viewBox="0 0 24 24"><path d="M15.5 4.5 8 12l7.5 7.5 1.5-1.5L11 12l6-6z"/></svg>
@@ -322,7 +333,7 @@
       "step": 10,
       "default": 300,
       "unit": "px",
-      "visible_if": "{{ section.settings.layout_style == 'grid' }}"
+      "visible_if": "{{ section.settings.layout_style == 'carousel' }}"
     },
     {
       "type": "range",
@@ -333,7 +344,7 @@
       "step": 10,
       "default": 220,
       "unit": "px",
-      "visible_if": "{{ section.settings.layout_style == 'grid' }}"
+      "visible_if": "{{ section.settings.layout_style == 'carousel' }}"
     },
     {
       "type": "range",
