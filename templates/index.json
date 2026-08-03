@@ -177,12 +177,57 @@
             "link": "",
             "link_target": "_self"
           }
+        },
+        "text_PiW8fX": {
+          "type": "text",
+          "settings": {
+            "text": "Marquee 4",
+            "link": "",
+            "link_target": "_self"
+          }
+        },
+        "text_9iJpQp": {
+          "type": "text",
+          "settings": {
+            "text": "Marquee 5",
+            "link": "",
+            "link_target": "_self"
+          }
+        },
+        "text_yxgAwP": {
+          "type": "text",
+          "settings": {
+            "text": "Marquee 6",
+            "link": "",
+            "link_target": "_self"
+          }
+        },
+        "text_XcpMtE": {
+          "type": "text",
+          "settings": {
+            "text": "Marquee 7",
+            "link": "",
+            "link_target": "_self"
+          }
+        },
+        "text_iCkTPy": {
+          "type": "text",
+          "settings": {
+            "text": "Marquee 8",
+            "link": "",
+            "link_target": "_self"
+          }
         }
       },
       "block_order": [
         "text_ri9M99",
         "text_NDcigx",
-        "text_3mUJwA"
+        "text_3mUJwA",
+        "text_PiW8fX",
+        "text_9iJpQp",
+        "text_yxgAwP",
+        "text_XcpMtE",
+        "text_iCkTPy"
       ],
       "name": "Marquee Text",
       "settings": {
