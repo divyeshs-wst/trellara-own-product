@@ -365,7 +365,7 @@
           "type": "collection",
           "settings": {
             "collection": "frontpage",
-            "custom_title": "",
+            "custom_title": "Racks + Rigs",
             "custom_link": "shopify://collections/frontpage"
           }
         },
@@ -373,7 +373,7 @@
           "type": "collection",
           "settings": {
             "collection": "cable-cross",
-            "custom_title": "",
+            "custom_title": "Plates + Bars",
             "custom_link": "shopify://collections/cable-cross"
           }
         },
@@ -381,7 +381,7 @@
           "type": "collection",
           "settings": {
             "collection": "cardio",
-            "custom_title": "",
+            "custom_title": "Benches",
             "custom_link": "shopify://collections/cardio"
           }
         },
@@ -389,7 +389,7 @@
           "type": "collection",
           "settings": {
             "collection": "collection-1",
-            "custom_title": "",
+            "custom_title": "Storage",
             "custom_link": "shopify://collections/collection-1"
           }
         },
