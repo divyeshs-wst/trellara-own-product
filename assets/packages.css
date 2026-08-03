@@ -44,8 +44,8 @@
 
 .trop-packages__wrapper {
   position: relative;
-  /* width: calc(100% + (99vw - 100%) / 4); */
-  width: calc(100% + (100vw - 750px) / 4);
+  /* width: calc(100% + (100vw - 750px) / 4); */
+  width: calc(100vw - 90%);
 }
 
 .trop-packages__track {
