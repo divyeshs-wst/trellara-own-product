@@ -101,8 +101,7 @@
   }
 
   .trop-collection-list-{{ section.id }} .trop-collection-list__image-wrap img {
-    object-fit: {{ s.image_fit }};
-      height: auto;
+    height: auto;
   }
 
   .trop-collection-list-{{ section.id }} .trop-collection-list__label {
@@ -584,16 +583,6 @@
       "step": 1,
       "default": 0,
       "unit": "px"
-    },
-    {
-      "type": "select",
-      "id": "image_fit",
-      "label": "Image Fit",
-      "options": [
-        { "value": "cover", "label": "Cover" },
-        { "value": "contain", "label": "Contain" }
-      ],
-      "default": "cover"
     },
     {
       "type": "range",
