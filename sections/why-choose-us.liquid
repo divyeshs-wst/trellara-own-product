@@ -26,6 +26,16 @@
 -%}
 
 {% style %}
+  .trop-collection-list-{{ section.id }} .trop-icon {
+        width: 56px;
+        height: 56px;
+    }
+
+    .trop-collection-list-{{ section.id }} .trop-icon img {
+        width: 16px;
+        height: auto;
+    }
+    
   .trop-collection-list-{{ section.id }} {
     background-color: {{ s.section_bg_color }};
     padding-top: {{ s.section_padding_top }}px;
