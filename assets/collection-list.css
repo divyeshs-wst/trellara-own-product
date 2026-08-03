@@ -33,6 +33,20 @@
   position: relative;
 }
 
+/* Cards row bleeds past the container to the right viewport edge,
+   while its left edge stays aligned with the heading/container. */
+.trop-collection-list__wrapper--bleed-right {
+  width: calc(100% + ((100vw - 100%) / 2));
+}
+
+/* Cards row stays boxed to a centered max-width even when the
+   main section itself is set to Full Width. */
+.trop-collection-list__wrapper--contained {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 /* Track: carousel mode */
 .trop-collection-list__track {
   display: flex;
