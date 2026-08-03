@@ -116,7 +116,7 @@
       "settings": {
         "layout_style": "carousel",
         "container_width": "container",
-        "cards_width": "full-width",
+        "cards_width": "container",
         "columns_desktop": 4,
         "columns_mobile": 1,
         "item_width_desktop": 300,
