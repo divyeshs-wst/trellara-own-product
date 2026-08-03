@@ -217,10 +217,7 @@
                                     {% endif %}
                                 </div>
                                 <div class="trop-link">
-                                    <a href="{{ card_link | default: '#' }}" class="trop-card-link trop-flex" {{ block.shopify_attributes }}>
-                                        {{ card_text }}
-                                        
-                                    </a>
+                                    <a href="{{ card_link | default: '#' }}" class="trop-card-link" {{ block.shopify_attributes }}>{{ card_text }}</a>
                                 </div>
                             </div>
 
