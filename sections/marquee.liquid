@@ -267,6 +267,57 @@
       "info": "Horizontal space around the divider."
     },
     {
+      "type": "select",
+      "id": "divider_border_show",
+      "label": "Divider Border",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "show",
+          "label": "Show"
+        }
+      ],
+      "default": "show"
+    },
+    {
+      "type": "range",
+      "id": "divider_border",
+      "label": "Divider Border",
+      "min": 5,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 20,
+      "visible_if": "{{ section.settings.background_type == 'image' }}"
+    },
+    {
+      "type": "select",
+      "id": "background_type",
+      "label": "Background Type",
+      "options": [
+        {
+          "value": "image",
+          "label": "Image"
+        },
+        {
+          "value": "video",
+          "label": "Video"
+        }
+      ],
+      "default": "image",
+      "visible_if": "{{ section.settings.background_type == 'image' }}"
+    },
+    {
+      "type": "color",
+      "id": "divider_border_color",
+      "label": "Divider Border Color",
+      "default": "#000000",
+      "visible_if": "{{ section.settings.background_type == 'image' }}"
+    },
+    {
       "type": "header",
       "content": "Padding"
     },
