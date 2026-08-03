@@ -83,7 +83,7 @@
             {{ block.settings.text | escape }}
           </a>
         {%- else -%}
-          {{ block.settings.text | escape }}
+          <span class="marquee-text">{{ block.settings.text | escape }}</span>
         {%- endif -%}
 
         {%- if section.settings.divider_position == 'after' -%}
@@ -128,7 +128,7 @@
             {{ block.settings.text | escape }}
           </a>
         {%- else -%}
-          {{ block.settings.text | escape }}
+          <span class="marquee-text">{{ block.settings.text | escape }}</span>
         {%- endif -%}
 
         {%- if section.settings.divider_position == 'after' -%}
