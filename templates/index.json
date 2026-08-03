@@ -329,7 +329,7 @@
         "diagram_spacing": 200,
         "card_width_desktop": 370,
         "card_width_mobile": 220,
-        "card_gap": 24,
+        "card_gap": 16,
         "card_bg_color": "#f6f6f6",
         "card_border_radius": 8,
         "card_padding_x": 20,
