@@ -112,13 +112,15 @@
   <div class="{{ container_class }}">
     <div class="trop-gym-packages__inner">
       <div class="trop-gym-packages__left">
-        {% if s.label != blank %}
-          <span class="trop-gym-packages__label">{{ s.label }}</span>
-        {% endif %}
+        <div class="trop-gym-package-content">
+            {% if s.label != blank %}
+            <span class="trop-gym-packages__label">{{ s.label }}</span>
+            {% endif %}
 
-        {% if s.heading != blank %}
-          <{{ s.heading_tag }} class="trop-gym-packages__heading">{{ s.heading }}</{{ s.heading_tag }}>
-        {% endif %}
+            {% if s.heading != blank %}
+            <{{ s.heading_tag }} class="trop-gym-packages__heading">{{ s.heading }}</{{ s.heading_tag }}>
+            {% endif %}
+        </div>
 
         {% if s.diagram_image != blank %}
           <div class="trop-gym-packages__diagram">
