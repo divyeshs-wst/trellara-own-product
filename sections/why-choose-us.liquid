@@ -244,7 +244,8 @@
                         <div class="trop-collection-list__content-wrap">
                             {% if s.label_position == 'below' and card_title != blank %}
                                 <span class="{{ label_class }}">{{ card_title }}</span>
-                                <p class="{{ label_class }}">{{ card_description }}</p>
+                                {% comment %} <p class="{{ label_class }}">{{ card_description }}</p> {% endcomment %}
+                                <p>{{ card_description }}</p>
                             {% endif %}
                         </div>
                     </div>
