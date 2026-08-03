@@ -51,7 +51,7 @@
 
   .marquee-divider-icon img {
     width: {{ section.settings.icon_size | append: 'px' | default: "auto" }};
-    margin: 0 {{ section.settings.divider_spacing | default: 20 }}px;
+    margin: {{ section.settings.divider_spacing | default: 20 }}px;
   }
 
   .marquee-item:hover {
