@@ -293,21 +293,38 @@
       "default": 20,
       "visible_if": "{{ section.settings.divider_border_show == 'show' }}"
     },
+ 
     {
       "type": "select",
       "id": "divider_border_type",
       "label": "Divider Border Type",
       "options": [
         {
-          "value": "image",
-          "label": "Image"
+          "value": "solid",
+          "label": "Solid"
         },
         {
-          "value": "video",
-          "label": "Video"
+          "value": "dashed",
+          "label": "Dashed"
+        },
+        {
+          "value": "dotted",
+          "label": "Dotted"
+        },
+        {
+          "value": "double",
+          "label": "Double"
+        },
+        {
+          "value": "groove",
+          "label": "Groove"
+        },
+        {
+          "value": "inset",
+          "label": "Inset"
         }
       ],
-      "default": "image",
+      "default": "solid",
       "visible_if": "{{ section.settings.divider_border_show == 'show' }}"
     },
     {
