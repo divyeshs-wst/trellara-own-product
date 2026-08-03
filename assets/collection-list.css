@@ -25,7 +25,7 @@
 /* Cards row bleeds past the container to the right viewport edge,
    while its left edge stays aligned with the heading/container. */
 .trop-collection-list__wrapper--bleed-right {
-  width: calc(100% + ((100vw - 100%) / 2));
+  width: calc(100% + ((99vw - 100%) / 2));
 }
 
 /* Cards row stays boxed to a centered max-width even when the
