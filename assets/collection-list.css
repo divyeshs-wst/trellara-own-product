@@ -26,6 +26,7 @@
    while its left edge stays aligned with the heading/container. */
 .trop-collection-list__wrapper--bleed-right {
   width: calc(100% + ((99vw - 100%) / 2));
+  padding-right: 15px;
 }
 
 /* Cards row stays boxed to a centered max-width even when the
