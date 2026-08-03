@@ -79,7 +79,7 @@
             <span class="marquee-divider">{{ section.settings.divider_char }}</span>
           {%- endif -%}
         {%- endif -%}
-        
+
         {%- if block.settings.link != blank -%}
           <a href="{{ block.settings.link }}" target="{{ block.settings.link_target }}">
             {{ block.settings.text | escape }}
@@ -103,8 +103,8 @@
             <span class="marquee-divider">{{ section.settings.divider_char }}</span>
           {%- endif -%}
         {%- endif -%}
-      {%- endfor -%}
       </div>
+    {%- endfor -%}
 
     {%- comment -%} Duplicate for seamless loop {%- endcomment -%}
     {%- for block in section.blocks -%}
@@ -124,7 +124,7 @@
             <span class="marquee-divider">{{ section.settings.divider_char }}</span>
           {%- endif -%}
         {%- endif -%}
-        
+
         {%- if block.settings.link != blank -%}
           <a href="{{ block.settings.link }}" target="{{ block.settings.link_target }}">
             {{ block.settings.text | escape }}
@@ -148,10 +148,11 @@
             <span class="marquee-divider">{{ section.settings.divider_char }}</span>
           {%- endif -%}
         {%- endif -%}
-      {%- endfor -%}
       </div>
+    {%- endfor -%}
   </div>
 </div>
+
 
 {% schema %}
 {
