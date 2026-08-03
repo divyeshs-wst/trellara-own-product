@@ -277,6 +277,7 @@
         "package_AzxDrG": {
           "type": "package",
           "settings": {
+            "image": "shopify://shop_images/693c53972a964e5d1892f927_CS800_2B.png",
             "title": "Package Title",
             "description": "<p>Transcenda o comum com a nossa linha de produtos.</p>",
             "link": ""
@@ -285,6 +286,7 @@
         "package_wrBHYP": {
           "type": "package",
           "settings": {
+            "image": "shopify://shop_images/693c31d773125325f656a20f_CE800_2B.png",
             "title": "Package Title",
             "description": "<p>Transcenda o comum com a nossa linha de produtos.</p>",
             "link": ""
@@ -293,6 +295,7 @@
         "package_RXRaay": {
           "type": "package",
           "settings": {
+            "image": "shopify://shop_images/693c53972a964e5d1892f927_CS800_2B.png",
             "title": "Package Title",
             "description": "<p>Transcenda o comum com a nossa linha de produtos.</p>",
             "link": ""
