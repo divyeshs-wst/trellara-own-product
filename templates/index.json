@@ -552,7 +552,7 @@
         "heading_alignment": "start",
         "heading_transform": "uppercase",
         "card_bg_color": "#ffffff",
-        "card_border_radius": 0,
+        "card_border_radius": 16,
         "image_aspect_ratio": "square",
         "image_fit": "cover",
         "image_border_radius": 0,
