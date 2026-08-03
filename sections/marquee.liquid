@@ -11,6 +11,7 @@
   .marquee-content {
     display: inline-flex;
     animation: marquee-scroll {{ section.settings.speed | default: 20 }}s linear infinite;
+    gap: {{ section.settings.item_gap | default: 70 }}px;
   }
 
   .marquee-item {
@@ -194,12 +195,22 @@
     {
       "type": "range",
       "id": "spacing",
-      "label": "Item Spacing",
+      "label": "Spacing between Icon and Text",
       "min": 10,
       "max": 200,
       "step": 5,
       "unit": "px",
       "default": 50
+    },
+    {
+      "type": "range",
+      "id": "item_gap",
+      "label": "Item Gap",
+      "min": 10,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "default": 70
     },
     {
       "type": "header",
