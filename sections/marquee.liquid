@@ -25,7 +25,7 @@
 
   .marquee-divider {
     {% if section.settings.divider_border_show == 'show' %}
-      border: {{ section.settings.divider_border_width | default: 0 }}px {{ section.settings.divider_border_type | default: "solid" }}px {{ section.settings.divider_border_color | default: "#000" }};
+      border: {{ section.settings.divider_border_width | default: 0 }}px {{ section.settings.divider_border_type | default: "solid" }} {{ section.settings.divider_border_color | default: "#000" }};
     {% endif %}
   }
 
