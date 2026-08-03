@@ -111,89 +111,95 @@
 <section class="trop-gym-packages trop-gym-packages-{{ section.id }}">
   <div class="{{ container_class }}">
     <div class="trop-gym-packages__inner">
-
-        <div class="trop-gym-packages__left">
+      <div class="trop-gym-packages__left">
         {% if s.label != blank %}
-            <span class="trop-gym-packages__label">{{ s.label }}</span>
+          <span class="trop-gym-packages__label">{{ s.label }}</span>
         {% endif %}
 
         {% if s.heading != blank %}
-            <{{ s.heading_tag }} class="trop-gym-packages__heading">{{ s.heading }}</{{ s.heading_tag }}>
+          <{{ s.heading_tag }} class="trop-gym-packages__heading">{{ s.heading }}</{{ s.heading_tag }}>
         {% endif %}
 
         {% if s.diagram_image != blank %}
-            <div class="trop-gym-packages__diagram">
+          <div class="trop-gym-packages__diagram">
             {{
-                s.diagram_image
-                | image_url: width: 1000
-                | image_tag: loading: 'lazy', widths: '400,600,800,1000', alt: s.diagram_image.alt
+              s.diagram_image
+              | image_url: width: 1000
+              | image_tag: loading: 'lazy', widths: '400,600,800,1000', alt: s.diagram_image.alt
             }}
-            </div>
+          </div>
         {% endif %}
-        </div>
+      </div>
 
-        <div class="trop-gym-packages__right">
+      <div class="trop-gym-packages__right">
         <div class="trop-gym-packages__wrapper">
-            <div class="trop-gym-packages__track" data-trop-track>
+          <div class="trop-gym-packages__track" data-trop-track>
             {% for block in section.blocks %}
-                {%- liquid
+              {%- liquid
                 assign block_settings = block.settings
                 assign card_link = block_settings.link
-                -%}
+              -%}
 
-                {% if card_link != blank %}
+              {% if card_link != blank %}
                 <a href="{{ card_link }}" class="trop-gym-packages__card" {{ block.shopify_attributes }}>
-                {% else %}
+              {% else %}
                 <div class="trop-gym-packages__card" {{ block.shopify_attributes }}>
-                {% endif %}
+              {% endif %}
 
-                <div class="trop-gym-packages__card-inner">
-                    <div class="trop-gym-packages__card-image">
-                    {% if block_settings.image != blank %}
-                        {{
-                        block_settings.image
-                        | image_url: width: 800
-                        | image_tag: loading: 'lazy', widths: '300,450,600,800', sizes: '(min-width: 990px) 25vw, 80vw', alt: block_settings.title
-                        }}
-                    {% else %}
-                        {{ 'product-1' | placeholder_svg_tag }}
-                    {% endif %}
-                    </div>
-
-                    <div class="trop-gym-packages__card-body">
-                    {% if block_settings.title != blank %}
-                        <h3 class="trop-gym-packages__card-title">{{ block_settings.title }}</h3>
-                    {% endif %}
-
-                    {% if block_settings.description != blank %}
-                        <div class="trop-gym-packages__card-desc">{{ block_settings.description }}</div>
-                    {% endif %}
-                    </div>
+              <div class="trop-gym-packages__card-inner">
+                <div class="trop-gym-packages__card-image">
+                  {% if block_settings.image != blank %}
+                    {{
+                      block_settings.image
+                      | image_url: width: 800
+                      | image_tag:
+                        loading: 'lazy',
+                        widths: '300,450,600,800',
+                        sizes: '(min-width: 990px) 25vw, 80vw',
+                        alt: block_settings.title
+                    }}
+                  {% else %}
+                    {{ 'product-1' | placeholder_svg_tag }}
+                  {% endif %}
                 </div>
 
-                {% if card_link != blank %}
+                <div class="trop-gym-packages__card-body">
+                  {% if block_settings.title != blank %}
+                    <h3 class="trop-gym-packages__card-title">{{ block_settings.title }}</h3>
+                  {% endif %}
+
+                  {% if block_settings.description != blank %}
+                    <div class="trop-gym-packages__card-desc">{{ block_settings.description }}</div>
+                  {% endif %}
+                </div>
+              </div>
+
+              {% if card_link != blank %}
                 </a>
-                {% else %}
+              {% else %}
                 </div>
-                {% endif %}
+              {% endif %}
             {% endfor %}
-            </div>
+          </div>
         </div>
 
         {% if s.enable_arrows %}
-            <div class="trop-gym-packages__nav">
+          <div class="trop-gym-packages__nav">
             <button type="button" class="{{ arrow_shape_class }}" data-trop-prev aria-label="Previous">
-                <svg viewBox="0 0 24 24"><path d="M15.5 4.5 8 12l7.5 7.5 1.5-1.5L11 12l6-6z"/></svg>
+              <svg viewBox="0 0 24 24">
+                <path d="M15.5 4.5 8 12l7.5 7.5 1.5-1.5L11 12l6-6z"/>
+              </svg>
             </button>
             <button type="button" class="{{ arrow_shape_class }}" data-trop-next aria-label="Next">
-                <svg viewBox="0 0 24 24"><path d="M8.5 4.5 16 12l-7.5 7.5L7 18l6-6-6-6z"/></svg>
+              <svg viewBox="0 0 24 24">
+                <path d="M8.5 4.5 16 12l-7.5 7.5L7 18l6-6-6-6z"/>
+              </svg>
             </button>
-            </div>
+          </div>
         {% endif %}
-        </div>
-
-        </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <script>
@@ -697,11 +703,7 @@
   "presets": [
     {
       "name": "Packages",
-      "blocks": [
-        { "type": "package" },
-        { "type": "package" },
-        { "type": "package" }
-      ]
+      "blocks": [{ "type": "package" }, { "type": "package" }, { "type": "package" }]
     }
   ]
 }
