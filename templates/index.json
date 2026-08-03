@@ -471,6 +471,93 @@
         "arrow_bg_color": "#949494",
         "arrow_icon_color": "#1a1a1a"
       }
+    },
+    "why_choose_us_UY4cUN": {
+      "type": "why-choose-us",
+      "blocks": {
+        "collection_zGeWCW": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "custom_title": "",
+            "custom_link": ""
+          }
+        },
+        "collection_MYHJ8W": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "custom_title": "",
+            "custom_link": ""
+          }
+        },
+        "collection_d8mgUK": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "custom_title": "",
+            "custom_link": ""
+          }
+        },
+        "collection_pLtMUP": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "custom_title": "",
+            "custom_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_zGeWCW",
+        "collection_MYHJ8W",
+        "collection_d8mgUK",
+        "collection_pLtMUP"
+      ],
+      "name": "Why Choose Us",
+      "settings": {
+        "layout_style": "carousel",
+        "container_width": "container",
+        "cards_width": "container",
+        "columns_desktop": 4,
+        "columns_mobile": 1,
+        "item_width_desktop": 300,
+        "item_width_mobile": 220,
+        "item_gap": 20,
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "section_bg_color": "#ffffff",
+        "sub_heading": "Shop the Essentials",
+        "sub_heading_tag": "p",
+        "sub_heading_size": 12,
+        "sub_heading_color": "#1a1a1a",
+        "sub_heading_alignment": "start",
+        "sub_heading_transform": "uppercase",
+        "heading": "Shop the Essentials",
+        "heading_tag": "h2",
+        "heading_size": 22,
+        "heading_color": "#1a1a1a",
+        "heading_alignment": "start",
+        "heading_transform": "uppercase",
+        "card_bg_color": "#f2f2f2",
+        "card_border_radius": 0,
+        "image_aspect_ratio": "square",
+        "image_fit": "cover",
+        "image_border_radius": 0,
+        "label_position": "below",
+        "label_color": "#1a1a1a",
+        "label_size": 14,
+        "label_font_weight": "600",
+        "label_transform": "uppercase",
+        "enable_arrows": true,
+        "arrow_position": "top",
+        "arrow_space": "flex-start",
+        "arrow_bottom_align": "flex-start",
+        "arrow_style": "circle",
+        "arrow_size": 36,
+        "arrow_bg_color": "#f2f2f2",
+        "arrow_icon_color": "#1a1a1a"
+      }
     }
   },
   "order": [
@@ -478,6 +565,7 @@
     "collection_list_ejKEpy",
     "marquee_nP73QW",
     "packages_AEECQU",
-    "collection_list_LU4zQJ"
+    "collection_list_LU4zQJ",
+    "why_choose_us_UY4cUN"
   ]
 }
