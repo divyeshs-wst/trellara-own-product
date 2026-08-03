@@ -58,21 +58,9 @@
     opacity: 0.8;
   }
 
-  {% comment %} @keyframes marquee-scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-  } {% endcomment %}
-
   @keyframes marquee-scroll {
-    {% comment %} 0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); } {% endcomment %}
-
-    from {
-      transform: translateX(0%) translateZ(1px);
-    }
-    to {
-      transform: translateX(-100%) translateZ(1px);
-    }
+    from {transform: translateX(0%) translateZ(1px);}
+    to {transform: translateX(-100%) translateZ(1px);}
   }
 </style>
 
