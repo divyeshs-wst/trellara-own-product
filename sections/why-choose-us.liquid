@@ -102,9 +102,7 @@
 
   .trop-collection-list-{{ section.id }} .trop-collection-list__image-wrap img {
     object-fit: {{ s.image_fit }};
-    {% if s.image_aspect_ratio == 'auto' %}
       height: auto;
-    {% endif %}
   }
 
   .trop-collection-list-{{ section.id }} .trop-collection-list__label {
@@ -586,18 +584,6 @@
       "step": 1,
       "default": 0,
       "unit": "px"
-    },
-    {
-      "type": "select",
-      "id": "image_aspect_ratio",
-      "label": "Image Aspect Ratio",
-      "options": [
-        { "value": "auto", "label": "Natural" },
-        { "value": "square", "label": "Square (1:1)" },
-        { "value": "portrait", "label": "Portrait (3:4)" },
-        { "value": "landscape", "label": "Landscape (4:3)" }
-      ],
-      "default": "square"
     },
     {
       "type": "select",
