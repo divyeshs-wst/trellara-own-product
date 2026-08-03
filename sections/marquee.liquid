@@ -27,13 +27,6 @@
     text-decoration: none;
   }
 
-  .marquee-divider {
-    {% if section.settings.divider_border_show == 'show' %}
-      border: {{ section.settings.divider_border_width | default: 0 }}px {{ section.settings.divider_border_type | default: "solid" }} {{ section.settings.divider_border_color | default: "#000" }};
-      border-radius: {{ section.settings.divider_border_radius | default: 0 }}px;
-    {% endif %}
-  }
-
   /* Divider Styles */
   .marquee-divider {
     display: inline-flex;
@@ -44,6 +37,10 @@
     flex-direction: row;
     width: max-content;
     height: 100%;
+    {% if section.settings.divider_border_show == 'show' %}
+      border: {{ section.settings.divider_border_width | default: 0 }}px {{ section.settings.divider_border_type | default: "solid" }} {{ section.settings.divider_border_color | default: "#000" }};
+      border-radius: {{ section.settings.divider_border_radius | default: 0 }}px;
+    {% endif %}
   }
 
   .marquee-divider-icon img {
