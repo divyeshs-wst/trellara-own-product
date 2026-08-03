@@ -154,50 +154,6 @@
         {%- endif -%}
       </div>
     {%- endfor -%}
-    
-    {%- for block in section.blocks -%}
-      <div class="marquee-item">
-        {%- if section.settings.divider_position == 'before' -%}
-          {%- if section.settings.divider_style == 'icon' -%}
-            <span class="marquee-divider marquee-divider-icon">
-              {% if section.settings.icon_image != blank %}
-                {{
-                  section.settings.icon_image
-                  | image_url: width: auto
-                  | image_tag: loading: 'lazy', alt: section.settings.icon_image.alt
-                }}
-              {% endif %}
-            </span>
-          {%- elsif section.settings.divider_style == 'character' and section.settings.divider_char != blank -%}
-            <span class="marquee-divider">{{ section.settings.divider_char }}</span>
-          {%- endif -%}
-        {%- endif -%}
-
-        {%- if block.settings.link != blank -%}
-          <a href="{{ block.settings.link }}" target="{{ block.settings.link_target }}" class="marquee-text">
-            {{ block.settings.text | escape }}
-          </a>
-        {%- else -%}
-          <span class="marquee-text">{{ block.settings.text | escape }}</span>
-        {%- endif -%}
-
-        {%- if section.settings.divider_position == 'after' -%}
-          {%- if section.settings.divider_style == 'icon' -%}
-            <span class="marquee-divider marquee-divider-icon">
-              {% if section.settings.icon_image != blank %}
-                {{
-                  section.settings.icon_image
-                  | image_url: width: auto
-                  | image_tag: loading: 'lazy', alt: section.settings.icon_image.alt
-                }}
-              {% endif %}
-            </span>
-          {%- elsif section.settings.divider_style == 'character' and section.settings.divider_char != blank -%}
-            <span class="marquee-divider">{{ section.settings.divider_char }}</span>
-          {%- endif -%}
-        {%- endif -%}
-      </div>
-    {%- endfor -%}
   </div>
 </div>
 
