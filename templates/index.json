@@ -157,19 +157,25 @@
         "text_ri9M99": {
           "type": "text",
           "settings": {
-            "text": "Marquee 1"
+            "text": "Marquee 1",
+            "link": "shopify://pages/contact",
+            "link_target": "_blank"
           }
         },
         "text_NDcigx": {
           "type": "text",
           "settings": {
-            "text": "Marquee 1"
+            "text": "Marquee 2",
+            "link": "",
+            "link_target": "_self"
           }
         },
         "text_3mUJwA": {
           "type": "text",
           "settings": {
-            "text": "Marquee 1"
+            "text": "Marquee 3",
+            "link": "",
+            "link_target": "_self"
           }
         }
       },
@@ -192,8 +198,6 @@
         "icon_size": 28,
         "divider_thickness": 1,
         "divider_spacing": 16,
-        "link": "",
-        "link_target": "_self",
         "padding_top": 16,
         "padding_bottom": 16
       }
