@@ -14,7 +14,7 @@
     gap: {{ section.settings.item_gap | default: 70 }}px;
   }
 
-  .marquee-item {
+  .marquee-item .marquee-text {
     padding: 0 0 0 {{ section.settings.spacing | default: 50 }}px;
   }
   
@@ -79,7 +79,7 @@
         {%- endif -%}
 
         {%- if block.settings.link != blank -%}
-          <a href="{{ block.settings.link }}" target="{{ block.settings.link_target }}">
+          <a href="{{ block.settings.link }}" target="{{ block.settings.link_target }}" class="marquee-text">
             {{ block.settings.text | escape }}
           </a>
         {%- else -%}
@@ -124,7 +124,7 @@
         {%- endif -%}
 
         {%- if block.settings.link != blank -%}
-          <a href="{{ block.settings.link }}" target="{{ block.settings.link_target }}">
+          <a href="{{ block.settings.link }}" target="{{ block.settings.link_target }}" class="marquee-text">
             {{ block.settings.text | escape }}
           </a>
         {%- else -%}
