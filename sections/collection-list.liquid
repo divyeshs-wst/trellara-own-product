@@ -426,25 +426,6 @@
       "default": "h2"
     },
     {
-      "type": "text",
-      "id": "sub_heading",
-      "label": "Sub Heading",
-      "default": "Shop the Essentials"
-    },
-    {
-      "type": "select",
-      "id": "sub_heading_tag",
-      "label": "Sub Heading Tag",
-      "options": [
-        { "value": "h1", "label": "H1" },
-        { "value": "h2", "label": "H2" },
-        { "value": "h3", "label": "H3" },
-        { "value": "h4", "label": "H4" },
-        { "value": "p", "label": "p" }
-      ],
-      "default": "h2"
-    },
-    {
       "type": "range",
       "id": "heading_size",
       "label": "Heading Font Size",
@@ -475,6 +456,62 @@
       "type": "select",
       "id": "heading_transform",
       "label": "Heading Text Transform",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "uppercase", "label": "Uppercase" }
+      ],
+      "default": "uppercase"
+    },
+    {
+      "type": "text",
+      "id": "sub_heading",
+      "label": "Sub Heading",
+      "default": "Shop the Essentials"
+    },
+    {
+      "type": "select",
+      "id": "sub_heading_tag",
+      "label": "Sub Heading Tag",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "h4", "label": "H4" },
+        { "value": "p", "label": "p" }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "range",
+      "id": "sub_heading_size",
+      "label": "Sub Heading Font Size",
+      "min": 12,
+      "max": 60,
+      "step": 1,
+      "default": 22,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "sub_heading_color",
+      "label": "Sub Heading Color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "select",
+      "id": "sub_heading_alignment",
+      "label": "Sub Heading Alignment",
+      "options": [
+        { "value": "start", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "end", "label": "Right" }
+      ],
+      "default": "start"
+    },
+    {
+      "type": "select",
+      "id": "sub_heading_transform",
+      "label": "Sub Heading Text Transform",
       "options": [
         { "value": "none", "label": "None" },
         { "value": "uppercase", "label": "Uppercase" }
