@@ -442,7 +442,7 @@
         "section_bg_color": "#ffffff",
         "sub_heading": "Shop by category",
         "sub_heading_tag": "p",
-        "sub_heading_size": 22,
+        "sub_heading_size": 12,
         "sub_heading_color": "#1a1a1a",
         "sub_heading_alignment": "start",
         "sub_heading_transform": "uppercase",
