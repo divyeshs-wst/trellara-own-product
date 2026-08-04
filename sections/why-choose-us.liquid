@@ -31,6 +31,7 @@
       height: 56px;
       {% if s.icon_border_show == true %}
         border: {{ s.icon_border_size | default: 0 }}px solid {{ s.icon_color }};
+        border-radius: {{ s.card_border_radius | default: 0 }}px;
       {% endif %}
     }
 
