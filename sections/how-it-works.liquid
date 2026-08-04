@@ -87,9 +87,6 @@
     height: 100%;
   }
 
-  .trop-collection-list-{{ section.id }} .trop-collection-list__image-wrap {
-    border-radius: {{ s.image_border_radius }}px;
-  }
   .trop-collection-list-{{ section.id }} .trop-collection-list__image-wrap img {
     width: {{ s.image_width | default: 300 }}px;
     object-fit: contain;
@@ -555,16 +552,6 @@
       "type": "range",
       "id": "card_border_radius",
       "label": "Card Corner Radius",
-      "min": 0,
-      "max": 50,
-      "step": 1,
-      "default": 0,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "image_border_radius",
-      "label": "Image Corner Radius",
       "min": 0,
       "max": 50,
       "step": 1,
