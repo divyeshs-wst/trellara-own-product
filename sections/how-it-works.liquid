@@ -32,6 +32,7 @@
       position: absolute;
       bottom: 24px;
       right: 16px;
+      color: {{ s.icon_color | default: "#000000" }};
       {% if s.icon_border_show == true %}
         border: {{ s.icon_border_size | default: 0 }}px {{ s.icon_border_type }} {{ s.icon_color }};
         border-radius: {{ s.icon_border_radius | default: 0 }}px;
@@ -695,7 +696,7 @@
     {
       "type": "checkbox",
       "id": "icon_border_show",
-      "label": "Enable Icon Border",
+      "label": "Enable Counter Border",
       "default": true
     },
     {
