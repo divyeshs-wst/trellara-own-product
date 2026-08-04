@@ -1,12 +1,7 @@
 /* collection-list.css
    Structural / static styles.
    Settings-driven (dynamic) styles live in the section's {% style %} block. */
-
-/* .trop-collection-list {
-  width: 100%;
-} */
-
-/* Header row: heading + arrows */
+   
 .trop-collection-list__header {
   display: flex;
   align-items: center;
@@ -17,20 +12,15 @@
   margin: 0;
 }
 
-/* Wrapper holds the track + arrows */
 .trop-collection-list__wrapper {
   position: relative;
 }
 
-/* Cards row bleeds past the container to the right viewport edge,
-   while its left edge stays aligned with the heading/container. */
 .trop-collection-list__wrapper--bleed-right {
   width: calc(100% + ((99vw - 100%) / 2));
   padding-right: 15px;
 }
 
-/* Cards row stays boxed to a centered max-width even when the
-   main section itself is set to Full Width. */
 .trop-collection-list__wrapper--contained {
   width: 100%;
   max-width: 1200px;
