@@ -696,20 +696,20 @@
     {
       "type": "checkbox",
       "id": "icon_border_show",
-      "label": "Enable Counter Border",
+      "label": "Enable Number Border",
       "default": true
     },
     {
       "type": "color",
       "id": "icon_color",
-      "label": "Icon & Border Color",
+      "label": "Number & Border Color",
       "default": "#FFB302",
       "visible_if": "{{ section.settings.icon_border_show == true }}"
     },
     {
       "type": "select",
       "id": "icon_border_type",
-      "label": "Icon Border Type",
+      "label": "Number Border Type",
       "options": [
         {
           "value": "solid",
@@ -742,7 +742,7 @@
     {
       "type": "range",
       "id": "icon_border_size",
-      "label": "Icon Border Size",
+      "label": "Number Border Size",
       "min": 0,
       "max": 10,
       "step": 1,
@@ -753,7 +753,7 @@
     {
       "type": "range",
       "id": "icon_border_radius",
-      "label": "Icon Border Radius",
+      "label": "Number Border Radius",
       "min": 1,
       "max": 100,
       "step": 1,
