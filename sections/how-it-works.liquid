@@ -189,11 +189,7 @@
             <div class="trop-collection-list__card" {{ block.shopify_attributes }}>
               <div class="trop-collection-list__card-inner trop-flex">
                 <div class="trop-icon trop-flex">
-                  {% if forloop.index < 10 %}
-                    0{{ forloop.index }}
-                  {% else %}
-                    {{ forloop.index }}
-                  {% endif %}
+                  {{ forloop.index | prepend: '0' | slice: -2, 2 }}
                 </div>
                 <div class="trop-collection-list__content-wrap">
                   {% if card_title != blank %}
