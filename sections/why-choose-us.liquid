@@ -104,6 +104,9 @@
     background-color: {{ s.card_bg_color }};
     border-radius: {{ s.card_border_radius }}px;
     padding: 24px;
+    {% if s.item_content_gap > 0 %}
+      gap: {{ s.item_content_gap | default: 0 }}px;
+    {% endif %}
   }
 
   .trop-collection-list-{{ section.id }} .trop-collection-list__image-wrap {
@@ -599,7 +602,7 @@
       "min": 0,
       "max": 120,
       "step": 2,
-      "default": 20,
+      "default": 94,
       "unit": "px",
       "info": "Gap Between Icon line and Heading line."
     },
