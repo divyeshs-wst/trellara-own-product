@@ -85,6 +85,7 @@
       gap: {{ s.item_content_gap | default: 0 }}px;
     {% endif %}
     height: 100%;
+    transition: .3s;
   }
 
   .trop-collection-list-{{ section.id }} .trop-collection-list__card-inner:hover {
@@ -187,7 +188,7 @@
 
             <div class="trop-collection-list__card" {{ block.shopify_attributes }}>
               <div class="trop-collection-list__card-inner trop-flex">
-                <div class="trop-icon trop-flex">1</div>
+                <div class="trop-icon trop-flex">{{ forloop.index }}</div>
                 <div class="trop-collection-list__content-wrap">
                   {% if card_title != blank %}
                     <span class="{{ label_class }}">{{ card_title }}</span>
