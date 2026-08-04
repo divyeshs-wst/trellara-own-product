@@ -83,6 +83,7 @@
     {% if s.item_content_gap > 0 %}
       gap: {{ s.item_content_gap | default: 0 }}px;
     {% endif %}
+    height: 100%;
   }
 
   .trop-collection-list-{{ section.id }} .trop-collection-list__image-wrap {
