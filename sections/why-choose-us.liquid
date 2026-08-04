@@ -35,6 +35,11 @@
       {% endif %}
     }
 
+    .trop-icon.trop-flex {
+      align-items: center;
+      justify-content: center;
+    }
+
     .trop-collection-list-{{ section.id }} .trop-icon img {
         width: 16px;
         height: auto;
@@ -234,7 +239,7 @@
                     <div class="trop-collection-list__card-inner">
                         <div class="trop-collection-list__image-wrap">
                             <div class="trop-flex trop-wcu">
-                                <div class="trop-icon">
+                                <div class="trop-icon trop-flex">
                                     {% if card_image != blank %}
                                         {{
                                             card_image
