@@ -263,7 +263,7 @@
         "item_gap": 70,
         "divider_style": "icon",
         "divider_position": "before",
-        "icon_image": "shopify://shop_images/hammer.png",
+        "icon_image": "shopify://shop_images/hammer-grey_c4932581-f9d2-4225-a1d8-2d11f7936f2e.svg",
         "divider_char": "|",
         "icon_size": 16,
         "divider_thickness": 1,
@@ -479,7 +479,7 @@
           "type": "collection",
           "settings": {
             "collection": "",
-            "custom_image": "shopify://shop_images/material-symbols-light_construction.svg",
+            "custom_image": "shopify://shop_images/hammer-orange.svg",
             "custom_title": "Materials",
             "custom_description": "11-gauge steel. Commercial load ratings. Precision engineering. Built to US commercial specifications.",
             "custom_link_text": "See our standards",
@@ -490,7 +490,7 @@
           "type": "collection",
           "settings": {
             "collection": "",
-            "custom_image": "shopify://shop_images/material-symbols-light_construction.svg",
+            "custom_image": "shopify://shop_images/hammer-orange.svg",
             "custom_title": "Materials",
             "custom_description": "11-gauge steel. Commercial load ratings. Precision engineering. Built to US commercial specifications.",
             "custom_link_text": "See our standards",
@@ -501,7 +501,7 @@
           "type": "collection",
           "settings": {
             "collection": "",
-            "custom_image": "shopify://shop_images/material-symbols-light_construction.svg",
+            "custom_image": "shopify://shop_images/hammer-orange.svg",
             "custom_title": "Materials",
             "custom_description": "11-gauge steel. Commercial load ratings. Precision engineering. Built to US commercial specifications.",
             "custom_link_text": "See our standards",
@@ -512,7 +512,7 @@
           "type": "collection",
           "settings": {
             "collection": "",
-            "custom_image": "shopify://shop_images/material-symbols-light_construction.svg",
+            "custom_image": "shopify://shop_images/hammer-orange.svg",
             "custom_title": "Materials",
             "custom_description": "11-gauge steel. Commercial load ratings. Precision engineering. Built to US commercial specifications.",
             "custom_link_text": "See our standards",
