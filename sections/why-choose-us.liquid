@@ -30,8 +30,8 @@
       width: 56px;
       height: 56px;
       {% if s.icon_border_show == true %}
-        border: {{ s.icon_border_size | default: 0 }}px solid {{ s.icon_color }};
-        border-radius: {{ s.card_border_radius | default: 0 }}px;
+        border: {{ s.icon_border_size | default: 0 }}px {{ s.icon_border_type }} {{ s.icon_color }};
+        border-radius: {{ s.icon_border_radius | default: 0 }}px;
       {% endif %}
     }
 
@@ -763,7 +763,7 @@
       "max": 100,
       "step": 1,
       "unit": "px",
-      "default": 1,
+      "default": 50,
       "visible_if": "{{ section.settings.divider_border_show == 'show' }}"
     },
     {
