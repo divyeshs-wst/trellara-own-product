@@ -1,1 +1,689 @@
-{"sections":{"hero":{"type":"hero","settings":{"header_width":"container","hero_height":"medium","hero_padding_top":25,"hero_padding_right":25,"hero_padding_bottom":25,"hero_padding_left":25,"background_type":"image","desktop_image":"shopify:\/\/shop_images\/SSSBronzingDrops-Lifestyle3.jpg","video":"shopify:\/\/files\/videos\/Sauna reel 2.mp4","enable_overlay":true,"overlay_color":"#000000","overlay_opacity":50,"subheading":"Small heading","heading":"Your Hero Heading","description":"<p>This is Your Hero Heading.<\/p>","content_width":50,"text_alignment":"left","horizontal_position":"stretch","vertical_position":"flex-end","sub_heading_tag":"h3","sub_heading_size":18,"sub_heading_color":"#fcfcfc","heading_tag":"h2","heading_size":52,"heading_color":"#fcfcfc","description_size":16,"description_color":"#fcfcfc","content_bg_color":"#332f2f","content_overlay_opacity":60}},"collection_list_ejKEpy":{"type":"collection-list","blocks":{"collection_QciziD":{"type":"collection","settings":{"collection":"frontpage","custom_title":"","custom_link":"shopify:\/\/collections\/frontpage"}},"collection_nhkVbe":{"type":"collection","settings":{"collection":"cable-cross","custom_title":"","custom_link":"shopify:\/\/collections\/cable-cross"}},"collection_Ut4xBP":{"type":"collection","settings":{"collection":"cardio","custom_title":"","custom_link":"shopify:\/\/collections\/cardio"}},"collection_maEjMA":{"type":"collection","settings":{"collection":"collection-1","custom_title":"","custom_link":"shopify:\/\/collections\/collection-1"}},"collection_Wc43RL":{"type":"collection","settings":{"collection":"cable-cross","custom_title":"","custom_link":"shopify:\/\/collections\/cable-cross"}},"collection_pGmJNp":{"type":"collection","settings":{"collection":"cardio","custom_title":"","custom_link":"shopify:\/\/collections\/cardio"}},"collection_A3Qyzi":{"type":"collection","settings":{"collection":"collection-2-copy","custom_title":"","custom_link":"shopify:\/\/collections\/collection-2-copy"}}},"block_order":["collection_QciziD","collection_nhkVbe","collection_Ut4xBP","collection_maEjMA","collection_Wc43RL","collection_pGmJNp","collection_A3Qyzi"],"name":"Collection List","settings":{"layout_style":"carousel","container_width":"container","cards_width":"full-width","columns_desktop":4,"columns_mobile":1,"item_width_desktop":300,"item_width_mobile":280,"item_gap":22,"section_padding_top":120,"section_padding_bottom":120,"section_bg_color":"#ffffff","sub_heading":"","sub_heading_tag":"h2","sub_heading_size":22,"sub_heading_color":"#1a1a1a","sub_heading_alignment":"start","sub_heading_transform":"uppercase","heading":"Shop the Essentials","heading_tag":"h2","heading_size":26,"heading_color":"#1a1a1a","heading_alignment":"start","heading_transform":"uppercase","card_bg_color":"#ffffff","card_border_radius":0,"image_aspect_ratio":"square","image_fit":"cover","image_border_radius":20,"label_position":"below","label_color":"#1a1a1a","label_size":16,"label_font_weight":"600","label_transform":"uppercase","enable_arrows":true,"arrow_position":"bottom","arrow_space":"space-between","arrow_bottom_align":"flex-end","arrow_style":"circle","arrow_size":36,"arrow_bg_color":"#949494","arrow_icon_color":"#1a1a1a"}},"marquee_nP73QW":{"type":"marquee","blocks":{"text_ri9M99":{"type":"text","settings":{"text":"Commercial-grade build","link":"","link_target":"_blank"}},"text_NDcigx":{"type":"text","settings":{"text":"Design-led finish","link":"","link_target":"_self"}},"text_3mUJwA":{"type":"text","settings":{"text":"Warranty","link":"","link_target":"_self"}},"text_PiW8fX":{"type":"text","settings":{"text":"Delivery + install","link":"","link_target":"_self"}},"text_9iJpQp":{"type":"text","settings":{"text":"QC standards","link":"","link_target":"_self"}},"text_JBMdXt":{"type":"text","settings":{"text":"Commercial-grade build","link":"","link_target":"_blank"}},"text_hLrfKH":{"type":"text","settings":{"text":"Design-led finish","link":"","link_target":"_self"}},"text_hyatew":{"type":"text","settings":{"text":"Warranty","link":"","link_target":"_self"}},"text_U7RLcd":{"type":"text","settings":{"text":"Delivery + install","link":"","link_target":"_self"}},"text_64eRkM":{"type":"text","settings":{"text":"QC standards","link":"","link_target":"_self"}}},"block_order":["text_ri9M99","text_NDcigx","text_3mUJwA","text_PiW8fX","text_9iJpQp","text_JBMdXt","text_hLrfKH","text_hyatew","text_U7RLcd","text_64eRkM"],"name":"Marquee Text","settings":{"color_background":"#f6f6f6","color_text":"#000000","font_size":16,"speed":50,"spacing":16,"item_gap":70,"divider_style":"icon","divider_position":"before","icon_image":"shopify:\/\/shop_images\/hammer-grey_c4932581-f9d2-4225-a1d8-2d11f7936f2e.svg","divider_char":"|","icon_size":16,"divider_thickness":1,"divider_spacing":16,"divider_border_show":"show","divider_border_width":1,"divider_border_type":"dashed","divider_border_radius":100,"divider_border_color":"#868686","padding_top":40,"padding_bottom":40}},"packages_AEECQU":{"type":"packages","blocks":{"package_AzxDrG":{"type":"package","settings":{"image":"shopify:\/\/shop_images\/a02cef07929c49a48c68c54be825b5fd_1647539213120.png","title":"Package Title","description":"<p>Transcenda o comum com a nossa linha de produtos.<\/p>","link":""}},"package_wrBHYP":{"type":"package","settings":{"image":"shopify:\/\/shop_images\/CYBEXRUN625T-main_1.png","title":"Package Title","description":"<p>Transcenda o comum com a nossa linha de produtos.<\/p>","link":""}},"package_RXRaay":{"type":"package","settings":{"image":"shopify:\/\/shop_images\/a02cef07929c49a48c68c54be825b5fd_1647539213120.png","title":"Package Title","description":"<p>Transcenda o comum com a nossa linha de produtos.<\/p>","link":""}}},"block_order":["package_AzxDrG","package_wrBHYP","package_RXRaay"],"name":"Packages","settings":{"container_width":"container","left_column_width":350,"column_gap":60,"section_padding_top":140,"section_padding_bottom":140,"section_bg_color":"#ffffff","label":"Gym Packages","label_color":"#1a1a1a","label_size":13,"label_transform":"uppercase","heading":"Gym Packages for Your Spaces","heading_tag":"h2","heading_size":44,"heading_line_height":1.2,"heading_color":"#14123a","diagram_image":"shopify:\/\/shop_images\/image_38.png","diagram_width":100,"diagram_spacing":200,"card_width_desktop":370,"card_width_mobile":280,"card_gap":16,"card_bg_color":"#f6f6f6","card_border_radius":8,"card_padding_x":20,"card_text_spacing":20,"image_aspect_ratio":"square","image_fit":"contain","image_border_radius":0,"title_color":"#1a1a1a","title_size":16,"title_transform":"uppercase","description_color":"#666666","description_size":14,"description_spacing":10,"enable_arrows":true,"arrow_align":"flex-end","arrow_spacing":24,"arrow_style":"circle","arrow_size":36,"arrow_bg_color":"#f2f2f2","arrow_icon_color":"#1a1a1a"}},"collection_list_LU4zQJ":{"type":"collection-list","blocks":{"collection_ryqUAN":{"type":"collection","settings":{"collection":"frontpage","custom_title":"Racks + Rigs","custom_link":"shopify:\/\/collections\/frontpage"}},"collection_R4WpVY":{"type":"collection","settings":{"collection":"cable-cross","custom_title":"Plates + Bars","custom_link":"shopify:\/\/collections\/cable-cross"}},"collection_rB6FrW":{"type":"collection","settings":{"collection":"cardio","custom_title":"Benches","custom_link":"shopify:\/\/collections\/cardio"}},"collection_7EpPUk":{"type":"collection","settings":{"collection":"collection-1","custom_title":"Storage","custom_link":"shopify:\/\/collections\/collection-1"}},"collection_g7fX9i":{"type":"collection","settings":{"collection":"cable-cross","custom_title":"Racks + Rigs","custom_link":"shopify:\/\/collections\/cable-cross"}},"collection_fPfMiG":{"type":"collection","settings":{"collection":"cardio","custom_title":"Plates + Bars","custom_link":"shopify:\/\/collections\/cardio"}},"collection_YDxMCY":{"type":"collection","settings":{"collection":"collection-2-copy","custom_title":"Benches","custom_link":"shopify:\/\/collections\/collection-2-copy"}}},"block_order":["collection_ryqUAN","collection_R4WpVY","collection_rB6FrW","collection_7EpPUk","collection_g7fX9i","collection_fPfMiG","collection_YDxMCY"],"name":"Collection List","settings":{"layout_style":"carousel","container_width":"container","cards_width":"full-width","columns_desktop":4,"columns_mobile":1,"item_width_desktop":300,"item_width_mobile":280,"item_gap":22,"section_padding_top":140,"section_padding_bottom":140,"section_bg_color":"#ffffff","sub_heading":"Shop by category","sub_heading_tag":"p","sub_heading_size":12,"sub_heading_color":"#1a1a1a","sub_heading_alignment":"start","sub_heading_transform":"uppercase","heading":"Products Category For You","heading_tag":"h2","heading_size":44,"heading_color":"#1a1a1a","heading_alignment":"start","heading_transform":"none","card_bg_color":"#ffffff","card_border_radius":0,"image_aspect_ratio":"square","image_fit":"cover","image_border_radius":20,"label_position":"below","label_color":"#1a1a1a","label_size":16,"label_font_weight":"600","label_transform":"uppercase","enable_arrows":true,"arrow_position":"bottom","arrow_space":"space-between","arrow_bottom_align":"flex-end","arrow_style":"circle","arrow_size":36,"arrow_bg_color":"#949494","arrow_icon_color":"#1a1a1a"}},"why_choose_us_ja3ABe":{"type":"why-choose-us","blocks":{"collection_J9enic":{"type":"collection","settings":{"custom_image":"shopify:\/\/shop_images\/hammer-orange.svg","custom_title":"Materials","custom_description":"11-gauge steel. Commercial load ratings. Precision engineering. Built to US commercial specifications.","custom_link_text":"See our standards","custom_link":"shopify:\/\/pages\/contact"}},"collection_aRX4pM":{"type":"collection","settings":{"custom_image":"shopify:\/\/shop_images\/hammer-orange.svg","custom_title":"Materials","custom_description":"11-gauge steel. Commercial load ratings. Precision engineering. Built to US commercial specifications.","custom_link_text":"See our standards","custom_link":"shopify:\/\/pages\/contact"}},"collection_VjaC7L":{"type":"collection","settings":{"custom_image":"shopify:\/\/shop_images\/hammer-orange.svg","custom_title":"Materials","custom_description":"11-gauge steel. Commercial load ratings. Precision engineering. Built to US commercial specifications.","custom_link_text":"See our standards","custom_link":"shopify:\/\/pages\/contact"}},"collection_hBdNBN":{"type":"collection","settings":{"custom_image":"shopify:\/\/shop_images\/hammer-orange.svg","custom_title":"Materials","custom_description":"11-gauge steel. Commercial load ratings. Precision engineering. Built to US commercial specifications.","custom_link_text":"See our standards","custom_link":"shopify:\/\/pages\/contact"}}},"block_order":["collection_J9enic","collection_aRX4pM","collection_VjaC7L","collection_hBdNBN"],"name":"Why Choose Us","settings":{"layout_style":"carousel","container_width":"container","cards_width":"full-width","columns_desktop":4,"columns_mobile":1,"item_width_desktop":440,"item_width_mobile":280,"item_gap":20,"section_padding_top":140,"section_padding_bottom":140,"section_bg_color":"#f6f6f6","sub_heading":"Why Choose","sub_heading_tag":"p","sub_heading_size":12,"sub_heading_color":"#1a1a1a","sub_heading_alignment":"start","sub_heading_transform":"uppercase","heading":"Why Choose US","heading_tag":"h2","heading_size":44,"heading_color":"#1a1a1a","heading_alignment":"start","heading_transform":"none","item_content_gap":94,"card_bg_color":"#ffffff","card_border_radius":16,"image_border_radius":0,"heading_text_alignment":"left","label_color":"#1a1a1a","label_size":16,"label_font_weight":"600","label_transform":"uppercase","description_text_alignment":"left","description_color":"#000000","description_size":14,"description_font_weight":"400","description_transform":"none","icon_border_show":true,"icon_color":"#ffb302","icon_border_type":"dashed","icon_border_size":1,"icon_border_radius":50,"enable_arrows":true,"arrow_position":"bottom","arrow_space":"flex-start","arrow_bottom_align":"flex-end","arrow_style":"circle","arrow_size":36,"arrow_bg_color":"#d3d3d3","arrow_icon_color":"#1a1a1a"}}},"order":["hero","collection_list_ejKEpy","marquee_nP73QW","packages_AEECQU","collection_list_LU4zQJ","why_choose_us_ja3ABe"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "header_width": "container",
+        "hero_height": "medium",
+        "hero_padding_top": 25,
+        "hero_padding_right": 25,
+        "hero_padding_bottom": 25,
+        "hero_padding_left": 25,
+        "background_type": "image",
+        "desktop_image": "shopify://shop_images/SSSBronzingDrops-Lifestyle3.jpg",
+        "video": "shopify://files/videos/Sauna reel 2.mp4",
+        "enable_overlay": true,
+        "overlay_color": "#000000",
+        "overlay_opacity": 50,
+        "subheading": "Small heading",
+        "heading": "Your Hero Heading",
+        "description": "<p>This is Your Hero Heading.</p>",
+        "content_width": 50,
+        "text_alignment": "left",
+        "horizontal_position": "stretch",
+        "vertical_position": "flex-end",
+        "sub_heading_tag": "h3",
+        "sub_heading_size": 18,
+        "sub_heading_color": "#fcfcfc",
+        "heading_tag": "h2",
+        "heading_size": 52,
+        "heading_color": "#fcfcfc",
+        "description_size": 16,
+        "description_color": "#fcfcfc",
+        "content_bg_color": "#332f2f",
+        "content_overlay_opacity": 60
+      }
+    },
+    "collection_list_ejKEpy": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_QciziD": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage",
+            "custom_title": "",
+            "custom_link": "shopify://collections/frontpage"
+          }
+        },
+        "collection_nhkVbe": {
+          "type": "collection",
+          "settings": {
+            "collection": "cable-cross",
+            "custom_title": "",
+            "custom_link": "shopify://collections/cable-cross"
+          }
+        },
+        "collection_Ut4xBP": {
+          "type": "collection",
+          "settings": {
+            "collection": "cardio",
+            "custom_title": "",
+            "custom_link": "shopify://collections/cardio"
+          }
+        },
+        "collection_maEjMA": {
+          "type": "collection",
+          "settings": {
+            "collection": "collection-1",
+            "custom_title": "",
+            "custom_link": "shopify://collections/collection-1"
+          }
+        },
+        "collection_Wc43RL": {
+          "type": "collection",
+          "settings": {
+            "collection": "cable-cross",
+            "custom_title": "",
+            "custom_link": "shopify://collections/cable-cross"
+          }
+        },
+        "collection_pGmJNp": {
+          "type": "collection",
+          "settings": {
+            "collection": "cardio",
+            "custom_title": "",
+            "custom_link": "shopify://collections/cardio"
+          }
+        },
+        "collection_A3Qyzi": {
+          "type": "collection",
+          "settings": {
+            "collection": "collection-2-copy",
+            "custom_title": "",
+            "custom_link": "shopify://collections/collection-2-copy"
+          }
+        }
+      },
+      "block_order": [
+        "collection_QciziD",
+        "collection_nhkVbe",
+        "collection_Ut4xBP",
+        "collection_maEjMA",
+        "collection_Wc43RL",
+        "collection_pGmJNp",
+        "collection_A3Qyzi"
+      ],
+      "name": "Collection List",
+      "settings": {
+        "layout_style": "carousel",
+        "container_width": "container",
+        "cards_width": "full-width",
+        "columns_desktop": 4,
+        "columns_mobile": 1,
+        "item_width_desktop": 300,
+        "item_width_mobile": 280,
+        "item_gap": 22,
+        "section_padding_top": 120,
+        "section_padding_bottom": 120,
+        "section_bg_color": "#ffffff",
+        "sub_heading": "",
+        "sub_heading_tag": "h2",
+        "sub_heading_size": 22,
+        "sub_heading_color": "#1a1a1a",
+        "sub_heading_alignment": "start",
+        "sub_heading_transform": "uppercase",
+        "heading": "Shop the Essentials",
+        "heading_tag": "h2",
+        "heading_size": 26,
+        "heading_color": "#1a1a1a",
+        "heading_alignment": "start",
+        "heading_transform": "uppercase",
+        "card_bg_color": "#ffffff",
+        "card_border_radius": 0,
+        "image_aspect_ratio": "square",
+        "image_fit": "cover",
+        "image_border_radius": 20,
+        "label_position": "below",
+        "label_color": "#1a1a1a",
+        "label_size": 16,
+        "label_font_weight": "600",
+        "label_transform": "uppercase",
+        "enable_arrows": true,
+        "arrow_position": "bottom",
+        "arrow_space": "space-between",
+        "arrow_bottom_align": "flex-end",
+        "arrow_style": "circle",
+        "arrow_size": 36,
+        "arrow_bg_color": "#949494",
+        "arrow_icon_color": "#1a1a1a"
+      }
+    },
+    "marquee_nP73QW": {
+      "type": "marquee",
+      "blocks": {
+        "text_ri9M99": {
+          "type": "text",
+          "settings": {
+            "text": "Commercial-grade build",
+            "link": "",
+            "link_target": "_blank"
+          }
+        },
+        "text_NDcigx": {
+          "type": "text",
+          "settings": {
+            "text": "Design-led finish",
+            "link": "",
+            "link_target": "_self"
+          }
+        },
+        "text_3mUJwA": {
+          "type": "text",
+          "settings": {
+            "text": "Warranty",
+            "link": "",
+            "link_target": "_self"
+          }
+        },
+        "text_PiW8fX": {
+          "type": "text",
+          "settings": {
+            "text": "Delivery + install",
+            "link": "",
+            "link_target": "_self"
+          }
+        },
+        "text_9iJpQp": {
+          "type": "text",
+          "settings": {
+            "text": "QC standards",
+            "link": "",
+            "link_target": "_self"
+          }
+        },
+        "text_JBMdXt": {
+          "type": "text",
+          "settings": {
+            "text": "Commercial-grade build",
+            "link": "",
+            "link_target": "_blank"
+          }
+        },
+        "text_hLrfKH": {
+          "type": "text",
+          "settings": {
+            "text": "Design-led finish",
+            "link": "",
+            "link_target": "_self"
+          }
+        },
+        "text_hyatew": {
+          "type": "text",
+          "settings": {
+            "text": "Warranty",
+            "link": "",
+            "link_target": "_self"
+          }
+        },
+        "text_U7RLcd": {
+          "type": "text",
+          "settings": {
+            "text": "Delivery + install",
+            "link": "",
+            "link_target": "_self"
+          }
+        },
+        "text_64eRkM": {
+          "type": "text",
+          "settings": {
+            "text": "QC standards",
+            "link": "",
+            "link_target": "_self"
+          }
+        }
+      },
+      "block_order": [
+        "text_ri9M99",
+        "text_NDcigx",
+        "text_3mUJwA",
+        "text_PiW8fX",
+        "text_9iJpQp",
+        "text_JBMdXt",
+        "text_hLrfKH",
+        "text_hyatew",
+        "text_U7RLcd",
+        "text_64eRkM"
+      ],
+      "name": "Marquee Text",
+      "settings": {
+        "color_background": "#f6f6f6",
+        "color_text": "#000000",
+        "font_size": 16,
+        "speed": 50,
+        "spacing": 16,
+        "item_gap": 70,
+        "divider_style": "icon",
+        "divider_position": "before",
+        "icon_image": "shopify://shop_images/hammer-grey_c4932581-f9d2-4225-a1d8-2d11f7936f2e.svg",
+        "divider_char": "|",
+        "icon_size": 16,
+        "divider_thickness": 1,
+        "divider_spacing": 16,
+        "divider_border_show": "show",
+        "divider_border_width": 1,
+        "divider_border_type": "dashed",
+        "divider_border_radius": 100,
+        "divider_border_color": "#868686",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "packages_AEECQU": {
+      "type": "packages",
+      "blocks": {
+        "package_AzxDrG": {
+          "type": "package",
+          "settings": {
+            "image": "shopify://shop_images/a02cef07929c49a48c68c54be825b5fd_1647539213120.png",
+            "title": "Package Title",
+            "description": "<p>Transcenda o comum com a nossa linha de produtos.</p>",
+            "link": ""
+          }
+        },
+        "package_wrBHYP": {
+          "type": "package",
+          "settings": {
+            "image": "shopify://shop_images/CYBEXRUN625T-main_1.png",
+            "title": "Package Title",
+            "description": "<p>Transcenda o comum com a nossa linha de produtos.</p>",
+            "link": ""
+          }
+        },
+        "package_RXRaay": {
+          "type": "package",
+          "settings": {
+            "image": "shopify://shop_images/a02cef07929c49a48c68c54be825b5fd_1647539213120.png",
+            "title": "Package Title",
+            "description": "<p>Transcenda o comum com a nossa linha de produtos.</p>",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "package_AzxDrG",
+        "package_wrBHYP",
+        "package_RXRaay"
+      ],
+      "name": "Packages",
+      "settings": {
+        "container_width": "container",
+        "left_column_width": 350,
+        "column_gap": 60,
+        "section_padding_top": 140,
+        "section_padding_bottom": 140,
+        "section_bg_color": "#ffffff",
+        "label": "Gym Packages",
+        "label_color": "#1a1a1a",
+        "label_size": 13,
+        "label_transform": "uppercase",
+        "heading": "Gym Packages for Your Spaces",
+        "heading_tag": "h2",
+        "heading_size": 44,
+        "heading_line_height": 1.2,
+        "heading_color": "#14123a",
+        "diagram_image": "shopify://shop_images/image_38.png",
+        "diagram_width": 100,
+        "diagram_spacing": 200,
+        "card_width_desktop": 370,
+        "card_width_mobile": 280,
+        "card_gap": 16,
+        "card_bg_color": "#f6f6f6",
+        "card_border_radius": 8,
+        "card_padding_x": 20,
+        "card_text_spacing": 20,
+        "image_aspect_ratio": "square",
+        "image_fit": "contain",
+        "image_border_radius": 0,
+        "title_color": "#1a1a1a",
+        "title_size": 16,
+        "title_transform": "uppercase",
+        "description_color": "#666666",
+        "description_size": 14,
+        "description_spacing": 10,
+        "enable_arrows": true,
+        "arrow_align": "flex-end",
+        "arrow_spacing": 24,
+        "arrow_style": "circle",
+        "arrow_size": 36,
+        "arrow_bg_color": "#f2f2f2",
+        "arrow_icon_color": "#1a1a1a"
+      }
+    },
+    "collection_list_LU4zQJ": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_ryqUAN": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage",
+            "custom_title": "Racks + Rigs",
+            "custom_link": "shopify://collections/frontpage"
+          }
+        },
+        "collection_R4WpVY": {
+          "type": "collection",
+          "settings": {
+            "collection": "cable-cross",
+            "custom_title": "Plates + Bars",
+            "custom_link": "shopify://collections/cable-cross"
+          }
+        },
+        "collection_rB6FrW": {
+          "type": "collection",
+          "settings": {
+            "collection": "cardio",
+            "custom_title": "Benches",
+            "custom_link": "shopify://collections/cardio"
+          }
+        },
+        "collection_7EpPUk": {
+          "type": "collection",
+          "settings": {
+            "collection": "collection-1",
+            "custom_title": "Storage",
+            "custom_link": "shopify://collections/collection-1"
+          }
+        },
+        "collection_g7fX9i": {
+          "type": "collection",
+          "settings": {
+            "collection": "cable-cross",
+            "custom_title": "Racks + Rigs",
+            "custom_link": "shopify://collections/cable-cross"
+          }
+        },
+        "collection_fPfMiG": {
+          "type": "collection",
+          "settings": {
+            "collection": "cardio",
+            "custom_title": "Plates + Bars",
+            "custom_link": "shopify://collections/cardio"
+          }
+        },
+        "collection_YDxMCY": {
+          "type": "collection",
+          "settings": {
+            "collection": "collection-2-copy",
+            "custom_title": "Benches",
+            "custom_link": "shopify://collections/collection-2-copy"
+          }
+        }
+      },
+      "block_order": [
+        "collection_ryqUAN",
+        "collection_R4WpVY",
+        "collection_rB6FrW",
+        "collection_7EpPUk",
+        "collection_g7fX9i",
+        "collection_fPfMiG",
+        "collection_YDxMCY"
+      ],
+      "name": "Collection List",
+      "settings": {
+        "layout_style": "carousel",
+        "container_width": "container",
+        "cards_width": "full-width",
+        "columns_desktop": 4,
+        "columns_mobile": 1,
+        "item_width_desktop": 300,
+        "item_width_mobile": 280,
+        "item_gap": 22,
+        "section_padding_top": 140,
+        "section_padding_bottom": 140,
+        "section_bg_color": "#ffffff",
+        "sub_heading": "Shop by category",
+        "sub_heading_tag": "p",
+        "sub_heading_size": 12,
+        "sub_heading_color": "#1a1a1a",
+        "sub_heading_alignment": "start",
+        "sub_heading_transform": "uppercase",
+        "heading": "Products Category For You",
+        "heading_tag": "h2",
+        "heading_size": 44,
+        "heading_color": "#1a1a1a",
+        "heading_alignment": "start",
+        "heading_transform": "none",
+        "card_bg_color": "#ffffff",
+        "card_border_radius": 0,
+        "image_aspect_ratio": "square",
+        "image_fit": "cover",
+        "image_border_radius": 20,
+        "label_position": "below",
+        "label_color": "#1a1a1a",
+        "label_size": 16,
+        "label_font_weight": "600",
+        "label_transform": "uppercase",
+        "enable_arrows": true,
+        "arrow_position": "bottom",
+        "arrow_space": "space-between",
+        "arrow_bottom_align": "flex-end",
+        "arrow_style": "circle",
+        "arrow_size": 36,
+        "arrow_bg_color": "#949494",
+        "arrow_icon_color": "#1a1a1a"
+      }
+    },
+    "why_choose_us_ja3ABe": {
+      "type": "why-choose-us",
+      "blocks": {
+        "collection_J9enic": {
+          "type": "collection",
+          "settings": {
+            "custom_image": "shopify://shop_images/hammer-orange.svg",
+            "custom_title": "Materials",
+            "custom_description": "11-gauge steel. Commercial load ratings. Precision engineering. Built to US commercial specifications.",
+            "custom_link_text": "See our standards",
+            "custom_link": "shopify://pages/contact"
+          }
+        },
+        "collection_aRX4pM": {
+          "type": "collection",
+          "settings": {
+            "custom_image": "shopify://shop_images/hammer-orange.svg",
+            "custom_title": "Materials",
+            "custom_description": "11-gauge steel. Commercial load ratings. Precision engineering. Built to US commercial specifications.",
+            "custom_link_text": "See our standards",
+            "custom_link": "shopify://pages/contact"
+          }
+        },
+        "collection_VjaC7L": {
+          "type": "collection",
+          "settings": {
+            "custom_image": "shopify://shop_images/hammer-orange.svg",
+            "custom_title": "Materials",
+            "custom_description": "11-gauge steel. Commercial load ratings. Precision engineering. Built to US commercial specifications.",
+            "custom_link_text": "See our standards",
+            "custom_link": "shopify://pages/contact"
+          }
+        },
+        "collection_hBdNBN": {
+          "type": "collection",
+          "settings": {
+            "custom_image": "shopify://shop_images/hammer-orange.svg",
+            "custom_title": "Materials",
+            "custom_description": "11-gauge steel. Commercial load ratings. Precision engineering. Built to US commercial specifications.",
+            "custom_link_text": "See our standards",
+            "custom_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "collection_J9enic",
+        "collection_aRX4pM",
+        "collection_VjaC7L",
+        "collection_hBdNBN"
+      ],
+      "name": "Why Choose Us",
+      "settings": {
+        "layout_style": "carousel",
+        "container_width": "container",
+        "cards_width": "full-width",
+        "columns_desktop": 4,
+        "columns_mobile": 1,
+        "item_width_desktop": 440,
+        "item_width_mobile": 280,
+        "item_gap": 20,
+        "section_padding_top": 140,
+        "section_padding_bottom": 140,
+        "section_bg_color": "#f6f6f6",
+        "sub_heading": "Why Choose",
+        "sub_heading_tag": "p",
+        "sub_heading_size": 12,
+        "sub_heading_color": "#1a1a1a",
+        "sub_heading_alignment": "start",
+        "sub_heading_transform": "uppercase",
+        "heading": "Why Choose US",
+        "heading_tag": "h2",
+        "heading_size": 44,
+        "heading_color": "#1a1a1a",
+        "heading_alignment": "start",
+        "heading_transform": "none",
+        "item_content_gap": 94,
+        "card_bg_color": "#ffffff",
+        "card_border_radius": 16,
+        "image_border_radius": 0,
+        "heading_text_alignment": "left",
+        "label_color": "#1a1a1a",
+        "label_size": 16,
+        "label_font_weight": "600",
+        "label_transform": "uppercase",
+        "description_text_alignment": "left",
+        "description_color": "#000000",
+        "description_size": 14,
+        "description_font_weight": "400",
+        "description_transform": "none",
+        "icon_border_show": true,
+        "icon_color": "#ffb302",
+        "icon_border_type": "dashed",
+        "icon_border_size": 1,
+        "icon_border_radius": 50,
+        "enable_arrows": true,
+        "arrow_position": "bottom",
+        "arrow_space": "flex-start",
+        "arrow_bottom_align": "flex-end",
+        "arrow_style": "circle",
+        "arrow_size": 36,
+        "arrow_bg_color": "#d3d3d3",
+        "arrow_icon_color": "#1a1a1a"
+      }
+    },
+    "how_it_works_hr7yep": {
+      "type": "how-it-works",
+      "blocks": {
+        "collection_NWD7tW": {
+          "type": "collection",
+          "settings": {
+            "custom_title": "",
+            "custom_description": "",
+            "custom_link_text": "",
+            "custom_link": ""
+          }
+        },
+        "collection_t8pk4M": {
+          "type": "collection",
+          "settings": {
+            "custom_title": "",
+            "custom_description": "",
+            "custom_link_text": "",
+            "custom_link": ""
+          }
+        },
+        "collection_ee6rGB": {
+          "type": "collection",
+          "settings": {
+            "custom_title": "",
+            "custom_description": "",
+            "custom_link_text": "",
+            "custom_link": ""
+          }
+        },
+        "collection_AAaHBL": {
+          "type": "collection",
+          "settings": {
+            "custom_title": "",
+            "custom_description": "",
+            "custom_link_text": "",
+            "custom_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_NWD7tW",
+        "collection_t8pk4M",
+        "collection_ee6rGB",
+        "collection_AAaHBL"
+      ],
+      "name": "How it Works",
+      "settings": {
+        "layout_style": "carousel",
+        "container_width": "container",
+        "cards_width": "container",
+        "columns_desktop": 4,
+        "columns_mobile": 1,
+        "item_width_desktop": 300,
+        "item_width_mobile": 220,
+        "item_gap": 20,
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "section_bg_color": "#ffffff",
+        "sub_heading": "Process",
+        "sub_heading_tag": "p",
+        "sub_heading_size": 12,
+        "sub_heading_color": "#1a1a1a",
+        "sub_heading_alignment": "start",
+        "sub_heading_transform": "uppercase",
+        "heading": "How it works",
+        "heading_tag": "h2",
+        "heading_size": 22,
+        "heading_color": "#1a1a1a",
+        "heading_alignment": "start",
+        "heading_transform": "uppercase",
+        "item_content_gap": 94,
+        "card_bg_color": "#f2f2f2",
+        "card_border_radius": 0,
+        "image_border_radius": 0,
+        "heading_text_alignment": "left",
+        "label_color": "#1a1a1a",
+        "label_size": 14,
+        "label_font_weight": "600",
+        "label_transform": "uppercase",
+        "description_text_alignment": "left",
+        "description_color": "#000000",
+        "description_size": 12,
+        "description_font_weight": "400",
+        "description_transform": "uppercase",
+        "icon_border_show": true,
+        "icon_color": "#FFB302",
+        "icon_border_type": "dashed",
+        "icon_border_size": 1,
+        "icon_border_radius": 50,
+        "enable_arrows": true,
+        "arrow_position": "bottom",
+        "arrow_space": "flex-start",
+        "arrow_bottom_align": "flex-end",
+        "arrow_style": "circle",
+        "arrow_size": 36,
+        "arrow_bg_color": "#f2f2f2",
+        "arrow_icon_color": "#1a1a1a"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "collection_list_ejKEpy",
+    "marquee_nP73QW",
+    "packages_AEECQU",
+    "collection_list_LU4zQJ",
+    "why_choose_us_ja3ABe",
+    "how_it_works_hr7yep"
+  ]
+}
