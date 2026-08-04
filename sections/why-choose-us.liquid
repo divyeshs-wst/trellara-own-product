@@ -223,30 +223,11 @@
                     assign block_settings = block.settings
                     assign the_collection = block_settings.collection
 
-                    assign card_title = block_settings.custom_title
-                    if card_title == blank and the_collection != blank
-                    assign card_title = the_collection.title
-                    endif
-                    
+                    assign card_title = block_settings.custom_title                    
                     assign card_description = block_settings.custom_description
-                    if card_description == blank and the_collection != blank
-                    assign card_description = the_collection.description
-                    endif
-
-                    assign card_text = block_settings.custom_link_text
-                    if card_text == blank and the_collection != blank
-                    assign card_text = the_collection.title
-                    endif
-                    
+                    assign card_text = block_settings.custom_link_text                    
                     assign card_link = block_settings.custom_link
-                    if card_link == blank and the_collection != blank
-                    assign card_link = the_collection.url
-                    endif
-
                     assign card_image = block_settings.custom_image
-                    if card_image == blank and the_collection != blank
-                    assign card_image = the_collection.image
-                    endif
                 -%}
 
                 <div class="trop-collection-list__card" {{ block.shopify_attributes }}>
