@@ -81,6 +81,7 @@
     {% if s.item_content_gap > 0 %}
       gap: {{ s.item_content_gap | default: 0 }}px;
     {% endif %}
+    transition: .3s;
   }
 
   .trop-collection-list-{{ section.id }} .trop-collection-list__card-inner:hover {
