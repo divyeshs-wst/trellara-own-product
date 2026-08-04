@@ -494,7 +494,7 @@
             "custom_title": "Materials",
             "custom_description": "11-gauge steel. Commercial load ratings. Precision engineering. Built to US commercial specifications.",
             "custom_link_text": "See our standards",
-            "custom_link": "shopify://pages/contact"
+            "custom_link": ""
           }
         },
         "collection_VjaC7L": {
@@ -563,6 +563,9 @@
         "description_size": 14,
         "description_font_weight": "400",
         "description_transform": "none",
+        "icon_border_show": true,
+        "icon_color": "#ffb302",
+        "icon_border_size": 1,
         "enable_arrows": true,
         "arrow_position": "bottom",
         "arrow_space": "flex-start",
