@@ -20,7 +20,7 @@
     assign wrapper_class = wrapper_class | append: ' trop-collection-list__wrapper--contained'
   endif
 
-  assign label_class = 'trop-collection-list__label trop-collection-list__label--' | append: s.label_position
+  assign label_class = 'trop-collection-list__label trop-collection-list__label--'
 
   assign arrow_shape_class = 'trop-collection-list__arrow trop-collection-list__arrow--' | append: s.arrow_style
 -%}
@@ -581,16 +581,6 @@
     {
       "type": "header",
       "content": "Card Style"
-    },
-    {
-      "type": "select",
-      "id": "label_position",
-      "label": "Card Content Position",
-      "options": [
-        { "value": "below", "label": "Below Image" },
-        { "value": "overlay", "label": "Overlay on Image" }
-      ],
-      "default": "below"
     },
     {
       "type": "color",
