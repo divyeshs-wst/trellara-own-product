@@ -35,40 +35,16 @@
       {% endif %}
     }
 
-    .trop-collection-list-{{ section.id }} .trop-icon.trop-flex {
-      align-items: center;
-      justify-content: center;
-    }
-
-    .trop-collection-list-{{ section.id }} .trop-icon img {
-        width: 16px;
-        height: auto;
-    }
-
-  .trop-collection-list-{{ section.id }} .trop-wcu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .trop-collection-list-{{ section.id }} a.trop-card-link svg {
-    width: auto;
-    height: auto;
-  }
-
   .trop-collection-list-{{ section.id }} {
     background-color: {{ s.section_bg_color }};
     padding-top: {{ s.section_padding_top }}px;
     padding-bottom: {{ s.section_padding_bottom }}px;
-    padding-right: 15px;
-    padding-left: 15px;
   }
 
   .trop-collection-list-{{ section.id }} .trop-collection-list__header--top {
     justify-content: {% if s.arrow_position == 'top' %}{{ s.arrow_space }}{% else %}flex-start{% endif %};
   }
 
-  /* Bottom header: only holds arrows (if arrow_position = bottom). */
   .trop-collection-list-{{ section.id }} .trop-collection-list__header--bottom {
     justify-content: {% if s.arrow_position == 'bottom' %}{{ s.arrow_bottom_align }}{% else %}flex-start{% endif %};
   }
@@ -78,15 +54,13 @@
     font-size: {{ s.heading_size }}px;
     text-transform: {{ s.heading_transform }};
     text-align: {{ s.heading_alignment }};
-    flex: max-content;
   }
-  
+
   .trop-collection-list-{{ section.id }} .trop-collection-list__sub_heading {
     color: {{ s.sub_heading_color }};
     font-size: {{ s.sub_heading_size }}px;
     text-transform: {{ s.sub_heading_transform }};
     text-align: {{ s.sub_heading_alignment }};
-    flex: max-content;
   }
 
   .trop-collection-list-{{ section.id }} .trop-collection-list__track {
@@ -103,7 +77,6 @@
   .trop-collection-list-{{ section.id }} .trop-collection-list__card-inner {
     background-color: {{ s.card_bg_color }};
     border-radius: {{ s.card_border_radius }}px;
-    padding: 24px;
     {% if s.item_content_gap > 0 %}
       gap: {{ s.item_content_gap | default: 0 }}px;
     {% endif %}
@@ -113,10 +86,6 @@
     border-radius: {{ s.image_border_radius }}px;
   }
 
-  .trop-collection-list-{{ section.id }} .trop-collection-list__image-wrap img {
-    height: auto;
-  }
-
   .trop-collection-list-{{ section.id }} .trop-collection-list__label {
     text-align: {{ s.heading_text_alignment | default: 'left' }};
     color: {{ s.label_color }};
@@ -124,7 +93,7 @@
     font-weight: {{ s.label_font_weight }};
     text-transform: {{ s.label_transform }};
   }
-  
+
   .trop-collection-list-{{ section.id }} .trop-collection-list__content-wrap p {
     text-align: {{ s.description_text_alignment | default: 'left' }};
     color: {{ s.description_color }};
@@ -132,41 +101,12 @@
     font-weight: {{ s.description_font_weight }};
     text-transform: {{ s.description_transform }};
   }
-  
+
   .trop-collection-list-{{ section.id }} a.trop-card-link {
     color: {{ s.description_color }};
     font-size: {{ s.description_size }}px;
     font-weight: {{ s.description_font_weight }};
     text-transform: {{ s.label_transform }};
-    align-items: center;
-    gap: 8px;
-    transition: transform 0.5s ease;
-  }
-
-  .trop-collection-list-{{ section.id }} a.trop-card-link:hover svg {
-    transform: scale(1.2);
-    transition: transform 0.5s ease;
-  }
-
-  .trop-collection-list-{{ section.id }} .trop-collection-list__label--overlay {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 12px;
-    height: calc(100% - 24px);
-  }
-
-  .trop-collection-list-{{ section.id }} .trop-collection-list__label--overlay::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to top, rgb(0 0 0 / 80%), rgba(0, 0, 0, 0));
-    z-index: -1;
   }
 
   .trop-collection-list-{{ section.id }} .trop-collection-list__arrow {
@@ -180,110 +120,133 @@
   }
 {% endstyle %}
 
-<section class="trop-collection-list trop-collection-list-{{ section.id }}">
+<section class="trop-collection-list trop-whychoose-list trop-collection-list-{{ section.id }}">
   <div class="{{ container_class }}">
     <div class="trop-collection-list__inner">
-
-        <div class="trop-collection-list__header trop-collection-list__header--top trop-flex mb-25">
+      <div class="trop-collection-list__header trop-collection-list__header--top trop-flex mb-25">
         <div class="trop-collection-list-content">
-            {% if s.sub_heading != blank %}
-            <{{ s.sub_heading_tag }} class="trop-collection-list__sub_heading">{{ s.sub_heading }}</{{ s.sub_heading_tag }}>
-            {% endif %}
-            {% if s.heading != blank %}
+          {% if s.sub_heading != blank %}
+            <{{ s.sub_heading_tag }} class="trop-collection-list__sub_heading">
+              {{- s.sub_heading -}}
+            </{{ s.sub_heading_tag }}>
+          {% endif %}
+          {% if s.heading != blank %}
             <{{ s.heading_tag }} class="trop-collection-list__heading">{{ s.heading }}</{{ s.heading_tag }}>
-            {% endif %}
+          {% endif %}
         </div>
 
         {% if s.arrow_position == 'top' and s.layout_style == 'carousel' and s.enable_arrows %}
-            <div class="trop-collection-list__nav">
+          <div class="trop-collection-list__nav">
             <button
-                type="button"
-                class="{{ arrow_shape_class }}"
-                data-trop-prev
-                aria-label="Previous"
+              type="button"
+              class="{{ arrow_shape_class }}"
+              data-trop-prev
+              aria-label="Previous"
             >
-                <svg viewBox="0 0 24 24"><path d="M15.5 4.5 8 12l7.5 7.5 1.5-1.5L11 12l6-6z"/></svg>
+              <svg viewBox="0 0 24 24">
+                <path d="M15.5 4.5 8 12l7.5 7.5 1.5-1.5L11 12l6-6z"/>
+              </svg>
             </button>
             <button
-                type="button"
-                class="{{ arrow_shape_class }}"
-                data-trop-next
-                aria-label="Next"
+              type="button"
+              class="{{ arrow_shape_class }}"
+              data-trop-next
+              aria-label="Next"
             >
-                <svg viewBox="0 0 24 24"><path d="M8.5 4.5 16 12l-7.5 7.5L7 18l6-6-6-6z"/></svg>
+              <svg viewBox="0 0 24 24">
+                <path d="M8.5 4.5 16 12l-7.5 7.5L7 18l6-6-6-6z"/>
+              </svg>
             </button>
-            </div>
+          </div>
         {% endif %}
-        </div>
+      </div>
 
-        <div class="{{ wrapper_class }}">
+      <div class="{{ wrapper_class }}">
         <div class="{{ track_class }}" data-trop-track>
-            {% for block in section.blocks %}
-                {%- liquid
-                    assign block_settings = block.settings
-                    assign the_collection = block_settings.collection
+          {% for block in section.blocks %}
+            {%- liquid
+              assign block_settings = block.settings
+              assign the_collection = block_settings.collection
 
-                    assign card_title = block_settings.custom_title                    
-                    assign card_description = block_settings.custom_description
-                    assign card_text = block_settings.custom_link_text                    
-                    assign card_link = block_settings.custom_link
-                    assign card_image = block_settings.custom_image
-                -%}
+              assign card_title = block_settings.custom_title
+              assign card_description = block_settings.custom_description
+              assign card_text = block_settings.custom_link_text
+              assign card_link = block_settings.custom_link
+              assign card_image = block_settings.custom_image
+            -%}
 
-                <div class="trop-collection-list__card" {{ block.shopify_attributes }}>
-                    <div class="trop-collection-list__card-inner trop-flex">
-                        <div class="trop-collection-list__image-wrap">
-                            <div class="trop-flex trop-wcu">
-                                <div class="trop-icon trop-flex">
-                                    {% if card_image != blank %}
-                                        {{
-                                            card_image
-                                            | image_url: width: 800
-                                            | image_tag: loading: 'lazy', widths: '300,450,600,800', sizes: '(min-width: 768px) 25vw, 80vw', alt: card_title
-                                        }}
-                                    {% else %}
-                                        {{ 'collection-1' | placeholder_svg_tag }}
-                                    {% endif %}
-                                </div>
-                                <div class="trop-link">
-                                  {% if card_link != blank %}
-                                    <a href="{{ card_link | default: '#' }}" class="trop-card-link trop-flex" {{ block.shopify_attributes }}>
-                                        <span>{{ card_text }}</span>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7" stroke="#FFB302" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 7H17V17" stroke="#FFB302" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                    </a>
-                                  {% endif %}
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="trop-collection-list__content-wrap">
-                            {% if card_title != blank %}
-                                <span class="{{ label_class }}">{{ card_title }}</span>
-                            {% endif %}
-                            {% if card_description != blank %}
-                                <p>{{ card_description }}</p>
-                            {% endif %}
-                        </div>
+            <div class="trop-collection-list__card" {{ block.shopify_attributes }}>
+              <div class="trop-collection-list__card-inner trop-flex">
+                <div class="trop-collection-list__image-wrap">
+                  <div class="trop-flex trop-wcu">
+                    <div class="trop-icon trop-flex">
+                      {% if card_image != blank %}
+                        {{
+                          card_image
+                          | image_url: width: 800
+                          | image_tag:
+                            loading: 'lazy',
+                            widths: '300,450,600,800',
+                            sizes: '(min-width: 768px) 25vw, 80vw',
+                            alt: card_title
+                        }}
+                      {% else %}
+                        {{ 'collection-1' | placeholder_svg_tag }}
+                      {% endif %}
                     </div>
+                    <div class="trop-link">
+                      {% if card_link != blank %}
+                        <a
+                          href="{{ card_link | default: '#' }}"
+                          class="trop-card-link trop-flex"
+                          {{ block.shopify_attributes }}
+                        >
+                          <span>{{ card_text }}</span>
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path d="M7 17L17 7" stroke="#FFB302" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 7H17V17" stroke="#FFB302" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </a>
+                      {% endif %}
+                    </div>
+                  </div>
                 </div>
-            {% endfor %}
-        </div>
-        </div>
 
-        <div class="trop-collection-list__header trop-collection-list__header--bottom trop-flex mt-25">
+                <div class="trop-collection-list__content-wrap">
+                  {% if card_title != blank %}
+                    <span class="{{ label_class }}">{{ card_title }}</span>
+                  {% endif %}
+                  {% if card_description != blank %}
+                    <p>{{ card_description }}</p>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="trop-collection-list__header trop-collection-list__header--bottom trop-flex mt-25">
         {% if s.arrow_position == 'bottom' and s.layout_style == 'carousel' and s.enable_arrows %}
-            <div class="trop-collection-list__nav">
+          <div class="trop-collection-list__nav">
             <button type="button" class="{{ arrow_shape_class }}" data-trop-prev aria-label="Previous">
-                <svg viewBox="0 0 24 24"><path d="M15.5 4.5 8 12l7.5 7.5 1.5-1.5L11 12l6-6z"/></svg>
+              <svg viewBox="0 0 24 24">
+                <path d="M15.5 4.5 8 12l7.5 7.5 1.5-1.5L11 12l6-6z"/>
+              </svg>
             </button>
             <button type="button" class="{{ arrow_shape_class }}" data-trop-next aria-label="Next">
-                <svg viewBox="0 0 24 24"><path d="M8.5 4.5 16 12l-7.5 7.5L7 18l6-6-6-6z"/></svg>
+              <svg viewBox="0 0 24 24">
+                <path d="M8.5 4.5 16 12l-7.5 7.5L7 18l6-6-6-6z"/>
+              </svg>
             </button>
-            </div>
+          </div>
         {% endif %}
-        </div>
-
+      </div>
     </div>
   </div>
 </section>
@@ -908,27 +871,27 @@
         {
           "type": "image_picker",
           "id": "custom_image",
-          "label": "Icon Image",
+          "label": "Icon Image"
         },
         {
           "type": "text",
           "id": "custom_title",
-          "label": "Custom Title",
+          "label": "Custom Title"
         },
         {
           "type": "textarea",
           "id": "custom_description",
-          "label": "Description",
+          "label": "Description"
         },
         {
           "type": "text",
           "id": "custom_link_text",
-          "label": "Custom Link Text",
+          "label": "Custom Link Text"
         },
         {
           "type": "url",
           "id": "custom_link",
-          "label": "Custom Link",
+          "label": "Custom Link"
         }
       ]
     }
@@ -937,12 +900,7 @@
   "presets": [
     {
       "name": "Why Choose Us",
-      "blocks": [
-        { "type": "collection" },
-        { "type": "collection" },
-        { "type": "collection" },
-        { "type": "collection" }
-      ]
+      "blocks": [{ "type": "collection" }, { "type": "collection" }, { "type": "collection" }, { "type": "collection" }]
     }
   ]
 }

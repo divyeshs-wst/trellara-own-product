@@ -1,7 +1,7 @@
 /* collection-list.css
    Structural / static styles.
    Settings-driven (dynamic) styles live in the section's {% style %} block. */
-   
+
 .trop-collection-list__header {
   display: flex;
   align-items: center;
@@ -144,4 +144,85 @@
 
 .trop-collection-list__arrow--circle {
   border-radius: 50%;
+}
+
+/* Collect File CSS */
+.trop-collection-list {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.trop-collection-list .trop-collection-list__heading {
+  flex: max-content;
+}
+
+.trop-collection-list .trop-collection-list__sub_heading {
+  flex: max-content;
+}
+
+.trop-collection-list .trop-collection-list__label--overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 12px;
+  height: calc(100% - 24px);
+}
+
+.trop-collection-list .trop-collection-list__label--overlay::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgb(0 0 0 / 80%), rgba(0, 0, 0, 0));
+  z-index: -1;
+}
+
+/* Why Choose Us Section CSS */
+.trop-whychoose-list .trop-icon {
+  width: 56px;
+  height: 56px;
+}
+
+.trop-whychoose-list .trop-icon.trop-flex {
+  align-items: center;
+  justify-content: center;
+}
+
+.trop-whychoose-list .trop-icon img {
+  width: 16px;
+  height: auto;
+}
+
+.trop-whychoose-list .trop-wcu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trop-whychoose-list a.trop-card-link svg {
+  width: auto;
+  height: auto;
+}
+
+.trop-whychoose-list .trop-collection-list__card-inner {
+  padding: 24px;
+}
+
+.trop-whychoose-list .trop-collection-list__image-wrap img {
+  height: auto;
+}
+
+.trop-whychoose-list a.trop-card-link {
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.5s ease;
+}
+
+.trop-whychoose-list a.trop-card-link:hover svg {
+  transform: scale(1.2);
+  transition: transform 0.5s ease;
 }
