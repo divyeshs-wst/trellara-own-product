@@ -29,6 +29,9 @@
   .trop-collection-list-{{ section.id }} .trop-icon {
       width: 56px;
       height: 56px;
+      position: absolute;
+      bottom: 24px;
+      right: 16px;
       {% if s.icon_border_show == true %}
         border: {{ s.icon_border_size | default: 0 }}px {{ s.icon_border_type }} {{ s.icon_color }};
         border-radius: {{ s.icon_border_radius | default: 0 }}px;
