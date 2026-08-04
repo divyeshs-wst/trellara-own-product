@@ -597,12 +597,12 @@
     },
     {
       "type": "header",
-      "content": "Label Style"
+      "content": "Card Heading Style"
     },
     {
       "type": "select",
       "id": "label_position",
-      "label": "Label Position",
+      "label": "Card Heading Position",
       "options": [
         { "value": "below", "label": "Below Image" },
         { "value": "overlay", "label": "Overlay on Image" }
@@ -612,13 +612,13 @@
     {
       "type": "color",
       "id": "label_color",
-      "label": "Label Color",
+      "label": "Card Heading Color",
       "default": "#1a1a1a"
     },
     {
       "type": "range",
       "id": "label_size",
-      "label": "Label Font Size",
+      "label": "Card Heading Font Size",
       "min": 8,
       "max": 40,
       "step": 1,
@@ -628,7 +628,7 @@
     {
       "type": "select",
       "id": "label_font_weight",
-      "label": "Label Font Weight",
+      "label": "Card Heading Font Weight",
       "options": [
         { "value": "400", "label": "Normal" },
         { "value": "600", "label": "Semibold" },
@@ -639,7 +639,58 @@
     {
       "type": "select",
       "id": "label_transform",
-      "label": "Label Text Transform",
+      "label": "Card Heading Text Transform",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "uppercase", "label": "Uppercase" }
+      ],
+      "default": "uppercase"
+    },
+    {
+      "type": "header",
+      "content": "Card Description Style"
+    },
+    {
+      "type": "select",
+      "id": "description_position",
+      "label": "Card Description Position",
+      "options": [
+        { "value": "below", "label": "Below Image" },
+        { "value": "overlay", "label": "Overlay on Image" }
+      ],
+      "default": "below"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Card Description Color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "label": "Card Description Font Size",
+      "min": 8,
+      "max": 40,
+      "step": 1,
+      "default": 12,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "description_font_weight",
+      "label": "Card Description Font Weight",
+      "options": [
+        { "value": "400", "label": "Normal" },
+        { "value": "600", "label": "Semibold" },
+        { "value": "700", "label": "Bold" }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "select",
+      "id": "description_transform",
+      "label": "Card Description Text Transform",
       "options": [
         { "value": "none", "label": "None" },
         { "value": "uppercase", "label": "Uppercase" }
