@@ -71,6 +71,10 @@
     border-radius: {{ s.card_border_radius }}px;
   }
 
+  .trop-collection-list-{{ section.id }} .trop-collection-list__card-inner:hover {
+    background: color-mix(in srgb, {{ s.card_bg_color }} 95%, black);
+  }
+
   .trop-collection-list-{{ section.id }} .trop-collection-list__image-wrap {
     border-radius: {{ s.image_border_radius }}px;
     {% if s.image_aspect_ratio == 'square' %}
