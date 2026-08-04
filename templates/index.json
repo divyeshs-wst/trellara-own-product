@@ -478,7 +478,6 @@
         "collection_J9enic": {
           "type": "collection",
           "settings": {
-            "collection": "",
             "custom_image": "shopify://shop_images/hammer-orange.svg",
             "custom_title": "Materials",
             "custom_description": "11-gauge steel. Commercial load ratings. Precision engineering. Built to US commercial specifications.",
@@ -489,7 +488,6 @@
         "collection_aRX4pM": {
           "type": "collection",
           "settings": {
-            "collection": "cable-cross",
             "custom_image": "shopify://shop_images/hammer-orange.svg",
             "custom_title": "Materials",
             "custom_description": "11-gauge steel. Commercial load ratings. Precision engineering. Built to US commercial specifications.",
@@ -500,7 +498,6 @@
         "collection_VjaC7L": {
           "type": "collection",
           "settings": {
-            "collection": "",
             "custom_image": "shopify://shop_images/hammer-orange.svg",
             "custom_title": "Materials",
             "custom_description": "11-gauge steel. Commercial load ratings. Precision engineering. Built to US commercial specifications.",
@@ -511,7 +508,6 @@
         "collection_hBdNBN": {
           "type": "collection",
           "settings": {
-            "collection": "",
             "custom_image": "shopify://shop_images/hammer-orange.svg",
             "custom_title": "Materials",
             "custom_description": "11-gauge steel. Commercial load ratings. Precision engineering. Built to US commercial specifications.",
@@ -536,8 +532,8 @@
         "item_width_desktop": 440,
         "item_width_mobile": 280,
         "item_gap": 20,
-        "section_padding_top": 60,
-        "section_padding_bottom": 60,
+        "section_padding_top": 140,
+        "section_padding_bottom": 140,
         "section_bg_color": "#f6f6f6",
         "sub_heading": "Why Choose",
         "sub_heading_tag": "p",
