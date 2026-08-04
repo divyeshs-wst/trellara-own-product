@@ -251,15 +251,13 @@
                                 </div>
                             </div>
 
-                            {% if s.label_position == 'overlay' and card_title != blank %}
-                                <span class="{{ label_class }}">{{ card_title }}</span>
-                                <p class="{{ label_class }}">{{ card_description }}</p>
-                            {% endif %}
                         </div>
 
                         <div class="trop-collection-list__content-wrap">
-                            {% if s.label_position == 'below' and card_title != blank %}
+                            {% if card_title != blank %}
                                 <span class="{{ label_class }}">{{ card_title }}</span>
+                            {% endif %}
+                            {% if card_description != blank %}
                                 <p>{{ card_description }}</p>
                             {% endif %}
                         </div>
