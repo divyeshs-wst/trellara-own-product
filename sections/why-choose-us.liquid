@@ -27,8 +27,11 @@
 
 {% style %}
   .trop-collection-list-{{ section.id }} .trop-icon {
-        width: 56px;
-        height: 56px;
+      width: 56px;
+      height: 56px;
+      {% if s.icon_border_show == true %}
+        border: {{ s.icon_border_size | default: 0 }}px solid {{ s.icon_color }};
+      {% endif %}
     }
 
     .trop-collection-list-{{ section.id }} .trop-icon img {
