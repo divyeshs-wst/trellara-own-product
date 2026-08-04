@@ -242,10 +242,12 @@
                                     {% endif %}
                                 </div>
                                 <div class="trop-link">
+                                  {% if card_link != blank %}
                                     <a href="{{ card_link | default: '#' }}" class="trop-card-link trop-flex" {{ block.shopify_attributes }}>
                                         <span>{{ card_text }}</span>
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7" stroke="#FFB302" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 7H17V17" stroke="#FFB302" stroke-linecap="round" stroke-linejoin="round"/></svg>
                                     </a>
+                                  {% endif %}
                                 </div>
                             </div>
 
@@ -258,7 +260,6 @@
                         <div class="trop-collection-list__content-wrap">
                             {% if s.label_position == 'below' and card_title != blank %}
                                 <span class="{{ label_class }}">{{ card_title }}</span>
-                                {% comment %} <p class="{{ label_class }}">{{ card_description }}</p> {% endcomment %}
                                 <p>{{ card_description }}</p>
                             {% endif %}
                         </div>
