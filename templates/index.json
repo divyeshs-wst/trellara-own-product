@@ -489,12 +489,12 @@
         "collection_aRX4pM": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "cable-cross",
             "custom_image": "shopify://shop_images/hammer-orange.svg",
             "custom_title": "Materials",
             "custom_description": "11-gauge steel. Commercial load ratings. Precision engineering. Built to US commercial specifications.",
             "custom_link_text": "See our standards",
-            "custom_link": ""
+            "custom_link": "shopify://pages/contact"
           }
         },
         "collection_VjaC7L": {
