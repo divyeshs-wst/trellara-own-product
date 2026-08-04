@@ -89,6 +89,8 @@
 
   .trop-collection-list-{{ section.id }} .trop-collection-list__image-wrap {
     border-radius: {{ s.image_border_radius }}px;
+    width: {{ s.image_width | default: 300 }}px;
+    object-fit: contain;
   }
 
   .trop-collection-list-{{ section.id }} .trop-collection-list__label {
