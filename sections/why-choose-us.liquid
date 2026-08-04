@@ -694,7 +694,34 @@
       ],
       "default": "uppercase"
     },
-
+    {
+      "type": "header",
+      "content": "Content Icon Style"
+    },
+    {
+      "type": "checkbox",
+      "id": "icon_border_show",
+      "label": "Enable Icon Border",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon & Border Color",
+      "default": "#000000",
+      "visible_if": "{{ section.settings.icon_border_show == true }}"
+    },
+    {
+      "type": "range",
+      "id": "icon_border_size",
+      "label": "Icon Border Size",
+      "min": 8,
+      "max": 40,
+      "step": 1,
+      "default": 12,
+      "unit": "px",
+      "visible_if": "{{ section.settings.icon_border_show == true }}"
+    },
     {
       "type": "header",
       "content": "Navigation Arrows (Carousel only)"
