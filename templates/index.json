@@ -626,7 +626,7 @@
       "settings": {
         "layout_style": "carousel",
         "container_width": "container",
-        "cards_width": "container",
+        "cards_width": "full-width",
         "columns_desktop": 4,
         "columns_mobile": 1,
         "item_width_desktop": 300,
@@ -662,7 +662,7 @@
         "description_font_weight": "400",
         "description_transform": "uppercase",
         "icon_border_show": true,
-        "icon_color": "#FFB302",
+        "icon_color": "#ffb302",
         "icon_border_type": "dashed",
         "icon_border_size": 1,
         "icon_border_radius": 50,
