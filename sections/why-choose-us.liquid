@@ -712,6 +712,39 @@
       "visible_if": "{{ section.settings.icon_border_show == true }}"
     },
     {
+      "type": "select",
+      "id": "icon_border_type",
+      "label": "Divider Border Type",
+      "options": [
+        {
+          "value": "solid",
+          "label": "Solid"
+        },
+        {
+          "value": "dashed",
+          "label": "Dashed"
+        },
+        {
+          "value": "dotted",
+          "label": "Dotted"
+        },
+        {
+          "value": "double",
+          "label": "Double"
+        },
+        {
+          "value": "groove",
+          "label": "Groove"
+        },
+        {
+          "value": "inset",
+          "label": "Inset"
+        }
+      ],
+      "default": "solid",
+      "visible_if": "{{ section.settings.icon_border_show == true }}"
+    },
+    {
       "type": "range",
       "id": "icon_border_size",
       "label": "Icon Border Size",
