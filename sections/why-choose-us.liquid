@@ -76,6 +76,7 @@
 
   .trop-collection-list-{{ section.id }} .trop-collection-list__card-inner {
     background-color: {{ s.card_bg_color }};
+    border: 1px solid {{ s.card_bg_color }};
     border-radius: {{ s.card_border_radius }}px;
     {% if s.item_content_gap > 0 %}
       gap: {{ s.item_content_gap | default: 0 }}px;
