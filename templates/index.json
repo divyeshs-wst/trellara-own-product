@@ -451,7 +451,7 @@
         "heading_size": 44,
         "heading_color": "#1a1a1a",
         "heading_alignment": "start",
-        "heading_transform": "uppercase",
+        "heading_transform": "none",
         "card_bg_color": "#ffffff",
         "card_border_radius": 0,
         "image_aspect_ratio": "square",
