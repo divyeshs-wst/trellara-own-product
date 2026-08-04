@@ -582,8 +582,9 @@
         "collection_NWD7tW": {
           "type": "collection",
           "settings": {
-            "custom_title": "",
-            "custom_description": "",
+            "custom_image": "shopify://shop_images/gym.png",
+            "custom_title": "Choose kit or build list",
+            "custom_description": "11-gauge steel. Commercial load ratings. Precision engineering. Built to US commercial specifications.",
             "custom_link_text": "",
             "custom_link": ""
           }
@@ -591,8 +592,9 @@
         "collection_t8pk4M": {
           "type": "collection",
           "settings": {
-            "custom_title": "",
-            "custom_description": "",
+            "custom_image": "shopify://shop_images/gym-1.png",
+            "custom_title": "Quote + confirmation",
+            "custom_description": "11-gauge steel. Commercial load ratings. Precision engineering. Built to US commercial specifications.",
             "custom_link_text": "",
             "custom_link": ""
           }
@@ -600,17 +602,19 @@
         "collection_ee6rGB": {
           "type": "collection",
           "settings": {
-            "custom_title": "",
-            "custom_description": "",
+            "custom_image": "shopify://shop_images/gym.png",
+            "custom_title": "Delivery",
+            "custom_description": "11-gauge steel. Commercial load ratings. Precision engineering. Built to US commercial specifications.",
             "custom_link_text": "",
             "custom_link": ""
           }
         },
-        "collection_AAaHBL": {
+        "collection_8QbqMV": {
           "type": "collection",
           "settings": {
-            "custom_title": "",
-            "custom_description": "",
+            "custom_image": "shopify://shop_images/gym-1.png",
+            "custom_title": "Quote + confirmation",
+            "custom_description": "11-gauge steel. Commercial load ratings. Precision engineering. Built to US commercial specifications.",
             "custom_link_text": "",
             "custom_link": ""
           }
@@ -620,7 +624,7 @@
         "collection_NWD7tW",
         "collection_t8pk4M",
         "collection_ee6rGB",
-        "collection_AAaHBL"
+        "collection_8QbqMV"
       ],
       "name": "How it Works",
       "settings": {
