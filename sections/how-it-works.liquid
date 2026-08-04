@@ -87,6 +87,10 @@
     height: 100%;
   }
 
+  .trop-collection-list-{{ section.id }} .trop-collection-list__card-inner:hover {
+    background: color-mix(in srgb, {{ s.card_bg_color }} 85%, black);
+  }
+
   .trop-collection-list-{{ section.id }} .trop-collection-list__image-wrap img {
     width: {{ s.image_width | default: 300 }}px;
     object-fit: contain;
