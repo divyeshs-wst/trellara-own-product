@@ -20,37 +20,20 @@
 
 {% schema %}
 {
-  "name": "Text",
+  "name": "Image",
   "tag": null,
   "settings": [
     {
-      "type": "select",
-      "id": "content_mode",
-      "label": "Content mode",
-      "options": [
-        {
-          "value": "editor",
-          "label": "Editor"
-        },
-        {
-          "value": "code",
-          "label": "Code"
-        }
-      ],
-      "default": "editor"
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "Desktop Image",
+      "visible_if": "{{ section.settings.background_type == 'image' }}"
     },
     {
-      "type": "richtext",
-      "id": "text",
-      "label": "Text",
-      "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
-      "visible_if": "{{ block.settings.content_mode == 'editor' }}"
-    },
-    {
-      "type": "html",
-      "id": "custom_html",
-      "label": "HTML",
-      "visible_if": "{{ block.settings.content_mode == 'code' }}"
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Image",
+      "visible_if": "{{ section.settings.background_type == 'image' }}"
     },
     {
       "type": "select",
