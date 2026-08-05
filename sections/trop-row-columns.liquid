@@ -1,0 +1,780 @@
+{{ 'row-columns.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign s = section.settings
+
+  assign container_class = 'container'
+  if s.container_width == 'no-container'
+    assign container_class = 'no-container'
+  endif
+
+  assign row_wrap = 'nowrap'
+  if s.row_wrap
+    assign row_wrap = 'wrap'
+  endif
+-%}
+
+{% style %}
+  .trop-row-columns-{{ section.id }} {
+    background-color: {{ s.section_bg_color }};
+    padding-top: {{ s.section_padding_top }}px;
+    padding-bottom: {{ s.section_padding_bottom }}px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .trop-row-columns-{{ section.id }} .trop-row-columns__heading-wrap {
+    text-align: {{ s.heading_alignment }};
+    margin-bottom: {{ s.heading_spacing }}px;
+  }
+
+  .trop-row-columns-{{ section.id }} .trop-row-columns__heading-label {
+    color: {{ s.heading_label_color }};
+    font-size: {{ s.heading_label_size }}px;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+  }
+
+  .trop-row-columns-{{ section.id }} .trop-row-columns__heading-title {
+    color: {{ s.heading_color }};
+    font-size: {{ s.heading_size }}px;
+  }
+
+  .trop-row-columns-{{ section.id }} .trop-row-columns__inner {
+    display: {{ s.row_display }};
+    flex-wrap: {{ row_wrap }};
+    gap: {{ s.row_gap }}px;
+    align-items: {{ s.row_align_items }};
+    justify-content: {{ s.row_justify_content }};
+  }
+
+  {% for block in section.blocks %}
+    {%- liquid
+      assign bs = block.settings
+    -%}
+
+    .trop-row-columns-{{ section.id }} .trop-row-columns__column-{{ block.id }} {
+      {% if s.row_display == 'flex' %}
+        width: {{ bs.column_width }}%;
+        flex: 0 0 {{ bs.column_width }}%;
+        max-width: {{ bs.column_width }}%;
+      {% else %}
+        width: 100%;
+      {% endif %}
+    }
+
+    .trop-row-columns-{{ section.id }} .trop-row-columns__column-{{ block.id }} .trop-row-columns__column-inner {
+      background-color: {{ bs.column_bg_color }};
+      padding: {{ bs.column_padding_y }}px {{ bs.column_padding_x }}px;
+      border-radius: {{ bs.column_border_radius }}px;
+      gap: {{ bs.inner_gap }}px;
+      {% if bs.content_layout == 'stacked' %}
+        align-items: {% if bs.content_align == 'center' %}center{% elsif bs.content_align == 'right' %}flex-end{% else %}flex-start{% endif %};
+        text-align: {{ bs.content_align }};
+      {% else %}
+        align-items: {{ bs.vertical_align }};
+      {% endif %}
+    }
+
+    .trop-row-columns-{{ section.id }} .trop-row-columns__column-{{ block.id }} .trop-row-columns__image {
+      border-radius: {{ bs.image_border_radius }}px;
+      {% if bs.content_layout != 'stacked' %}
+        width: {{ bs.image_width }}%;
+      {% endif %}
+      {% if bs.image_aspect_ratio == 'square' %}
+        aspect-ratio: 1 / 1;
+      {% elsif bs.image_aspect_ratio == 'portrait' %}
+        aspect-ratio: 3 / 4;
+      {% elsif bs.image_aspect_ratio == 'landscape' %}
+        aspect-ratio: 4 / 3;
+      {% endif %}
+    }
+
+    .trop-row-columns-{{ section.id }} .trop-row-columns__column-{{ block.id }} .trop-row-columns__image img {
+      object-fit: {{ bs.image_fit }};
+      {% if bs.image_aspect_ratio == 'auto' %}
+        height: auto;
+      {% endif %}
+    }
+
+    .trop-row-columns-{{ section.id }} .trop-row-columns__column-{{ block.id }} .trop-row-columns__title {
+      color: {{ bs.title_color }};
+      font-size: {{ bs.title_size }}px;
+      text-transform: {{ bs.title_transform }};
+    }
+
+    .trop-row-columns-{{ section.id }} .trop-row-columns__column-{{ block.id }} .trop-row-columns__paragraph {
+      color: {{ bs.text_color }};
+      font-size: {{ bs.text_size }}px;
+    }
+
+    .trop-row-columns-{{ section.id }} .trop-row-columns__column-{{ block.id }} .trop-row-columns__list {
+      list-style-type: {{ bs.list_style }};
+      color: {{ bs.list_color }};
+      font-size: {{ bs.list_size }}px;
+    }
+
+    .trop-row-columns-{{ section.id }} .trop-row-columns__column-{{ block.id }} .trop-row-columns__list li + li {
+      margin-top: {{ bs.list_item_spacing }}px;
+    }
+
+    .trop-row-columns-{{ section.id }} .trop-row-columns__column-{{ block.id }} .trop-row-columns__button {
+      border-radius: {{ bs.button_border_radius }}px;
+      padding: {{ bs.button_padding_y }}px {{ bs.button_padding_x }}px;
+      {% if bs.button_style == 'outline' %}
+        border-color: {{ bs.button_bg_color }};
+        color: {{ bs.button_bg_color }};
+      {% else %}
+        background-color: {{ bs.button_bg_color }};
+        color: {{ bs.button_text_color }};
+      {% endif %}
+    }
+  {% endfor %}
+{% endstyle %}
+
+<section class="trop-row-columns trop-row-columns-{{ section.id }} {{ container_class }}">
+
+  {% if s.heading_label != blank or s.heading_text != blank %}
+    <div class="trop-row-columns__heading-wrap">
+      {% if s.heading_label != blank %}
+        <span class="trop-row-columns__heading-label">{{ s.heading_label }}</span>
+      {% endif %}
+      {% if s.heading_text != blank %}
+        <{{ s.heading_tag }} class="trop-row-columns__heading-title">{{ s.heading_text }}</{{ s.heading_tag }}>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <div class="trop-row-columns__inner">
+    {% for block in section.blocks %}
+      {%- liquid
+        assign bs = block.settings
+        assign has_image = false
+        if bs.image != blank
+          assign has_image = true
+        endif
+        assign has_text = false
+        if bs.title != blank or bs.text != blank or bs.button_text != blank or bs.list_items != blank
+          assign has_text = true
+        endif
+      -%}
+
+      <div
+        class="trop-row-columns__column trop-row-columns__column-{{ block.id }} trop-row-columns__column--{{ bs.content_layout }}"
+        {{ block.shopify_attributes }}
+      >
+        <div class="trop-row-columns__column-inner">
+          {% if has_image %}
+            <div class="trop-row-columns__image">
+              {{
+                bs.image
+                | image_url: width: 1200
+                | image_tag: loading: 'lazy', widths: '400,600,900,1200', alt: bs.image.alt
+              }}
+            </div>
+          {% endif %}
+
+          {% if has_text %}
+            <div class="trop-row-columns__text">
+              {% if bs.title != blank %}
+                <{{ bs.title_tag }} class="trop-row-columns__title">{{ bs.title }}</{{ bs.title_tag }}>
+              {% endif %}
+
+              {% if bs.text != blank %}
+                <div class="trop-row-columns__paragraph">{{ bs.text }}</div>
+              {% endif %}
+
+              {% if bs.list_items != blank %}
+                <ul class="trop-row-columns__list">
+                  {%- assign list_lines = bs.list_items | newline_to_br | split: '<br />' -%}
+                  {% for line in list_lines %}
+                    {%- assign trimmed_line = line | strip -%}
+                    {% if trimmed_line != blank %}
+                      <li>{{ trimmed_line }}</li>
+                    {% endif %}
+                  {% endfor %}
+                </ul>
+              {% endif %}
+
+              {% if bs.button_text != blank %}
+                <a
+                  href="{{ bs.button_link | default: '#' }}"
+                  class="trop-row-columns__button trop-row-columns__button--{{ bs.button_style }}"
+                >
+                  {{ bs.button_text }}
+                </a>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+</section>
+
+{% schema %}
+{
+  "name": "Row Layout (Multi-Column)",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Row Settings"
+    },
+    {
+      "type": "select",
+      "id": "container_width",
+      "label": "Section Width",
+      "options": [
+        { "value": "container", "label": "Container" },
+        { "value": "no-container", "label": "Full Width" }
+      ],
+      "default": "container"
+    },
+    {
+      "type": "select",
+      "id": "row_display",
+      "label": "Row Display",
+      "info": "Flex allows columns to sit side by side using their width settings. Block stacks every column full width regardless of width settings.",
+      "options": [
+        { "value": "flex", "label": "Flex (side by side)" },
+        { "value": "block", "label": "Block (stacked)" }
+      ],
+      "default": "flex"
+    },
+    {
+      "type": "checkbox",
+      "id": "row_wrap",
+      "label": "Allow Columns to Wrap",
+      "info": "Turn on so columns that don't fit on one line (e.g. two 50% columns already using 100%) drop to a new line instead of shrinking.",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "row_gap",
+      "label": "Gap Between Columns",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 24,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "row_align_items",
+      "label": "Row Vertical Alignment",
+      "options": [
+        { "value": "stretch", "label": "Stretch" },
+        { "value": "flex-start", "label": "Top" },
+        { "value": "center", "label": "Center" },
+        { "value": "flex-end", "label": "Bottom" }
+      ],
+      "default": "stretch"
+    },
+    {
+      "type": "select",
+      "id": "row_justify_content",
+      "label": "Row Horizontal Alignment",
+      "options": [
+        { "value": "flex-start", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "flex-end", "label": "Right" },
+        { "value": "space-between", "label": "Space Between" }
+      ],
+      "default": "flex-start"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "label": "Section Top Padding",
+      "min": 0,
+      "max": 150,
+      "step": 2,
+      "default": 60,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "label": "Section Bottom Padding",
+      "min": 0,
+      "max": 150,
+      "step": 2,
+      "default": 60,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Section Background Color",
+      "default": "#ffffff"
+    },
+
+    {
+      "type": "header",
+      "content": "Section Heading (optional)"
+    },
+    {
+      "type": "text",
+      "id": "heading_label",
+      "label": "Label Text",
+      "default": "Best Sellers"
+    },
+    {
+      "type": "color",
+      "id": "heading_label_color",
+      "label": "Label Color",
+      "default": "#666666"
+    },
+    {
+      "type": "range",
+      "id": "heading_label_size",
+      "label": "Label Font Size",
+      "min": 8,
+      "max": 30,
+      "step": 1,
+      "default": 12,
+      "unit": "px"
+    },
+    {
+      "type": "text",
+      "id": "heading_text",
+      "label": "Heading Text",
+      "default": "Customer Favorites"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading Tag",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "p", "label": "p" }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Heading Font Size",
+      "min": 16,
+      "max": 60,
+      "step": 1,
+      "default": 32,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#14123a"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Heading Alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "heading_spacing",
+      "label": "Space Below Heading",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 40,
+      "unit": "px"
+    }
+  ],
+
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Column",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Column Layout"
+        },
+        {
+          "type": "range",
+          "id": "column_width",
+          "label": "Column Width",
+          "min": 10,
+          "max": 100,
+          "step": 5,
+          "default": 50,
+          "unit": "%",
+          "info": "Only applies when Row Display is set to Flex."
+        },
+        {
+          "type": "select",
+          "id": "content_layout",
+          "label": "Content Layout",
+          "options": [
+            { "value": "stacked", "label": "Stacked (image on top)" },
+            { "value": "image-left", "label": "Side by Side (image left)" },
+            { "value": "image-right", "label": "Side by Side (image right)" }
+          ],
+          "default": "stacked"
+        },
+        {
+          "type": "range",
+          "id": "inner_gap",
+          "label": "Gap Between Image and Text",
+          "min": 0,
+          "max": 80,
+          "step": 2,
+          "default": 24,
+          "unit": "px"
+        },
+        {
+          "type": "select",
+          "id": "content_align",
+          "label": "Text Alignment (Stacked layout)",
+          "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "center", "label": "Center" },
+            { "value": "right", "label": "Right" }
+          ],
+          "default": "center"
+        },
+        {
+          "type": "select",
+          "id": "vertical_align",
+          "label": "Vertical Alignment (Side by Side layout)",
+          "options": [
+            { "value": "flex-start", "label": "Top" },
+            { "value": "center", "label": "Center" },
+            { "value": "flex-end", "label": "Bottom" }
+          ],
+          "default": "center"
+        },
+
+        {
+          "type": "header",
+          "content": "Column Background"
+        },
+        {
+          "type": "color",
+          "id": "column_bg_color",
+          "label": "Background Color"
+        },
+        {
+          "type": "range",
+          "id": "column_padding_y",
+          "label": "Vertical Padding",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "default": 0,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "column_padding_x",
+          "label": "Horizontal Padding",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "default": 0,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "column_border_radius",
+          "label": "Corner Radius",
+          "min": 0,
+          "max": 50,
+          "step": 1,
+          "default": 0,
+          "unit": "px"
+        },
+
+        {
+          "type": "header",
+          "content": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "range",
+          "id": "image_width",
+          "label": "Image Width (Side by Side layout)",
+          "min": 20,
+          "max": 80,
+          "step": 5,
+          "default": 45,
+          "unit": "%"
+        },
+        {
+          "type": "select",
+          "id": "image_aspect_ratio",
+          "label": "Image Aspect Ratio",
+          "options": [
+            { "value": "auto", "label": "Natural" },
+            { "value": "square", "label": "Square (1:1)" },
+            { "value": "portrait", "label": "Portrait (3:4)" },
+            { "value": "landscape", "label": "Landscape (4:3)" }
+          ],
+          "default": "auto"
+        },
+        {
+          "type": "select",
+          "id": "image_fit",
+          "label": "Image Fit",
+          "options": [
+            { "value": "cover", "label": "Cover" },
+            { "value": "contain", "label": "Contain" }
+          ],
+          "default": "cover"
+        },
+        {
+          "type": "range",
+          "id": "image_border_radius",
+          "label": "Image Corner Radius",
+          "min": 0,
+          "max": 50,
+          "step": 1,
+          "default": 0,
+          "unit": "px"
+        },
+
+        {
+          "type": "header",
+          "content": "Title"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "select",
+          "id": "title_tag",
+          "label": "Title Tag",
+          "options": [
+            { "value": "h2", "label": "H2" },
+            { "value": "h3", "label": "H3" },
+            { "value": "h4", "label": "H4" },
+            { "value": "p", "label": "p" }
+          ],
+          "default": "h3"
+        },
+        {
+          "type": "range",
+          "id": "title_size",
+          "label": "Title Font Size",
+          "min": 12,
+          "max": 60,
+          "step": 1,
+          "default": 20,
+          "unit": "px"
+        },
+        {
+          "type": "color",
+          "id": "title_color",
+          "label": "Title Color",
+          "default": "#1a1a1a"
+        },
+        {
+          "type": "select",
+          "id": "title_transform",
+          "label": "Title Text Transform",
+          "options": [
+            { "value": "none", "label": "None" },
+            { "value": "uppercase", "label": "Uppercase" }
+          ],
+          "default": "uppercase"
+        },
+
+        {
+          "type": "header",
+          "content": "Paragraph"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Paragraph Text"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Paragraph Color",
+          "default": "#666666"
+        },
+        {
+          "type": "range",
+          "id": "text_size",
+          "label": "Paragraph Font Size",
+          "min": 10,
+          "max": 30,
+          "step": 1,
+          "default": 15,
+          "unit": "px"
+        },
+
+        {
+          "type": "header",
+          "content": "List"
+        },
+        {
+          "type": "textarea",
+          "id": "list_items",
+          "label": "List Items",
+          "info": "One item per line."
+        },
+        {
+          "type": "select",
+          "id": "list_style",
+          "label": "List Marker",
+          "options": [
+            { "value": "disc", "label": "Bullet" },
+            { "value": "circle", "label": "Circle" },
+            { "value": "square", "label": "Square" },
+            { "value": "none", "label": "None" }
+          ],
+          "default": "disc"
+        },
+        {
+          "type": "color",
+          "id": "list_color",
+          "label": "List Text Color",
+          "default": "#333333"
+        },
+        {
+          "type": "range",
+          "id": "list_size",
+          "label": "List Font Size",
+          "min": 10,
+          "max": 24,
+          "step": 1,
+          "default": 14,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "list_item_spacing",
+          "label": "Space Between Items",
+          "min": 0,
+          "max": 30,
+          "step": 1,
+          "default": 8,
+          "unit": "px"
+        },
+
+        {
+          "type": "header",
+          "content": "Button"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        },
+        {
+          "type": "select",
+          "id": "button_style",
+          "label": "Button Style",
+          "options": [
+            { "value": "filled", "label": "Filled" },
+            { "value": "outline", "label": "Outline" }
+          ],
+          "default": "filled"
+        },
+        {
+          "type": "color",
+          "id": "button_bg_color",
+          "label": "Button Color",
+          "default": "#14123a"
+        },
+        {
+          "type": "color",
+          "id": "button_text_color",
+          "label": "Button Text Color (Filled only)",
+          "default": "#ffffff"
+        },
+        {
+          "type": "range",
+          "id": "button_border_radius",
+          "label": "Button Corner Radius",
+          "min": 0,
+          "max": 50,
+          "step": 1,
+          "default": 4,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "button_padding_y",
+          "label": "Button Vertical Padding",
+          "min": 4,
+          "max": 30,
+          "step": 1,
+          "default": 12,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "button_padding_x",
+          "label": "Button Horizontal Padding",
+          "min": 8,
+          "max": 80,
+          "step": 2,
+          "default": 28,
+          "unit": "px"
+        }
+      ]
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Row Layout (Multi-Column)",
+      "blocks": [
+        {
+          "type": "column",
+          "settings": {
+            "column_width": 50,
+            "content_layout": "stacked",
+            "title": "Home Gym Packages",
+            "text": "<p>Transcenda o comum com a nossa linha de produtos.</p>"
+          }
+        },
+        {
+          "type": "column",
+          "settings": {
+            "column_width": 50,
+            "content_layout": "stacked",
+            "title": "Home Gym Packages",
+            "text": "<p>Transcenda o comum com a nossa linha de produtos.</p>"
+          }
+        },
+        {
+          "type": "column",
+          "settings": {
+            "column_width": 100,
+            "content_layout": "image-right",
+            "title": "Home Gym Packages",
+            "text": "<p>Transcenda o comum com a nossa linha de produtos.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
