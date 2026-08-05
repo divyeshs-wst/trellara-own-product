@@ -24,16 +24,32 @@
   "tag": null,
   "settings": [
     {
+      "type": "select",
+      "id": "content_type",
+      "label": "Content Type",
+      "options": [
+        {
+          "value": "image",
+          "label": "Image"
+        },
+        {
+          "value": "video",
+          "label": "Video"
+        }
+      ],
+      "default": "image"
+    },
+    {
       "type": "image_picker",
       "id": "desktop_image",
       "label": "Desktop Image",
-      "visible_if": "{{ section.settings.background_type == 'image' }}"
+      "visible_if": "{{ section.settings.content_type == 'image' }}"
     },
     {
       "type": "image_picker",
       "id": "mobile_image",
       "label": "Mobile Image",
-      "visible_if": "{{ section.settings.background_type == 'image' }}"
+      "visible_if": "{{ section.settings.content_type == 'image' }}"
     },
     {
       "type": "select",
