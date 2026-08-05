@@ -11,11 +11,204 @@
 
 {% schema %}
 {
-  "name": "Canvas",
+  "name": "Row",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Row Settings"
+    },
+    {
+      "type": "select",
+      "id": "container_width",
+      "label": "Section Width",
+      "options": [
+        { "value": "container", "label": "Container" },
+        { "value": "no-container", "label": "Full Width" }
+      ],
+      "default": "container"
+    },
+    {
+      "type": "select",
+      "id": "row_display",
+      "label": "Row Display",
+      "info": "Flex allows columns to sit side by side using their width settings. Block stacks every column full width regardless of width settings.",
+      "options": [
+        { "value": "flex", "label": "Column" },
+        { "value": "block", "label": "Block" }
+      ],
+      "default": "flex"
+    },
+    {
+      "type": "checkbox",
+      "id": "row_wrap",
+      "label": "Allow Columns to Wrap",
+      "info": "Turn on so columns that don't fit on one line (e.g. two 50% columns already using 100%) drop to a new line instead of shrinking.",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "row_gap",
+      "label": "Gap Between Columns",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 24,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "row_align_items",
+      "label": "Row Vertical Alignment",
+      "options": [
+        { "value": "stretch", "label": "Stretch" },
+        { "value": "flex-start", "label": "Top" },
+        { "value": "center", "label": "Center" },
+        { "value": "flex-end", "label": "Bottom" }
+      ],
+      "default": "stretch"
+    },
+    {
+      "type": "select",
+      "id": "row_justify_content",
+      "label": "Row Horizontal Alignment",
+      "options": [
+        { "value": "flex-start", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "flex-end", "label": "Right" },
+        { "value": "space-between", "label": "Space Between" }
+      ],
+      "default": "flex-start"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "label": "Section Top Padding",
+      "min": 0,
+      "max": 150,
+      "step": 2,
+      "default": 60,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "label": "Section Bottom Padding",
+      "min": 0,
+      "max": 150,
+      "step": 2,
+      "default": 60,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Section Background Color",
+      "default": "#ffffff"
+    },
+
+    {
+      "type": "header",
+      "content": "Sub Heading"
+    },
+    {
+      "type": "text",
+      "id": "sub_heading_text",
+      "label": "Heading Text",
+      "default": "Best Sellers"
+    },
+    {
+      "type": "color",
+      "id": "sub_heading_text_color",
+      "label": "Text Color",
+      "default": "#666666"
+    },
+    {
+      "type": "select",
+      "id": "sub_heading_tag",
+      "label": "Sub Heading Tag",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "p", "label": "p" }
+      ],
+      "default": "p"
+    },
+    {
+      "type": "range",
+      "id": "sub_heading_size",
+      "label": "Font Size",
+      "min": 8,
+      "max": 30,
+      "step": 1,
+      "default": 12,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "sub_heading_alignment",
+      "label": "Sub Heading Alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "heading_text",
+      "label": "Heading Text",
+      "default": "Customer Favorites"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading Tag",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "p", "label": "p" }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Heading Font Size",
+      "min": 16,
+      "max": 60,
+      "step": 1,
+      "default": 32,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#14123a"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Heading Alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left"
+    }
+  ],
   "blocks": [{ "type": "@theme" }],
   "presets": [
     {
-      "name": "Canvas"
+      "name": "Row"
     }
   ]
 }
