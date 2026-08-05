@@ -1,0 +1,132 @@
+/* row-columns.css
+   Structural / static styles.
+   Settings-driven (dynamic) styles live in the section's {% style %} block. */
+
+.trop-row-columns {
+  width: 100%;
+}
+
+.trop-row-columns.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.trop-row-columns.no-container {
+  width: 100%;
+}
+
+.trop-row-columns__heading-wrap {
+  width: 100%;
+}
+
+.trop-row-columns__heading-label {
+  display: block;
+}
+
+.trop-row-columns__heading-title {
+  margin: 0;
+}
+
+/* The row itself */
+.trop-row-columns__inner {
+  width: 100%;
+}
+
+/* Column */
+.trop-row-columns__column {
+  box-sizing: border-box;
+}
+
+.trop-row-columns__column-inner {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Stacked layout: image on top, text block below */
+.trop-row-columns__column--stacked .trop-row-columns__column-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Side-by-side layouts: image + text next to each other */
+.trop-row-columns__column--image-left .trop-row-columns__column-inner {
+  display: flex;
+  flex-direction: row;
+}
+
+.trop-row-columns__column--image-right .trop-row-columns__column-inner {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.trop-row-columns__image {
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.trop-row-columns__column--stacked .trop-row-columns__image {
+  width: 100%;
+  flex-shrink: 1;
+}
+
+.trop-row-columns__image img,
+.trop-row-columns__image svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-position: center;
+}
+
+.trop-row-columns__text {
+  min-width: 0;
+}
+
+.trop-row-columns__column--image-left .trop-row-columns__text,
+.trop-row-columns__column--image-right .trop-row-columns__text {
+  flex: 1;
+}
+
+.trop-row-columns__title {
+  margin: 0;
+}
+
+.trop-row-columns__paragraph {
+  margin: 0;
+}
+
+.trop-row-columns__paragraph p {
+  margin: 0;
+}
+
+.trop-row-columns__list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.trop-row-columns__button {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.trop-row-columns__button--outline {
+  background-color: transparent !important;
+  border-width: 1px;
+  border-style: solid;
+}
+
+/* Mobile: always stack columns full width regardless of desktop width setting */
+@media screen and (max-width: 767px) {
+  .trop-row-columns__column {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+  .trop-row-columns__column--image-left .trop-row-columns__column-inner,
+  .trop-row-columns__column--image-right .trop-row-columns__column-inner {
+    flex-direction: column;
+  }
+}
