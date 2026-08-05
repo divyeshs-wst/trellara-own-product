@@ -1,41 +1,9 @@
 {% doc %}
-  Widget: Text
-
-  Rich text content with two content modes:
-  - Editor: Shopify's rich text editor (bold, italic, links, lists)
-  - Code:   raw HTML for advanced use
-
-  Includes alignment, text color, optional custom text size and
-  line height, multi column text, and a drop cap. Shared style,
-  animation and advanced settings come from 'wst-attributes'.
+  Widget: Image
 {% enddoc %}
 
 {%- liquid
   assign settings = block.settings
-
-  # Drop cap modifier class
-  assign text_classes = ''
-  if settings.drop_cap
-    assign text_classes = 'wst-text--drop-cap'
-  endif
-
-  # Widget specific style variables, passed to wst-attributes
-  capture text_vars
-    if settings.alignment != blank
-      echo '--wst-align: ' | append: settings.alignment | append: ';'
-    endif
-    if settings.text_color != blank and settings.text_color.alpha != 0.0
-      echo '--wst-color: ' | append: settings.text_color | append: ';'
-    endif
-    if settings.custom_typography
-      echo '--wst-text-size: ' | append: settings.font_size | append: 'px;'
-      echo '--wst-text-lh: ' | append: settings.line_height | append: ';'
-    endif
-    if settings.columns_count > 1
-      echo '--wst-text-cols: ' | append: settings.columns_count | append: ';'
-      echo '--wst-text-col-gap: ' | append: settings.column_gap | append: 'px;'
-    endif
-  endcapture
 -%}
 
 <div {% render 'wst-attributes', block: block, widget: 'text', extra_class: text_classes, extra_vars: text_vars %}>
@@ -47,36 +15,7 @@
 </div>
 
 {% stylesheet %}
-  .wst-text {
-    text-align: var(--wst-align, inherit);
-    color: var(--wst-color, inherit);
-    font-size: var(--wst-text-size, inherit);
-    line-height: var(--wst-text-lh, inherit);
-    columns: var(--wst-text-cols, auto);
-    column-gap: var(--wst-text-col-gap, 40px);
-  }
 
-  .wst-text > *:first-child {
-    margin-top: 0;
-  }
-
-  .wst-text > *:last-child {
-    margin-bottom: 0;
-  }
-
-  .wst-text--drop-cap p:first-of-type::first-letter {
-    float: left;
-    font-size: 3.2em;
-    line-height: 0.85;
-    padding-right: 0.08em;
-    font-weight: 600;
-  }
-
-  @media screen and (max-width: 749.98px) {
-    .wst-text {
-      columns: auto;
-    }
-  }
 {% endstylesheet %}
 
 {% schema %}
